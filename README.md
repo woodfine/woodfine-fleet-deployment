@@ -23,3 +23,7 @@ Woodfine Management Corp. bypasses legacy cloud vulnerabilities by deploying its
 
 ---
 *© 2026 Woodfine Management Corp. Adheres to Leapfrog 2030 standards.*
+
+> **Directory Nomenclature Ledger**
+> All files committed to this directory MUST adhere to the following strict prefix taxonomy:
+> * `GUIDE-*`: Step-by-step operational deployment manuals.

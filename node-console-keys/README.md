@@ -1,18 +1,11 @@
-# node-console-keys | Master Aggregator Terminal
+# Woodfine Fleet Showcase: node-console-keys
+### *Institutional Brutalism & Processing Integrity*
 
-## 📜 Mandate
-This console serves as the **Tier-5 System Administration** interface for the aggregated Woodfine clusters. It does not communicate with the Mesh directly; instead, it establishes a secure paring with the `gateway-interface-command`.
+**Status: Generic Showcase** | **Silo: fleet-woodfine**
 
-## 🌐 Connectivity
-* **Target:** `gateway-interface-command` (Mesh VM)
-* **Protocol:** PointSav Secure Tunnel (PSST)
-* **Authorization:** Machine-Based Authorization (MBA) - F-Key Authority
+## 📜 Operational Mandate
+This directory serves as the public structural manifest for the node-console-keys node within the Woodfine Sovereign Fleet.
 
-## 📂 Managed Clusters
-By authorizing via the Gateway, this console administers:
-1. `cluster-totebox-personnel-1`
-2. `cluster-totebox-corporate-1`
-3. `cluster-totebox-property-1`
-
-## ⚠️ Security Restriction
-This console has **zero visibility** into `cluster-totebox-personnel-2`. It is cryptographically siloed from the Standalone Email environment.
+> **Directory Nomenclature Ledger**
+> All files committed to this directory MUST adhere to the following strict prefix taxonomy:
+> * `GUIDE-*`: Step-by-step operational deployment manuals.

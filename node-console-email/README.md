@@ -1,12 +1,11 @@
-# node-console-email | Standalone Administration Terminal
+# Woodfine Fleet Showcase: node-console-email
+### *Institutional Brutalism & Processing Integrity*
 
-## 📜 Mandate
-This console is a **Direct-Action Terminal** designed for the siloed management of the standalone personnel email environment. It is intentionally isolated from the `gateway-interface-command` to prevent cross-contamination of administrative keys.
+**Status: Generic Showcase** | **Silo: fleet-woodfine**
 
-## 🌐 Connectivity
-* **Target:** `cluster-totebox-personnel-1` (Mesh VM)
-* **Protocol:** Direct Sovereign Link (DSL)
-* **Authorization:** Unique MBA Signature (Email Silo)
+## 📜 Operational Mandate
+This directory serves as the public structural manifest for the node-console-email node within the Woodfine Sovereign Fleet.
 
-## ⚠️ Security Restriction
-This console cannot see, manage, or interact with the Corporate or Property clusters. It is an independent administrative silo.
+> **Directory Nomenclature Ledger**
+> All files committed to this directory MUST adhere to the following strict prefix taxonomy:
+> * `GUIDE-*`: Step-by-step operational deployment manuals.
