@@ -1,15 +1,14 @@
-# 🚢 MEDIA-MARKETING-LANDING
-**Entity:** Woodfine Management Corp. (The Customer)
-**Taxonomy:** Tier-3 Fleet Node
-**Status:** Provisioning / Active Deployment
+# Woodfine Management Corp: Media & Marketing Landing
 
----
+This directory contains the operational deployment files for the Woodfine Capital Projects primary digital interface. It is powered by PointSav Digital Systems architecture.
 
-## I. OPERATIONAL MANDATE
-This directory serves as a physical deployment node within the Woodfine Management Corp. corporate infrastructure. It maps directly to the active fleet inventory and governs the ingestion of compiled PointSav OS binaries.
+## Operational Guides
+- `GUIDE-01`: Deployment Synchronization (Tier 1 to Tier 2)
+- `GUIDE-02`: Updating Linguistic Payloads & Disclaimers
+- `GUIDE-03`: Telemetry Operations & Compliance
 
-## II. SOVEREIGN FRAMEWORK DECLARATION
-To enforce SOC 3 and DARP compliance, this node is structured to operate on physically isolated, Customer-owned architecture. It strictly enforces the Sovereign Data Protocol, guaranteeing zero leakage to third-party cloud analytics or foreign intelligence models.
+## Architecture
+- `index.html`: The monolithic, Zero-Cookie, PWA-enabled application interface.
+- `app-mediakit-telemetry/`: The Rust-based daemon and synthesizer for sovereign data collection.
 
-## III. LICENSING
-This operational node is governed by the fiduciary parameters of Woodfine Capital Projects Inc. Refer to the root `LICENSE` file. All corporate frameworks and ledger architectures are strictly reserved.
+*Note: Modifications to the UI/UX must adhere to PointSav's Institutional Brutalism standards.*
