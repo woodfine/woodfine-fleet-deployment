@@ -1,22 +1,22 @@
-# 🚢 ROUTE-NETWORK-ADMIN
-
 <div align="center">
 
-[ 🇪🇸 Leer este documento en Español ](./README.es.md)
+# Node 3: PointSav Command Centre™ (Brain)
+### *Hardware Forensics & Cryptographic Authority*
+**Status: Active | Tier: 4. Gateway (Type-II Hypervisor)**
 
 </div>
 
-**Entity:** Woodfine Management Corp. (The Customer)
-**Taxonomy:** Tier-3 Fleet Node
-**Status:** Provisioning / Active Deployment
-
 ---
 
-## I. OPERATIONAL MANDATE
-This directory serves as a physical deployment node within the Woodfine Management Corp. corporate infrastructure. It maps directly to the active fleet inventory and governs the ingestion of compiled PointSav OS binaries.
+## 💻 Silicon Profile | Perfil de Silicio
+This node operates as the **Command Authority** for the entire Woodfine Fleet. It holds the cryptographic keys (MBA) and serves as the single point of entry for infrastructure orchestration.
 
-## II. SOVEREIGN FRAMEWORK DECLARATION
-To enforce SOC 3 and DARP compliance, this node is structured to operate on physically isolated, Customer-owned architecture. It strictly enforces the Sovereign Data Protocol, guaranteeing zero leakage to third-party cloud analytics or foreign intelligence models.
+| Component | Specification | Hardware ID | Sovereign Notes |
+| :--- | :--- | :--- | :--- |
+| **System Model** | iMac 12,1 (Mid-2011) | N/A | Apple SMC & UEFI Boot Architecture. |
+| **Host OS** | Linux Mint (Foundry) | N/A | The physical host compiling the Tier-1 Rust logic. |
+| **Guest OS** | PointSav `os-network-admin` | VM | Type-II Hypervisor running the Command Authority. |
+| **Network (NIC)** | Virtualized Bridge | `wg0` | Dials OUT to the GCP Relay. Public internet cannot dial IN. |
 
-## III. LICENSING
-This operational node is governed by the fiduciary parameters of Woodfine Capital Projects Inc. Refer to the root `LICENSE` file. All corporate frameworks and ledger architectures are strictly reserved.
+## 🛡️ Architectural Constraints
+To ensure absolute custodial control and eliminate hyperscaler vulnerabilities, this routing node is physically located on the Executive's desk. If the Tier-2 Cloud Relay is destroyed, this node retains the master cryptographic keys and can instantly rebuild the mesh by dialing into a new cloud IP.
