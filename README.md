@@ -1,47 +1,52 @@
 <div align="center">
 
-# Woodfine Fleet Manifest | Manifiesto de Flota Woodfine
-### *Operational Infrastructure & Digital Operations*
+# Woodfine Management Corp.
+### *Fleet Manifest: Operational Infrastructure & Digital Operations | Manifiesto de Flota: Infraestructura Operativa y Operaciones Digitales*
+**Vancouver | New York | Berlin**
 
-[ **Corporate Wiki** ](https://github.com/woodfine/content-wiki-corporate) | [ **Projects Wiki** ](https://github.com/woodfine/content-wiki-projects) | [ **Main Profile** ](https://github.com/woodfine)
-
-*System Vendor:* [ **PointSav Digital Systems** ](https://github.com/pointsav/pointsav-monorepo)
-
-[ 🇪🇸 Leer este documento en Español ](./README.es.md)
+[ **Corporate Governance** ](https://github.com/woodfine/content-wiki-corporate) | [ **Real Estate Projects** ](https://github.com/woodfine/content-wiki-projects) | [ **Infrastructure Provider (PointSav)** ](https://github.com/pointsav/pointsav-monorepo)
 
 </div>
 
 ---
 
-> [!NOTE]
-> **OPERATIONAL POSTURE [MARCH 2026]**
-> **Phase:** Unified Terminal Deployment | **Compliance:** SOC 3 & DARP | **Modelo de Datos:** Archivos deterministas.
+## 1. EXECUTIVE OVERVIEW | VISIÓN GENERAL EJECUTIVA
 
-### 📡 The Digital Nervous System
-**[ EN ]** Woodfine operates a 100% independent digital infrastructure to protect our real estate operations and investor data. This repository maps the physical servers and secure cloud gateways that power our enterprise. We secure all corporate knowledge in decentralized, physically owned data vaults called "Totebox Archives," bypassing the risks associated with rented SaaS databases.
+**[ EN ]** Woodfine Management Corp. operates a 100% independent digital infrastructure to protect our real estate operations and investor data. This repository maps the physical servers and secure cloud gateways that power our enterprise. We secure all corporate knowledge in decentralized, physically owned data vaults (Totebox Archives), structurally bypassing the custody risks associated with rented commercial software databases.
 
-> [!WARNING]
-> **SECURITY BOUNDARY DECLARATION**
-> To comply with strict privacy and financial reporting mandates, **this repository acts solely as a structural map of our network. No live ledgers, tenant data, or property financial metrics are stored here.**
+**[ ES ]** Woodfine Management Corp. opera una infraestructura digital 100% independiente para proteger nuestras operaciones inmobiliarias y los datos de los inversores. Este repositorio mapea los servidores físicos y las pasarelas seguras en la nube. Aseguramos todo el conocimiento corporativo en bóvedas de datos descentralizadas de propiedad física (Archivos Totebox), evitando los riesgos de custodia asociados con las bases de datos de software comercial alquilado.
 
-### 🎛️ 1. Physical Infrastructure (The Secure Network)
-| Hardware Designation | Institutional Role | Operational State |
+---
+
+## 2. PHYSICAL INFRASTRUCTURE (THE SECURE NETWORK)
+The live routing hardware establishing the cryptographic mesh.
+
+| Node Designation | Institutional Role | Operational State |
 | :--- | :--- | :--- |
-| [`fleet-infrastructure-leased`](./fleet-infrastructure-leased) | Secure Edge Node (Public Routing) | 🟢 `Active (Virtualized)` |
-| [`fleet-infrastructure-cloud`](./fleet-infrastructure-cloud) | Enterprise Cloud Gateway | 🟢 `Active (Virtualized)` |
-| [`route-network-admin`](./route-network-admin) | Central Command & Cryptographic Authority | 🟢 `Active (Foundry Host)` |
+| [`fleet-infrastructure-cloud`](./fleet-infrastructure-cloud) | **Node 2:** Enterprise Cloud Gateway (Public Shield) | 🟢 `Active` |
+| [`fleet-infrastructure-leased`](./fleet-infrastructure-leased) | **Node 1:** Secure Edge Node (Hardware Anchor) | 🟢 `Active` |
+| [`route-network-admin`](./route-network-admin) | **Node 3:** Type-II Hypervisor Command Authority | 🟢 `Active` |
 
-### 📦 2. Totebox Archives (Isolated Data Vaults)
+---
+
+## 3. TOTEBOX ARCHIVES (ISOLATED DATA VAULTS)
+Independent Unikernel environments storing deterministic ledgers.
+
 | Asset Cluster | Enterprise Workload | Regulatory Guarantee |
 | :--- | :--- | :--- |
-| [`cluster-totebox-corporate`](./cluster-totebox-corporate) | Institutional Reporting & Synthesis | SOC 3 Processing Integrity |
+| [`cluster-totebox-corporate`](./cluster-totebox-corporate) | Institutional Reporting & Linguistic Synthesis | SOC 3 Processing Integrity |
 | [`cluster-totebox-personnel`](./cluster-totebox-personnel) | Secure Communications & Operations | SOC 3 Confidentiality |
 | [`cluster-totebox-real-property`](./cluster-totebox-real-property) | Real Estate Ledgers & Project Tracking | Absolute Data Ownership (DARP) |
 
-### 🖥️ 3. Execution Terminals (Sovereign Desktop)
+---
+
+## 4. EXECUTION TERMINALS (THE HUMAN INTERFACE)
+Bare-metal delivery vehicles providing operator access to the underlying archives.
+
 | Terminal Node | Operational Function | Hardware Integrity |
 | :--- | :--- | :--- |
 | [`node-console-operator`](./node-console-operator) | Unified Command Ledger (`os-console`). | Machine-Based Authorization |
+| [`node-console-input`](./node-console-input) | Cryptographic Airlock (Ingestion Gateway). | File Neutralization Engine |
 
 ---
-*© 2026 Woodfine Management Corp.*
+*© 2026 Woodfine Management Corp. Institutional Operations Ledger.*
