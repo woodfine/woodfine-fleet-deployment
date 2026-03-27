@@ -1,52 +1,70 @@
 <div align="center">
 
-# Woodfine Management Corp.
-### *Fleet Manifest: Operational Infrastructure & Digital Operations | Manifiesto de Flota: Infraestructura Operativa y Operaciones Digitales*
-**Vancouver | New York | Berlin**
+<img src="https://raw.githubusercontent.com/woodfine/woodfine-media-assets/main/ASSET-SIGNET-MASTER.svg" width="80" alt="Woodfine Signet">
 
-[ **Corporate Governance** ](https://github.com/woodfine/content-wiki-corporate) | [ **Real Estate Projects** ](https://github.com/woodfine/content-wiki-projects) | [ **Infrastructure Provider (PointSav)** ](https://github.com/pointsav/pointsav-monorepo)
+# Woodfine Fleet Manifest | Manifiesto de Flota Woodfine
+### *Operational Deployment & Fleet Orchestration*
+
+[![Network](https://img.shields.io/badge/Network-PointSav_Mesh-164679?style=flat-square)](#)
+[![Nodes](https://img.shields.io/badge/Active_Nodes-3-164679?style=flat-square)](#)
+[![Protocol](https://img.shields.io/badge/Protocol-Files_over_Databases-164679?style=flat-square)](#)
+
+[ **Corporate Governance** ](https://github.com/woodfine/content-wiki-corporate) | [ **Real Estate Projects** ](https://github.com/woodfine/content-wiki-projects) | [ **System Vendor** ](https://github.com/pointsav)
 
 </div>
 
 ---
 
-## 1. EXECUTIVE OVERVIEW | VISIÓN GENERAL EJECUTIVA
+> [!NOTE]
+> **OPERATIONAL POSTURE [MARCH 2026]**
+> **Phase:** 3-Node Trustworthy System Deployment | **Compliance:** SOC 3 & DARP | **Modelo de Datos:** Archivos deterministas (Files over Databases).
 
-**[ EN ]** Woodfine Management Corp. operates a 100% independent digital infrastructure to protect our real estate operations and investor data. This repository maps the physical servers and secure cloud gateways that power our enterprise. We secure all corporate knowledge in decentralized, physically owned data vaults (Totebox Archives), structurally bypassing the custody risks associated with rented commercial software databases.
+## 📡 Deployment Matrix (3-Track System)
+**[ EN ]** Woodfine operates a 100% Digital First infrastructure. We secure all corporate data in decentralized Totebox Archives and audit actions via foundational PointSav engines.
 
-**[ ES ]** Woodfine Management Corp. opera una infraestructura digital 100% independiente para proteger nuestras operaciones inmobiliarias y los datos de los inversores. Este repositorio mapea los servidores físicos y las pasarelas seguras en la nube. Aseguramos todo el conocimiento corporativo en bóvedas de datos descentralizadas de propiedad física (Archivos Totebox), evitando los riesgos de custodia asociados con las bases de datos de software comercial alquilado.
+**[ ES ]** Woodfine opera una infraestructura 100% de Prioridad Digital. Aseguramos todos los datos corporativos en Archivos Totebox descentralizados.
+
+<details>
+<summary><b>🛡️ VIEW SECURITY BOUNDARY DECLARATION</b></summary>
+<br>
+This repository maps the physical and virtual nodes of the Woodfine Sovereign Fleet. To comply with DARP mandates, <b>this repository acts solely as a structural map. No live ledgers, tenant data, or property metrics are stored within this SaaS domain.</b>
+<br><br>
+</details>
 
 ---
 
-## 2. PHYSICAL INFRASTRUCTURE (THE SECURE NETWORK)
-The live routing hardware establishing the cryptographic mesh.
+## 🗺️ Physical Mesh Topology
+Our private network operates on a Hub-and-Spoke model, securely connecting edge computing to central command without exposing payloads to the public internet.
 
-| Node Designation | Institutional Role | Operational State |
+```mermaid
+graph LR;
+    subgraph The Cloud Shield
+        A((Node 2: GCP Relay))
+    end
+    
+    subgraph Physical Execution
+        B((Node 1: Laptop Edge)) -.->|WireGuard PSST| A
+        C((Node 3: iMac Command)) -.->|WireGuard PSST| A
+    end
+    
+    style A fill:#164679,stroke:#111827,stroke-width:2px,color:#fff
+    style B fill:#F7F9FA,stroke:#164679,stroke-width:2px,color:#111827
+    style C fill:#F7F9FA,stroke:#164679,stroke-width:2px,color:#111827
+```
+
+### 🎛️ 1. Infrastructure (Physical Network)
+| Node Designation | Institutional Role | Connection State |
 | :--- | :--- | :--- |
-| [`fleet-infrastructure-cloud`](./fleet-infrastructure-cloud) | **Node 2:** Enterprise Cloud Gateway (Public Shield) | 🟢 `Active` |
-| [`fleet-infrastructure-leased`](./fleet-infrastructure-leased) | **Node 1:** Secure Edge Node (Hardware Anchor) | 🟢 `Active` |
-| [`route-network-admin`](./route-network-admin) | **Node 3:** Type-II Hypervisor Command Authority | 🟢 `Active` |
+| [`fleet-infrastructure-leased`](./fleet-infrastructure-leased) | Laptop Edge Anchor (Node 1) | 🟢 `Active (Virtualized)` |
+| [`fleet-infrastructure-cloud`](./fleet-infrastructure-cloud) | Cloud Anchor (Node 2) | 🟢 `Active (Virtualized)` |
+| [`route-network-admin`](./route-network-admin) | Command Centre™ (Node 3) | 🟢 `Active (Foundry Host)` |
 
----
-
-## 3. TOTEBOX ARCHIVES (ISOLATED DATA VAULTS)
-Independent Unikernel environments storing deterministic ledgers.
-
-| Asset Cluster | Enterprise Workload | Regulatory Guarantee |
+### 📦 2. Totebox (Data Archives)
+| Asset Cluster | Service Workload | Compliance Guarantee |
 | :--- | :--- | :--- |
-| [`cluster-totebox-corporate`](./cluster-totebox-corporate) | Institutional Reporting & Linguistic Synthesis | SOC 3 Processing Integrity |
-| [`cluster-totebox-personnel`](./cluster-totebox-personnel) | Secure Communications & Operations | SOC 3 Confidentiality |
-| [`cluster-totebox-real-property`](./cluster-totebox-real-property) | Real Estate Ledgers & Project Tracking | Absolute Data Ownership (DARP) |
+| [`cluster-totebox-corporate`](./cluster-totebox-corporate) | `service-content` | SOC 3 Processing Integrity |
+| [`cluster-totebox-personnel`](./cluster-totebox-personnel) | `service-people` | SOC 3 Confidentiality |
+| [`cluster-totebox-real-property`](./cluster-totebox-real-property) | Real Estate Ledgers | DARP Export Manifest |
 
 ---
-
-## 4. EXECUTION TERMINALS (THE HUMAN INTERFACE)
-Bare-metal delivery vehicles providing operator access to the underlying archives.
-
-| Terminal Node | Operational Function | Hardware Integrity |
-| :--- | :--- | :--- |
-| [`node-console-operator`](./node-console-operator) | Unified Command Ledger (`os-console`). | Machine-Based Authorization |
-| [`node-console-input`](./node-console-input) | Cryptographic Airlock (Ingestion Gateway). | File Neutralization Engine |
-
----
-*© 2026 Woodfine Management Corp. Institutional Operations Ledger.*
+*© 2026 Woodfine Management Corp.*
