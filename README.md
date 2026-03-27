@@ -36,22 +36,6 @@ This repository maps the physical and virtual nodes of the Woodfine Sovereign Fl
 ## 🗺️ Physical Mesh Topology
 Our private network operates on a Hub-and-Spoke model, securely connecting edge computing to central command without exposing payloads to the public internet.
 
-```mermaid
-graph LR;
-    subgraph The Cloud Shield
-        A((Node 2: GCP Relay))
-    end
-    
-    subgraph Physical Execution
-        B((Node 1: Laptop Edge)) -.->|WireGuard PSST| A
-        C((Node 3: iMac Command)) -.->|WireGuard PSST| A
-    end
-    
-    style A fill:#164679,stroke:#111827,stroke-width:2px,color:#fff
-    style B fill:#F7F9FA,stroke:#164679,stroke-width:2px,color:#111827
-    style C fill:#F7F9FA,stroke:#164679,stroke-width:2px,color:#111827
-```
-
 ### 🎛️ 1. Infrastructure (Physical Network)
 | Node Designation | Institutional Role | Connection State |
 | :--- | :--- | :--- |
