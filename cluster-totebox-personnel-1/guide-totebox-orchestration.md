@@ -1,23 +1,25 @@
-# 🧭 GUIDE: TOTEBOX ORCHESTRATION & ACTIVE INTELLIGENCE
+# 🧭 GUIDE: TOTEBOX ORCHESTRATION & TOTEBOX-PEDIA
 **Operational Tier:** 3 (Fleet Deployment)
-**Target Node:** cluster-totebox-personnel
+**Target Node:** cluster-totebox-personnel-1
 
 ---
 
 ## I. EXECUTIVE SUMMARY
 This guide defines the operational intelligence pipeline utilized within the Personnel Totebox Archive. 
 
-The Totebox Archive is not a passive backup drive. It functions as an Active Intelligence Engine. All corporate communications received via the legacy Microsoft 365 network are automatically intercepted, translated into independent physical files, and sorted based on operational utility.
+The Totebox Archive is an Active Intelligence Engine. All inbound corporate communications are automatically intercepted, translated into independent physical files, and staged as "Overlays" for human verification. We mathematically reject Vector Databases (RAG), utilizing a self-healing network of flat, hyperlinked Markdown files (The Totebox-pedia).
 
-## II. THE ENTITY BUNDLE
-The architecture eliminates proprietary email databases. Every communication is stored as an independent physical folder containing:
-1. **The Intelligence:** A mathematically clean, plain-text document containing the metadata and core message.
-2. **The Assets:** Unaltered physical attachments (PDFs, Images) stored immediately adjacent to the text.
+## II. THE LONG-TERM SUPPORT (LTS) KNOWLEDGE GRAPH
+The `content-wiki-*` repositories (Corporate, Projects, Documentation) serve as the Long-Term Support (LTS) encyclopedic backbone for Woodfine personnel and Service Providers. 
 
-## III. EPHEMERAL INGESTION (THE PURGE PROTOCOL)
-To maintain the mathematical purity of the long-term storage ledger, consumable media (e.g., industry newsletters, automated alerts) are strictly excluded from cold storage. 
+The **Domains** (Corporate, Projects, Documentation) consist of two core elements:
+1. **Glossaries:** The immutable definition ledgers.
+2. **Topics:** The physical Markdown index cards explaining operational realities.
 
-If personnel route specific emails into their "Content Ingest" folders within their Microsoft client, the system executes an automated Parse-and-Purge Protocol:
-1. The intelligence is extracted and fed directly to the Sovereign AI Routing component (`service-llm`).
-2. The core insights are synthesized into the corporate knowledge base.
-3. The original raw email is violently destroyed, ensuring zero permanent storage footprint.
+## III. THE OVERLAY PIPELINE (STAGING VS. PUBLISHING)
+To prevent AI hallucination creep, the ingestion loop operates strictly as a staging procedure.
+
+1. **Ingest & Splinter:** `service-email` drops data into the spool and shatters it.
+2. **Cognitive Staging:** `service-slm` reads the raw text, evaluates it against the Domain Glossaries, and generates an **Overlay Payload** (Suggested New Topics & Facts). It places this in `/knowledge-graph/` (the Staging Ground). It **does not** automatically publish to the LTS Wiki.
+3. **The Fiduciary Merge:** The operator mounts **[F4] CONTENT** on the Command Ledger. The UI displays the Suggested Overlay against the Current LTS State.
+4. **Synthesis:** The operator manually edits and verifies the Overlay. `service-content` then compiles the final Markdown Index Cards, natively hyperlinking recognized Glossary terms, and formally commits the update to the LTS Wiki.

@@ -1,23 +1,28 @@
-# 🧭 GUIDE: CONSOLE OPERATIONS & CARTRIDGE MOUNTING
+# 🧭 GUIDE: CONSOLE OPERATIONS & INTENT-DRIVEN INTERFACE
 **Operational Tier:** 3 (Fleet Deployment)
 **Interface:** `app-console-keys` (https://console.woodfinegroup.com)
 
 ---
 
 ## I. OPERATIONAL POSTURE
-The Sovereign Command Ledger (`console.woodfinegroup.com`) is a Zero-Form interface. It acts as a blank "Chassis" that mounts isolated application "Cartridges" based on physical F-Key inputs.
+The Sovereign Command Ledger (`console.woodfinegroup.com`) utilizes an Intent-Driven Interface (IDI). The Universal Omnibar dynamically binds its execution capabilities to the specific physical Cartridge currently mounted in the viewport.
 
-## II. THE F-KEY TAXONOMY (PHYSICAL ROUTING)
-To access specific business data, the operator must strike the corresponding hardware key. The Chassis overrides default browser behaviors (e.g., F5 reload) and fetches the isolated UI fragment directly from the Edge Node.
+## II. THE F-KEY TAXONOMY & CONTEXT LOGIC
+To access specific business data or generative engines, strike the corresponding hardware key. 
 
-* **[F1] HELP:** Protocol & Glossary Reference
-* **[F2] PEOPLE:** Personnel Identity Ledger
-* **[F3] EMAIL:** Comm Diode (Messaging)
-* **[F4] CONTENT:** Knowledge Synthesis
-* **[F5] MINUTEBOOK:** Deep Corporate Records
-* **[F6] BOOKKEEPER:** Financial Ledger
-* **[F12] INPUT MACHINE:** Secure Ingestion Gateway
+* **[F2] PEOPLE (The Identity Ledger):**
+  * **Omnibar Context:** Identity queries, CRM self-healing, and personnel signal mass review.
+* **[F3] EMAIL (The Comm Diode):**
+  * **Omnibar Context:** Spool monitoring, WORM vault audits, and physical ingress triggers.
+* **[F4] CONTENT (The Knowledge Forge):**
+  * **Omnibar Context:** Generative drafting and overlay review.
+  * **Function:** Serves as the primary engine for creating content. Query current LTS Wikis (e.g., "What are our sustainability metrics?") or draft new assets against the Domain Glossaries (e.g., "Draft a news release on the Co-Location Mandate").
+  * **Overlay Review:** Correct, edit, and proofread "Suggested Topics" mined by `service-slm` before authorizing their merge into the `content-wiki-*` LTS repositories.
+* **[F8] ADMIN (Totebox Orchestration):**
+  * **Omnibar Context:** Physical infrastructure and Integration Gateway management.
+  * **Function:** Distinct from the Raw Mesh Terminal, this provides high-level oversight of isolated cluster health and hardware boundaries.
+* **[F12] INPUT MACHINE:**
+  * **Omnibar Context:** Secure Ingestion Gateway for raw asset drops (CSV, PDF).
 
-## III. TROUBLESHOOTING (THE CACHE PHANTOM)
-If the interface appears outdated or fails to render the Institutional Light Theme, the local browser memory has failed to purge. 
-**Resolution:** Close the tab, open a new **Private/Incognito** window, and re-authenticate. The NGINX Cloud Shield enforces strict `no-store` headers, guaranteeing the Private window fetches the live, mathematical state.
+## III. EDITING IS VERIFICATION
+The Command Ledger strictly enforces the Fiduciary Gateway. The AI (`service-slm`) acts solely as a staging engine. The act of a human operator actively editing, correcting, or explicitly approving a document in the F4 viewport constitutes the mathematical verification required to commit that data to the Long-Term Support (LTS) corporate memory.
