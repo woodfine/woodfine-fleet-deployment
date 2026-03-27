@@ -39,16 +39,16 @@ Our private network operates on a Hub-and-Spoke model, securely connecting edge 
 ### 🎛️ 1. Infrastructure (Physical Network)
 | Node Designation | Institutional Role | Connection State |
 | :--- | :--- | :--- |
-| [`fleet-infrastructure-leased`](./fleet-infrastructure-leased) | Laptop Edge Anchor (Node 1) | 🟢 `Active (Virtualized)` |
-| [`fleet-infrastructure-cloud`](./fleet-infrastructure-cloud) | Cloud Anchor (Node 2) | 🟢 `Active (Virtualized)` |
-| [`route-network-admin`](./route-network-admin) | Command Centre™ (Node 3) | 🟢 `Active (Foundry Host)` |
+| `fleet-infrastructure-leased` | Laptop Edge Anchor (Node 1) | 🟢 Active (Virtualized) |
+| `fleet-infrastructure-cloud` | Cloud Anchor (Node 2) | 🟢 Active (Virtualized) |
+| `route-network-admin` | Command Centre™ (Node 3) | 🟢 Active (Foundry Host) |
 
 ### 📦 2. Totebox (Data Archives)
 | Asset Cluster | Service Workload | Compliance Guarantee |
 | :--- | :--- | :--- |
-| [`cluster-totebox-corporate`](./cluster-totebox-corporate) | `service-content` | SOC 3 Processing Integrity |
-| [`cluster-totebox-personnel`](./cluster-totebox-personnel) | `service-people` | SOC 3 Confidentiality |
-| [`cluster-totebox-real-property`](./cluster-totebox-real-property) | Real Estate Ledgers | DARP Export Manifest |
+| `cluster-totebox-corporate` | service-content | SOC 3 Processing Integrity |
+| `cluster-totebox-personnel` | service-people | SOC 3 Confidentiality |
+| `cluster-totebox-real-property` | Real Estate Ledgers | DARP Export Manifest |
 
 ---
 *© 2026 Woodfine Management Corp.*
