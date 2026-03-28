@@ -1,25 +1,21 @@
-# 🧭 GUIDE: TOTEBOX ORCHESTRATION & TOTEBOX-PEDIA
+# 🧭 GUIDE: TOTEBOX ORCHESTRATION & AUTONOMOUS SYNTHESIS
 **Operational Tier:** 3 (Fleet Deployment)
 **Target Node:** cluster-totebox-personnel-1
 
 ---
 
 ## I. EXECUTIVE SUMMARY
-This guide defines the operational intelligence pipeline utilized within the Personnel Totebox Archive. 
+This guide defines the operational intelligence pipeline utilized within the Totebox Archive. 
 
-The Totebox Archive is an Active Intelligence Engine. All inbound corporate communications are automatically intercepted, translated into independent physical files, and staged as "Overlays" for human verification. We mathematically reject Vector Databases (RAG), utilizing a self-healing network of flat, hyperlinked Markdown files (The Totebox-pedia).
+The Totebox Archive utilizes a **Derivative Architecture**. It physically separates Storage (raw `.eml` files on disk) from Sense-Making (the First Derivative taxonomy files continuously updated by the SLM daemon).
 
-## II. THE LONG-TERM SUPPORT (LTS) KNOWLEDGE GRAPH
-The `content-wiki-*` repositories (Corporate, Projects, Documentation) serve as the Long-Term Support (LTS) encyclopedic backbone for Woodfine personnel and Service Providers. 
+## II. THE SYNTHESIS LOOP (THE MADISON AVENUE ENGINE)
+The system operates a continuous, self-healing loop in the background:
 
-The **Domains** (Corporate, Projects, Documentation) consist of two core elements:
-1. **Glossaries:** The immutable definition ledgers.
-2. **Topics:** The physical Markdown index cards explaining operational realities.
+1. **The Base Asset:** `service-email` pulls raw files from MSFT and locks them into cold storage as immutable `.eml` files.
+2. **Autonomous Indexing:** The `service-slm` daemon reads the cold files and synthesizes the **First Derivative** (Archetypes, Chart of Accounts, Domains, Themes).
+3. **The Gravity Well:** If seeded with Domains (e.g., Corporate, Projects), the SLM pulls new data toward those wells. If starting from a Zero-State, the SLM synthesizes the matrix entirely from scratch based on detected patterns.
+4. **Self-Healing:** Background cron jobs actively deduplicate and merge redundant Topics.
 
-## III. THE OVERLAY PIPELINE (STAGING VS. PUBLISHING)
-To prevent AI hallucination creep, the ingestion loop operates strictly as a staging procedure.
-
-1. **Ingest & Splinter:** `service-email` drops data into the spool and shatters it.
-2. **Cognitive Staging:** `service-slm` reads the raw text, evaluates it against the Domain Glossaries, and generates an **Overlay Payload** (Suggested New Topics & Facts). It places this in `/knowledge-graph/` (the Staging Ground). It **does not** automatically publish to the LTS Wiki.
-3. **The Fiduciary Merge:** The operator mounts **[F4] CONTENT** on the Command Ledger. The UI displays the Suggested Overlay against the Current LTS State.
-4. **Synthesis:** The operator manually edits and verifies the Overlay. `service-content` then compiles the final Markdown Index Cards, natively hyperlinking recognized Glossary terms, and formally commits the update to the LTS Wiki.
+## III. THE OUTPUT
+The synthesized First Derivative is not hidden in a database. It is continuously written to physical `.CSV` and `.MD` files, allowing the business to instantly export its operational brain for marketing or digital advertising purposes at zero additional cost.
