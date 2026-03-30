@@ -22,8 +22,8 @@
 ### 📦 2. Totebox Archives (Isolated Data Vaults)
 | Asset Cluster | Enterprise Workload | Regulatory Guarantee |
 | :--- | :--- | :--- |
-| `cluster-totebox-corporate` | Institutional Reporting & Synthesis | Secures 3D Asset Tokens (SOC 3 Processing) |
-| `cluster-totebox-personnel` | Secure Communications & Operations | Secures 3D Asset Tokens (SOC 3 Confidentiality) |
+| `cluster-totebox-corporate` | Institutional Reporting & Synthesis | Secures Totebox Archives (SOC 3 Processing) |
+| `cluster-totebox-personnel` | Secure Communications & Operations | Secures Totebox Archives (SOC 3 Confidentiality) |
 | `cluster-totebox-real-property` | Real Estate Ledgers & Project Tracking | Absolute Data Ownership via Sovereign Release Valve |
 
 ---
