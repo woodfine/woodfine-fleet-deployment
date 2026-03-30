@@ -1,54 +1,30 @@
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/woodfine/woodfine-media-assets/main/ASSET-SIGNET-MASTER.svg" width="80" alt="Woodfine Signet">
-
 # Woodfine Fleet Manifest | Manifiesto de Flota Woodfine
-### *Operational Deployment & Fleet Orchestration*
-
-[![Network](https://img.shields.io/badge/Network-PointSav_Mesh-164679?style=flat-square)](#)
-[![Nodes](https://img.shields.io/badge/Active_Nodes-3-164679?style=flat-square)](#)
-[![Protocol](https://img.shields.io/badge/Protocol-Files_over_Databases-164679?style=flat-square)](#)
-
-[ **Corporate Governance** ](https://github.com/woodfine/content-wiki-corporate) | [ **Real Estate Projects** ](https://github.com/woodfine/content-wiki-projects) | [ **System Vendor** ](https://github.com/pointsav)
-
-</div>
-
----
+### *Operational Infrastructure & Digital Operations*
 
 > [!NOTE]
 > **OPERATIONAL POSTURE [MARCH 2026]**
-> **Phase:** 3-Node Trustworthy System Deployment | **Compliance:** SOC 3 & DARP | **Modelo de Datos:** Archivos deterministas (Files over Databases).
+> **Phase:** Infrastructure Deployment | **Compliance:** SOC 3 & DARP | **Architecture:** Independent Data Vaults
 
-## 📡 Deployment Matrix (3-Track System)
-**[ EN ]** Woodfine operates a 100% Digital First infrastructure. We secure all corporate data in decentralized Totebox Archives and audit actions via foundational PointSav engines.
+### 📡 The Digital Nervous System
+**[ EN ]** Woodfine operates a 100% independent digital infrastructure to protect our real estate operations and investor data. This repository maps the physical servers and secure cloud gateways that power our enterprise. We secure all corporate knowledge in decentralized, physically owned data vaults called "Totebox Archives." Operating as sub-millisecond Unikernel environments, these archives completely bypass the risks associated with rented SaaS databases and multi-tenant cloud hypervisors.
 
-**[ ES ]** Woodfine opera una infraestructura 100% de Prioridad Digital. Aseguramos todos los datos corporativos en Archivos Totebox descentralizados.
+> [!WARNING]
+> **SECURITY BOUNDARY DECLARATION**
+> To comply with strict privacy and financial reporting mandates, **this repository acts solely as a structural map of our network. No live ledgers, tenant data, or property financial metrics are stored here.**
 
-<details>
-<summary><b>🛡️ VIEW SECURITY BOUNDARY DECLARATION</b></summary>
-<br>
-This repository maps the physical and virtual nodes of the Woodfine Sovereign Fleet. To comply with DARP mandates, <b>this repository acts solely as a structural map. No live ledgers, tenant data, or property metrics are stored within this SaaS domain.</b>
-<br><br>
-</details>
-
----
-
-## 🗺️ Physical Mesh Topology
-Our private network operates on a Hub-and-Spoke model, securely connecting edge computing to central command without exposing payloads to the public internet.
-
-### 🎛️ 1. Infrastructure (Physical Network)
-| Node Designation | Institutional Role | Connection State |
+### 🎛️ 1. Physical Infrastructure (The Secure Network)
+| Hardware Designation | Institutional Role | Operational State |
 | :--- | :--- | :--- |
-| `fleet-infrastructure-leased` | Laptop Edge Anchor (Node 1) | 🟢 Active (Virtualized) |
-| `fleet-infrastructure-cloud` | Cloud Anchor (Node 2) | 🟢 Active (Virtualized) |
-| `route-network-admin` | Command Centre™ (Node 3) | 🟢 Active (Foundry Host) |
+| `fleet-infrastructure-leased` | Secure Edge Node (Public Routing) | 🟢 `Active` |
+| `fleet-infrastructure-cloud` | Enterprise Cloud Gateway | 🟢 `Active` |
+| `route-network-admin` | Central Command & Cryptographic Authority | 🟢 `Active` |
 
-### 📦 2. Totebox (Data Archives)
-| Asset Cluster | Service Workload | Compliance Guarantee |
+### 📦 2. Totebox Archives (Isolated Data Vaults)
+| Asset Cluster | Enterprise Workload | Regulatory Guarantee |
 | :--- | :--- | :--- |
-| `cluster-totebox-corporate` | service-content | SOC 3 Processing Integrity |
-| `cluster-totebox-personnel` | service-people | SOC 3 Confidentiality |
-| `cluster-totebox-real-property` | Real Estate Ledgers | DARP Export Manifest |
+| `cluster-totebox-corporate` | Institutional Reporting & Synthesis | Secures 3D Asset Tokens (SOC 3 Processing) |
+| `cluster-totebox-personnel` | Secure Communications & Operations | Secures 3D Asset Tokens (SOC 3 Confidentiality) |
+| `cluster-totebox-real-property` | Real Estate Ledgers & Project Tracking | Absolute Data Ownership via Sovereign Release Valve |
 
 ---
 *© 2026 Woodfine Management Corp.*
