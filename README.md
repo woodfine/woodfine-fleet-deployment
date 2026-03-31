@@ -1,30 +1,9 @@
-# Woodfine Fleet Manifest | Manifiesto de Flota Woodfine
-### *Operational Infrastructure & Data Custody*
+# WOODFINE MANAGEMENT CORP.: FLEET DEPLOYMENT
 
-> [!NOTE]
-> **OPERATIONAL POSTURE [MARCH 2026]**
-> **Phase:** Infrastructure Deployment | **Compliance:** SOC 3 & DARP | **Architecture:** Independent Data Vaults
+## OPERATIONAL OVERVIEW
+This repository contains the active fleet configuration for Woodfine Management Corp.'s internal Command Ledger (Panopticon V1.8). The system is designed to execute cross-border capital flow and operational governance while maintaining absolute internal custody of operational intelligence.
 
-### 📡 Operational Infrastructure
-**[ EN ]** Woodfine operates a 100% independent digital infrastructure to protect our real estate operations and investor data. This repository maps the physical servers and secure cloud gateways that power our enterprise. We secure all corporate knowledge in decentralized, physically owned data vaults, completely bypassing the risks associated with rented SaaS databases.
-
-> [!WARNING]
-> **SECURITY BOUNDARY DECLARATION**
-> To comply with strict privacy and financial reporting mandates, **this repository acts solely as a structural map of our network. No live ledgers, tenant data, or property financial metrics are stored here.**
-
-### 🎛️ 1. Physical Infrastructure (The Secure Network)
-| Hardware Designation | Institutional Role | Operational State |
-| :--- | :--- | :--- |
-| [`fleet-infrastructure-leased`](./fleet-infrastructure-leased) | Secure Edge Node (Public Routing) | 🟢 `Active` |
-| [`fleet-infrastructure-cloud`](./fleet-infrastructure-cloud) | Enterprise Cloud Gateway | 🟢 `Active` |
-| [`route-network-admin`](./route-network-admin) | Central Command & Cryptographic Authority | 🟢 `Active` |
-
-### 📦 2. Data Vaults (Isolated Storage)
-| Asset Cluster | Enterprise Workload | Regulatory Guarantee |
-| :--- | :--- | :--- |
-| [`cluster-totebox-corporate`](./cluster-totebox-corporate) | Institutional Reporting & Synthesis | SOC 3 Processing Integrity |
-| [`cluster-totebox-personnel`](./cluster-totebox-personnel) | Secure Communications & Operations | SOC 3 Confidentiality |
-| [`cluster-totebox-real-property`](./cluster-totebox-real-property) | Real Estate Ledgers & Project Tracking | Absolute Data Ownership (DARP) |
-
----
-*© 2026 Woodfine Management Corp.*
+## COMPLIANCE & RISK MITIGATION
+1.  **WORM Protocol (Write Once, Read Many):** Data is strictly ingested via a Semantic Ingress Gateway. Assets must be mapped to a specific Chart of Accounts prior to storage, establishing absolute physical provenance and preventing localized data fragmentation.
+2.  **Compute Economics:** The execution of external computing power is gated by explicit Operator authorization. Operators manually engage hyperscaler API calls via a strict UI toggle, ensuring optimal capital allocation and exact auditing of algorithmic operations.
+3.  **Data Sovereignty:** All internal communication and personnel ledgers are housed in mathematically isolated bootable enclaves, guaranteeing absolute data integrity and seamless portability across any physical or commercial cloud infrastructure.
