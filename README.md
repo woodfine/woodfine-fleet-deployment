@@ -13,23 +13,23 @@
 
 ---
 
-## 1. THE HARDWARE MANIFEST
+## 1. ACTIVE DEPLOYMENTS & NETWORK ARCHITECTURE
 
-**[ EN ]** This repository documents the active physical hardware and network configurations deployed by Woodfine Management Corp. Administration records are committed to Write-Once, Read-Many (WORM) physical ledgers.
+**[ EN ]** This repository documents the active physical hardware and network configurations securing Woodfine's corporate records. Operators access these ledgers through specific terminal architecture:
+* **Type I Terminals:** Dedicated bare-metal hardware running PointSav Workplace OS.
+* **Type II Terminals:** Commercial machines executing the browser-based PointSav Console OS HUD.
 
-> **[ ES ]** *Este repositorio documenta el hardware físico activo y las configuraciones de red desplegadas por Woodfine Management Corp. Los registros de administración se consignan en libros mayores físicos WORM (Escribir una vez, Leer muchas).*
+> **[ ES ]** *Este repositorio documenta el hardware físico activo y las configuraciones de red que aseguran los registros corporativos de Woodfine. Los operadores acceden a estos libros mayores a través de una arquitectura de terminal específica:
+> * **Terminales Tipo I:** Hardware bare-metal dedicado que ejecuta PointSav Workplace OS.
+> * **Terminales Tipo II:** Máquinas comerciales que ejecutan el HUD de PointSav Console OS basado en navegador.*
 
-## 2. TERMINAL ACCESS
+## 2. ACTIVE FLEET DIRECTORY
 
-**[ EN ]** Operational personnel interact with the cyberphysical infrastructure via Type I Terminals (dedicated bare-metal workstations running PointSav Workplace OS) or Type II Terminals (secure hosted applications).
-
-> **[ ES ]** *El personal operativo interactúa con la infraestructura ciberfísica a través de Terminales Tipo I (estaciones de trabajo físicas dedicadas que ejecutan PointSav Workplace OS) o Terminales Tipo II (aplicaciones alojadas seguras).*
-
-| Target Environment | Operating System | Deployment Role | Status |
-| :--- | :--- | :--- | :--- |
-| **`fleet-infrastructure-onprem`** | PointSav Infrastructure OS | Physical Office Servers. | 🟢 Active |
-| **`cluster-totebox-corporate`** | Totebox OS | Internal personnel and event records. | 🟡 Staging |
-| **`cluster-totebox-real-property`**| Totebox OS | Real estate property records. | 🟡 Staging |
+| Deployment Target | Active Path Allocation | Status |
+| :--- | :--- | :--- |
+| **`fleet-infrastructure-onprem`** | Primary physical routing hub handling local network bridging. | 🟢 Active |
+| **`app-mediakit-telemetry`** | External telemetry processing nodes for public disclosures. | 🟢 Active |
+| **`cluster-totebox-personnel-1`** | Isolated internal ledger processing corporate administrative vectors. | 🟡 Staging |
 
 ---
 
