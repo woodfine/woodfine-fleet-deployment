@@ -13,23 +13,24 @@
 
 ---
 
-## 1. ACTIVE DEPLOYMENTS & NETWORK ARCHITECTURE
+## 1. ACTIVE DEPLOYMENTS & TERMINAL ACCESS
 
-**[ EN ]** This repository documents the active physical hardware and network configurations securing Woodfine's corporate records. Operators access these ledgers through specific terminal architecture:
+**[ EN ]** This repository documents the active physical hardware and network configurations securing Woodfine's corporate records. Operators access these internal ledgers through specific terminal architecture:
 * **Type I Terminals:** Dedicated bare-metal hardware running PointSav Workplace OS.
 * **Type II Terminals:** Commercial machines executing the browser-based PointSav Console OS HUD.
 
-> **[ ES ]** *Este repositorio documenta el hardware físico activo y las configuraciones de red que aseguran los registros corporativos de Woodfine. Los operadores acceden a estos libros mayores a través de una arquitectura de terminal específica:
+> **[ ES ]** *Este repositorio documenta el hardware físico activo y las configuraciones de red que aseguran los registros corporativos de Woodfine. Los operadores acceden a estos libros mayores internos a través de una arquitectura de terminal específica:
 > * **Terminales Tipo I:** Hardware bare-metal dedicado que ejecuta PointSav Workplace OS.
 > * **Terminales Tipo II:** Máquinas comerciales que ejecutan el HUD de PointSav Console OS basado en navegador.*
 
 ## 2. ACTIVE FLEET DIRECTORY
 
-| Deployment Target | Active Path Allocation | Status |
+| Deployment Target | Active Path Allocation | Network Status |
 | :--- | :--- | :--- |
 | **`fleet-infrastructure-onprem`** | Primary physical routing hub handling local network bridging. | 🟢 Active |
 | **`app-mediakit-telemetry`** | External telemetry processing nodes for public disclosures. | 🟢 Active |
 | **`cluster-totebox-personnel-1`** | Isolated internal ledger processing corporate administrative vectors. | 🟡 Staging |
+| **`cluster-totebox-real-property`** | Isolated internal ledger maintaining direct-hold real estate assets. | 🟡 Staging |
 
 ---
 
