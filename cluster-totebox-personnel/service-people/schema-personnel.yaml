@@ -1,0 +1,16 @@
+---
+schema_version: "1.0"
+target_entity: "woodfine-personnel-template"
+required_fields:
+  - entity_id
+  - classification
+  - status
+identity_block:
+  first_name: "string"
+  last_name: "string"
+organization_block:
+  primary_entity: "string"
+  roles: "list(object)"
+contact_vectors:
+  primary_email: "string"
+...
