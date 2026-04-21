@@ -1,15 +1,160 @@
-COPYRIGHT © 2026 Woodfine Capital Projects Inc.
-ALL RIGHTS RESERVED.
+PointSav All Rights Reserved License
+Version 1.0 — Effective 2026-04-20
+Copyright (c) 2026 Woodfine Capital Projects Inc. All rights reserved.
 
-PointSav Digital Systems™ and Woodfine Management Corp. operate under the intellectual property definitions of Woodfine Capital Projects Inc.
+PREAMBLE
 
-1. INCUBATION PHASE STATUS
-This repository and all associated source code, documentation, and architectural patterns are currently in an active Incubation Phase. 
+This license governs public operational reference material published by
+Woodfine Capital Projects Inc. ("Woodfine"), including PointSav Digital
+Systems(TM) and Woodfine Management Corp. outputs, under the
+"PointSav-ARR" designation per the factory-release-engineering license
+matrix. It is intended for repositories that are made publicly visible
+for transparency, audit, or reference — NOT for repositories intended to
+be reused, modified, or redistributed.
 
-2. STRICT PROPRIETARY RETENTION
-At this time, no open-source license (e.g., MIT, Apache, GPL) is granted. You may not use, copy, modify, merge, publish, distribute, sublicense, or sell copies of this software, or permit persons to whom the software is furnished to do so, without explicit, written, cryptographic authorization from Woodfine Capital Projects Inc.
+For a license that permits commercial or productive use of this material,
+see PointSav-Commercial.txt or contact corporate.secretary@woodfinegroup.com.
 
-3. LICENSING ROADMAP
-PointSav Digital Systems™ operates on a Vendor/Customer engineering model under the stewardship of Woodfine Capital Projects Inc. Upon the conclusion of the Incubation Phase and the incorporation of PointSav Digital Systems AG, portions of this architecture may transition to a source-available or delayed-open-source model (such as the Functional Source License or Business Source License) to foster knowledge transfer while preventing commercial free-riding. 
+--------------------------------------------------------------------------------
+1. DEFINITIONS
+--------------------------------------------------------------------------------
 
-Until such a corporate transition is finalized and cryptographically signed within this repository, ALL RIGHTS REMAIN STRICTLY RESERVED.
+"Material" means the source code, documentation, configuration,
+media assets, design tokens, brand assets, and any other content
+contained in a repository to which this license is applied.
+
+"You" means the individual or entity exercising rights under this license.
+
+"Woodfine Marks" means the trademarks, service marks, trade dress, logos,
+and names of Woodfine Capital Projects Inc., PointSav Digital Systems(TM),
+Woodfine Management Corp., and their affiliates, whether registered or not.
+
+--------------------------------------------------------------------------------
+2. GRANT OF RIGHTS
+--------------------------------------------------------------------------------
+
+Subject to the restrictions in Section 3, Woodfine grants You a
+non-exclusive, non-transferable, revocable, royalty-free license to:
+
+  (a) view and read the Material;
+  (b) clone the Material for the sole purpose of reading it locally;
+  (c) reference the Material in good-faith academic, journalistic, or
+      security-research contexts with attribution to Woodfine.
+
+For the avoidance of doubt, the grant in this Section does NOT include
+the right to run the Material in any environment, to make internal copies
+within Your organization, or to evaluate the Material against competing
+products. Any such broader use requires a separate agreement — see
+Section 10.
+
+--------------------------------------------------------------------------------
+3. RESTRICTIONS
+--------------------------------------------------------------------------------
+
+Except as expressly granted in Section 2, You MAY NOT:
+
+  (a) use the Material in any product, service, or commercial offering;
+  (b) modify, adapt, translate, or create derivative works of the Material;
+  (c) redistribute the Material or any portion thereof, whether modified
+      or unmodified, in source or binary form;
+  (d) sublicense, sell, rent, lease, or otherwise transfer rights to the
+      Material;
+  (e) remove or alter any copyright, trademark, or other proprietary notice;
+  (f) use the Material to train, fine-tune, or otherwise develop any
+      machine-learning model without a separate written agreement;
+  (g) use the Material in any manner that competes with Woodfine or
+      PointSav Digital Systems(TM).
+
+No exceptions are made for security researchers, named partners, or
+reviewers acting under non-disclosure agreements. Any broader use by
+such parties requires a separate written agreement with Woodfine.
+
+--------------------------------------------------------------------------------
+4. TRADEMARK
+--------------------------------------------------------------------------------
+
+Nothing in this license grants You any right to use any Woodfine Mark.
+Trademark use is governed separately by TRADEMARK.md in the
+factory-release-engineering directory, which is incorporated here by
+reference. Use of Woodfine Marks in materials subject to this license
+— including *-media-assets repositories — remains governed by
+TRADEMARK.md even where the underlying copyrightable elements are
+permitted to be viewed under Section 2.
+
+--------------------------------------------------------------------------------
+5. DESIGN SYSTEM
+--------------------------------------------------------------------------------
+
+The pointsav-design-system repository is licensed under this license.
+Third parties — including partners, franchisees, and vendors building
+interfaces — may not use its tokens, components, or patterns without
+a separate written agreement with Woodfine. Interfaces that need to
+interoperate visually with Woodfine products must obtain such an
+agreement or must be designed independently without reference to the
+design system's protected elements.
+
+--------------------------------------------------------------------------------
+6. WARRANTY DISCLAIMER
+--------------------------------------------------------------------------------
+
+THE MATERIAL IS PROVIDED "AS IS" AND WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND
+NON-INFRINGEMENT. WOODFINE DOES NOT WARRANT THAT THE MATERIAL IS
+ACCURATE, COMPLETE, RELIABLE, CURRENT, OR ERROR-FREE.
+
+--------------------------------------------------------------------------------
+7. LIMITATION OF LIABILITY
+--------------------------------------------------------------------------------
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT WILL
+WOODFINE BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL,
+OR PUNITIVE DAMAGES ARISING OUT OF OR RELATED TO YOUR USE OF OR
+INABILITY TO USE THE MATERIAL, EVEN IF ADVISED OF THE POSSIBILITY OF
+SUCH DAMAGES. WOODFINE'S TOTAL LIABILITY UNDER THIS LICENSE SHALL NOT
+EXCEED ONE HUNDRED CANADIAN DOLLARS (CAD $100).
+
+--------------------------------------------------------------------------------
+8. TERMINATION
+--------------------------------------------------------------------------------
+
+This license terminates automatically and without notice if You breach
+any of its terms. Upon termination, You must cease all use of the
+Material and destroy all copies in Your possession. Sections 3, 6, 7,
+9, and 10 survive termination.
+
+--------------------------------------------------------------------------------
+9. GOVERNING LAW
+--------------------------------------------------------------------------------
+
+This license shall be governed by and construed in accordance with the
+laws of the Province of Ontario and the federal laws of Canada
+applicable therein, without regard to its conflict-of-laws principles.
+Any dispute arising out of or related to this license shall be
+submitted to the exclusive jurisdiction of the courts of the Province
+of Ontario sitting in Toronto.
+
+--------------------------------------------------------------------------------
+10. COMMERCIAL LICENSE INQUIRIES
+--------------------------------------------------------------------------------
+
+If You wish to use the Material for any purpose beyond the grant in
+Section 2, contact corporate.secretary@woodfinegroup.com to obtain a
+PointSav-Commercial license.
+
+--------------------------------------------------------------------------------
+11. MISCELLANEOUS
+--------------------------------------------------------------------------------
+
+Entire Agreement. This license constitutes the entire agreement
+between You and Woodfine concerning the Material and supersedes any
+prior understandings.
+
+Severability. If any provision of this license is held unenforceable,
+the remaining provisions shall remain in full force.
+
+No Waiver. Failure by Woodfine to enforce any provision shall not
+constitute a waiver of that provision.
+
+Assignment. You may not assign this license without Woodfine's prior
+written consent. Woodfine may assign this license freely.
