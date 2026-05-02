@@ -136,7 +136,7 @@ mode:
 - The status bar shows "AI-disabled — deterministic operations only"
 
 This is the substrate-without-inference base case. Per
-`~/Foundry/conventions/substrate-without-inference-base-case.md`, your Totebox
+`[[substrate-without-inference-base-case]]`, your Totebox
 remains operational and your data remains accessible even with all AI tiers
 offline.
 
@@ -216,7 +216,7 @@ If the TUI behavior differs from this guide, check two possibilities:
    `sudo systemctl restart local-slm-cli.service` after the next Foundry
    release.
 2. **Regression.** File via the operator outbox
-   (`~/Foundry/.claude/outbox.md` if you operate the workspace dogfood) or
+   (the Master outbox on the Foundry workspace VM, if you operate the workspace) or
    contact the Foundry vendor channel.
 
 Per CLAUDE.md §6 surface-drift discipline, regressions are surfaced as cleanup

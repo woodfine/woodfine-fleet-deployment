@@ -226,7 +226,7 @@ The workspace VM continues to operate Tier A only. Briefs that needed Tier B (gr
 
 ## When something does not match this guide
 
-This guide reflects the workspace v0.1.91 state. If you find behaviour that diverges from what is documented here, the divergence is either a regression to investigate or an enhancement to backfill into this guide. Either way, surface via `~/Foundry/.claude/inbox.md` (Master inbox) so the next workspace session can address it.
+This guide reflects the workspace v0.1.91 state. If you find behaviour that diverges from what is documented here, the divergence is either a regression to investigate or an enhancement to backfill into this guide. Either way, surface via the Master inbox (on the Foundry workspace VM) so the next workspace session can address it.
 
 
 ---

@@ -10,7 +10,7 @@ The deployment runs on the workspace VM as a single binary (`/usr/local/bin/app-
 | Surface | Path | Owner |
 |---|---|---|
 | systemd unit | `/etc/systemd/system/local-knowledge.service` | root, mode 0644 |
-| systemd unit (IaC) | `~/Foundry/infrastructure/local-knowledge/local-knowledge.service` | version-controlled |
+| systemd unit (IaC) | `vault-privategit-source-1/infrastructure/local-knowledge/local-knowledge.service` (on the Foundry workspace VM) | version-controlled |
 | Binary | `/usr/local/bin/app-mediakit-knowledge` | root, mode 0755 |
 | Content tree | `<as configured by --content-dir>` | local-knowledge readable |
 | State dir | `/var/lib/local-knowledge/state` | local-knowledge:local-knowledge |
@@ -21,7 +21,7 @@ The deployment runs on the workspace VM as a single binary (`/usr/local/bin/app-
 | GCP firewall | `allow-https-documentation` rule, `documentation-public` target tag | gcloud |
 | DNS | DreamHost A record `documentation.pointsav.com` → VM public IP | external |
 
-The unit, binary, citations registry, and IaC are version-controlled in `~/Foundry`. The content tree is version-controlled in `~/Foundry/clones/project-knowledge/content-wiki-documentation/` (or whichever subdirectory is named in `--content-dir`). State directory contents are non-canonical — the Tantivy search index rebuilds on startup from the content tree, so wiping state is non-destructive.
+The unit, binary, citations registry, and IaC are version-controlled in the Foundry workspace VM (`vault-privategit-source-1/`). The content tree is version-controlled in `content-wiki-documentation` (the path configured in `--content-dir`). State directory contents are non-canonical — the Tantivy search index rebuilds on startup from the content tree, so wiping state is non-destructive.
 
 ## Firewall — both layers must be open
 
@@ -77,7 +77,7 @@ PrivateTmp=true
 ReadWritePaths=/var/lib/local-knowledge/state
 ```
 
-To edit the unit, edit the IaC copy at `~/Foundry/infrastructure/local-knowledge/local-knowledge.service`, then propagate to `/etc/systemd/system/local-knowledge.service`, then reload and restart:
+To edit the unit, edit the IaC copy at `vault-privategit-source-1/infrastructure/local-knowledge/local-knowledge.service` (on the Foundry workspace VM), then propagate to `/etc/systemd/system/local-knowledge.service`, then reload and restart:
 
 ```
 sudo systemctl daemon-reload

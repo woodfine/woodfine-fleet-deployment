@@ -1,11 +1,12 @@
 
-## 4. Sovereign Data Extraction (DARP Compliance)
-To satisfy the Digital Asset Resolution Package (DARP) mandate, operators can extract the entire JSON personnel ledger into a flat, human-readable CSV at any time.
+## 4. Personnel Data Export
 
-1. Navigate to the local command terminal (e.g., `~/Foundry`).
-2. Execute the extraction diode: `./tool-extract-people.sh`.
-3. The engine will temporarily flatten the nested JSONs on the cloud node, extract `personnel_export.csv` via SSH, and immediately destroy the temporary cloud file.
-4. Review your data in `./Sovereign-Exports/People/`.
+Operators can export the entire personnel ledger to a flat CSV at any time.
+
+1. Open a terminal in the cluster-totebox-personnel working directory.
+2. Run `./tool-extract-people.sh`.
+3. The script extracts `personnel_export.csv` from the cluster node via SSH.
+4. Review output in `./Sovereign-Exports/People/`.
 
 
 ---

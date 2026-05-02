@@ -50,10 +50,8 @@ not a design doc.
 
 ### 2.1 Source and build
 
-Source lives on the project-slm cluster clone at:
-```
-~/Foundry/clones/project-slm/pointsav-monorepo/service-slm/crates/slm-doorman-server/
-```
+Source code: `pointsav-monorepo/service-slm/crates/slm-doorman-server/`
+(public: `github.com/pointsav/pointsav-monorepo`; on the Foundry workspace VM at `clones/project-slm/pointsav-monorepo/`)
 
 The cluster Task ships changes via promotion (Stage-6 to canonical
 `pointsav/pointsav-monorepo`); Master builds from canonical clone HEAD,
@@ -591,10 +589,10 @@ the §7C ship but the sequence pattern generalizes). Manual form:
 
 ```bash
 # 1. Stage-6 promote cluster → canonical (Master scope)
-~/Foundry/bin/promote.sh --cluster project-slm --target pointsav-monorepo
+bin/promote.sh --cluster project-slm --target pointsav-monorepo  # on the Foundry workspace VM
 
 # 2. Rebuild from canonical clone HEAD
-cd ~/Foundry/clones/<canonical-clone>/pointsav-monorepo/service-slm
+cd <pointsav-monorepo-clone>/service-slm
 cargo build --release -p slm-doorman-server
 
 # 3. Snapshot + install
@@ -647,7 +645,7 @@ rollback is needed, recover the older binary from canonical
 `pointsav/pointsav-monorepo` git history:
 
 ```bash
-cd ~/Foundry/clones/<canonical-clone>/pointsav-monorepo/service-slm
+cd <pointsav-monorepo-clone>/service-slm
 git checkout <previous-good-sha> -- crates/slm-doorman-server/
 cargo build --release -p slm-doorman-server
 # Then install per §6.4 step 3
@@ -677,7 +675,7 @@ The unit file lives in the workspace repo at
 unit change:
 
 ```bash
-cd ~/Foundry
+# On the Foundry workspace VM (vault-privategit-source-1/):
 git log -- infrastructure/local-doorman/local-doorman.service
 git checkout <previous-good-sha> -- \
     infrastructure/local-doorman/local-doorman.service
@@ -714,28 +712,28 @@ systemd only loads `*.conf` files from drop-in directories.
 ## 8. Reference / cross-links
 
 Conventions (architecture and design rationale):
-- `~/Foundry/conventions/four-tier-slm-substrate.md` — Tier 0/1/2/3 ladder
-- `~/Foundry/conventions/api-key-boundary-discipline.md` — keys at the gateway only
-- `~/Foundry/conventions/apprenticeship-substrate.md` — brief / verdict / shadow
-- `~/Foundry/conventions/three-ring-architecture.md` — Ring 1/2/3 boundaries
-- `~/Foundry/conventions/adapter-composition.md` — request-time adapter algebra
+- `[[four-tier-slm-substrate]]` — Tier 0/1/2/3 ladder
+- `[[api-key-boundary-discipline]]` — keys at the gateway only
+- `[[apprenticeship-substrate]]` — brief / verdict / shadow
+- `[[three-ring-architecture]]` — Ring 1/2/3 boundaries
+- `[[adapter-composition]]` — request-time adapter algebra
 
 Infrastructure (substrate and operational state):
-- `~/Foundry/infrastructure/local-doorman/README.md` — endpoint surface, on-disk layout, status
-- `~/Foundry/infrastructure/local-doorman/local-doorman.service` — canonical systemd unit
-- `~/Foundry/infrastructure/local-doorman/bootstrap.sh` — install procedure
-- `~/Foundry/infrastructure/local-slm/` — Tier A backend (OLMo 7B Q4)
-- `~/Foundry/infrastructure/yoyo-manual/README.md` — Tier B operator-presence runbook
-- `~/Foundry/infrastructure/slm-yoyo/CONTRACT.md` — Tier B wire contract
+- on the Foundry workspace VM: `vault-privategit-source-1/infrastructure/local-doorman/README.md` — endpoint surface, on-disk layout, status
+- on the Foundry workspace VM: `vault-privategit-source-1/infrastructure/local-doorman/local-doorman.service` — canonical systemd unit
+- on the Foundry workspace VM: `vault-privategit-source-1/infrastructure/local-doorman/bootstrap.sh` — install procedure
+- on the Foundry workspace VM: `vault-privategit-source-1/infrastructure/local-slm/` — Tier A backend (OLMo 7B Q4)
+- on the Foundry workspace VM: `vault-privategit-source-1/infrastructure/yoyo-manual/README.md` — Tier B operator-presence runbook
+- on the Foundry workspace VM: `vault-privategit-source-1/infrastructure/slm-yoyo/CONTRACT.md` — Tier B wire contract
 
 Tools (Master operates):
-- `~/Foundry/bin/post-impl-brief-queue.sh` — §7C ship sequence (Stage-6 + build + install + restart + smoke + diff-preview)
-- `~/Foundry/bin/promote.sh` — Stage-6 staging-tier → canonical promotion
-- `~/Foundry/bin/capture-edit.py` — post-commit shadow brief emitter (workspace v0.1.83+ writes to queue, not HTTP)
+- on the Foundry workspace VM: `bin/post-impl-brief-queue.sh` — §7C ship sequence (Stage-6 + build + install + restart + smoke + diff-preview)
+- on the Foundry workspace VM: `bin/promote.sh` — Stage-6 staging-tier → canonical promotion
+- on the Foundry workspace VM: `bin/capture-edit.py` — post-commit shadow brief emitter
 
 Source (cluster Task scope):
-- `~/Foundry/clones/project-slm/pointsav-monorepo/service-slm/crates/slm-doorman-server/` — Doorman crate source
-- `~/Foundry/clones/project-slm/pointsav-monorepo/service-slm/ARCHITECTURE.md` — per-project architecture
+- `pointsav-monorepo/service-slm/crates/slm-doorman-server/` — Doorman crate source
+- `pointsav-monorepo/service-slm/ARCHITECTURE.md` — per-project architecture
 
 Doctrine anchors:
 - `DOCTRINE.md` claim #16 — Optional Intelligence (Rings 1+2 functional without Ring 3)
@@ -748,7 +746,7 @@ Doctrine anchors:
 
 ## References
 
-Per `~/Foundry/citations.yaml`:
+Per the Foundry workspace citations registry (`vault-privategit-source-1/citations.yaml` on the workspace VM):
 - [ni-51-102] — BCSC continuous-disclosure obligations (audit ledger
   is the operational artefact backing per-tenant disclosure events)
 

@@ -13,7 +13,7 @@ The home page is rendered by the `app-mediakit-knowledge` crate's `index()` hand
 
 The handler composes: site header → lede (rendered from `index.md`) → featured-pin panel (when `featured-topic.yaml` resolves a valid slug) → "Browse by category" 3×3 grid (all 9 ratified categories) → "Recent additions" feed (top 5 by `last_edited` desc) → site footer.
 
-The deployment instance at `~/Foundry/deployments/media-knowledge-documentation-1/` runs this binary as a systemd service (`local-knowledge.service`) bound to `127.0.0.1:9090`, fronted by an nginx vhost serving `documentation.pointsav.com` over HTTPS.
+The deployment instance (on the Foundry workspace VM at `deployments/media-knowledge-documentation-1/`) runs this binary as a systemd service (`local-knowledge.service`) bound to `127.0.0.1:9090`, fronted by an nginx vhost serving `documentation.pointsav.com` over HTTPS.
 
 ## Format invariants — hard rules
 
@@ -46,7 +46,7 @@ The featured-pin is rotated by editing `featured-topic.yaml` at `content-wiki-do
 4. **Commit via the staging-tier helper.** From `content-wiki-documentation/`:
    ```
    git add featured-topic.yaml
-   ~/Foundry/bin/commit-as-next.sh "rotate featured pin: <slug> — <one-line rationale>"
+   bin/commit-as-next.sh "rotate featured pin: <slug> — <one-line rationale>"  # on the Foundry workspace VM
    ```
    Author identity alternates between Jennifer and Peter per the workspace commit-toggle pattern.
 
