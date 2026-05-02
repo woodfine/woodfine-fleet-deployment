@@ -16,3 +16,10 @@ The cryptographic keys (Tenant ID, Client ID, Secret Value) are mathematically i
 During fleet deployment, PointSav Digital Systems utilizes a strict Zero-Touch Parser to read the live vault, securely transmit the keys across an encrypted air-bridge, and lock them into the node-level execution boundary (`.env`) with absolute 600-level kernel permissions. 
 
 **The keys never enter the version control history, ensuring a mathematically perfect Institutional Showcase.**
+
+
+---
+
+*Copyright © 2026 Woodfine Management Corp. All rights reserved.*
+
+*Woodfine Capital Projects™, Woodfine Management Corp™, PointSav Digital Systems™, Totebox Orchestration™, and Totebox Archive™ are trademarks of Woodfine Capital Projects Inc., used in Canada, the United States, Latin America, and Europe. All other trademarks are the property of their respective owners.*

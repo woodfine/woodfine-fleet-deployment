@@ -9,3 +9,10 @@
 7. Establish the one-way network diode.
 8. Disconnect external peripheral devices.
 9. Lock the physical terminal interface.
+
+
+---
+
+*Copyright © 2026 Woodfine Management Corp. All rights reserved.*
+
+*Woodfine Capital Projects™, Woodfine Management Corp™, PointSav Digital Systems™, Totebox Orchestration™, and Totebox Archive™ are trademarks of Woodfine Capital Projects Inc., used in Canada, the United States, Latin America, and Europe. All other trademarks are the property of their respective owners.*

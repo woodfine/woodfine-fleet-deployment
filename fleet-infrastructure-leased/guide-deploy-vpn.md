@@ -25,3 +25,10 @@ Execute the Vendor payload on the target asset with elevated system privileges t
 Upon successful execution, the physical egress point will output a **Hub Public Key**. 
 
 This cryptographic signature must be recorded in the Woodfine secure ledgers. It acts as the anchor identity for all subsequent node authorizations (e.g., authorizing the MacPro or iMac to enter the sovereign network).
+
+
+---
+
+*Copyright © 2026 Woodfine Management Corp. All rights reserved.*
+
+*Woodfine Capital Projects™, Woodfine Management Corp™, PointSav Digital Systems™, Totebox Orchestration™, and Totebox Archive™ are trademarks of Woodfine Capital Projects Inc., used in Canada, the United States, Latin America, and Europe. All other trademarks are the property of their respective owners.*

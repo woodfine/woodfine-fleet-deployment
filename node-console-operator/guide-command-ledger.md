@@ -20,3 +20,10 @@ Navigation is executed via the physical F-Keys on your keyboard, instantly hot-s
 * **[F5] Minutebook:** Deep Records. Read-only access to immutable corporate PDFs and resolutions.
 * **[F6] Bookkeeper:** Financial Ledgers and Capital Deployment metrics.
 * **[F12] Input Machine:** The Secure Gateway. Drag and drop local desktop files here to strip execution permissions and inject them into the Sovereign network.
+
+
+---
+
+*Copyright © 2026 Woodfine Management Corp. All rights reserved.*
+
+*Woodfine Capital Projects™, Woodfine Management Corp™, PointSav Digital Systems™, Totebox Orchestration™, and Totebox Archive™ are trademarks of Woodfine Capital Projects Inc., used in Canada, the United States, Latin America, and Europe. All other trademarks are the property of their respective owners.*

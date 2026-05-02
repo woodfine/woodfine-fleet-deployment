@@ -22,3 +22,10 @@ To access specific layers of the architecture, strike the corresponding hardware
   * **Action:** Draft communications. The SLM passively assists by exposing the First Derivative (Themes/Domains).
   * **Output:** Export the finalized draft as an `.MD` file to the desktop.
   * **Global Export:** Dump the entire current state of the First Derivative (Archetypes, Domains, Themes) as a `.CSV` for external Data Marketplaces.
+
+
+---
+
+*Copyright © 2026 Woodfine Management Corp. All rights reserved.*
+
+*Woodfine Capital Projects™, Woodfine Management Corp™, PointSav Digital Systems™, Totebox Orchestration™, and Totebox Archive™ are trademarks of Woodfine Capital Projects Inc., used in Canada, the United States, Latin America, and Europe. All other trademarks are the property of their respective owners.*

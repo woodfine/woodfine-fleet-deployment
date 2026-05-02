@@ -17,3 +17,10 @@ rsync -avz --progress admin@136.117.130.104:/assets/personnel-maildir/ /Volumes/
 ```
 
 This mathematical transfer guarantees an exact 1:1 physical clone of the entire operational communication history, ensuring complete disaster recovery capability even if the cloud relay is destroyed.
+
+
+---
+
+*Copyright © 2026 Woodfine Management Corp. All rights reserved.*
+
+*Woodfine Capital Projects™, Woodfine Management Corp™, PointSav Digital Systems™, Totebox Orchestration™, and Totebox Archive™ are trademarks of Woodfine Capital Projects Inc., used in Canada, the United States, Latin America, and Europe. All other trademarks are the property of their respective owners.*

@@ -23,3 +23,10 @@ If the F8 Terminal indicates a stalled pipeline:
 1. Verify the MSFT Graph API tokens in `service-email/auth-credentials.env`.
 2. Ensure the target folders (`totebox-ingress`, etc.) physically exist in the Outlook client.
 3. Check the `spool-daemon` status via systemd to ensure the watchdog is actively monitoring `/maildir/new/`.
+
+
+---
+
+*Copyright © 2026 Woodfine Management Corp. All rights reserved.*
+
+*Woodfine Capital Projects™, Woodfine Management Corp™, PointSav Digital Systems™, Totebox Orchestration™, and Totebox Archive™ are trademarks of Woodfine Capital Projects Inc., used in Canada, the United States, Latin America, and Europe. All other trademarks are the property of their respective owners.*

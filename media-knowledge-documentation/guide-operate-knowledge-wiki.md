@@ -173,3 +173,10 @@ This keeps cargo's resolver scoped to the wiki crate's dependency graph (which u
 - **Rebuild and redeploy the binary.** When pulling Phase 4+ features into production, follow the §7 crate-scoped build pattern. After install, restart and smoke.
 
 The wiki has no scheduled maintenance windows. Restarts are fast (under a second between `systemctl restart` and the next 200 response on `/healthz`). The Tantivy index rebuild on startup is non-blocking — the service answers requests during rebuild, returning empty search results during the rebuild window.
+
+
+---
+
+*Copyright © 2026 Woodfine Management Corp. All rights reserved.*
+
+*Woodfine Capital Projects™, Woodfine Management Corp™, PointSav Digital Systems™, Totebox Orchestration™, and Totebox Archive™ are trademarks of Woodfine Capital Projects Inc., used in Canada, the United States, Latin America, and Europe. All other trademarks are the property of their respective owners.*

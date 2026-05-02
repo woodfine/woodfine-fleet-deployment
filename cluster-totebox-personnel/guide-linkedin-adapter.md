@@ -15,3 +15,10 @@ Before synchronizing this deployment to the GCP cluster (via `node_sync.sh`), yo
 ## 3. Operational Constraints (Risk Mitigation)
 * **Volume Cap:** The adapter is hard-coded to process a maximum of 75-100 operations per execution cycle to prevent heuristic detection by the target network.
 * **Data Ledger:** The adapter queries the master `service-people` database. It does not store contact data locally, ensuring that if the GCP node is destroyed, no personnel data is compromised.
+
+
+---
+
+*Copyright © 2026 Woodfine Management Corp. All rights reserved.*
+
+*Woodfine Capital Projects™, Woodfine Management Corp™, PointSav Digital Systems™, Totebox Orchestration™, and Totebox Archive™ are trademarks of Woodfine Capital Projects Inc., used in Canada, the United States, Latin America, and Europe. All other trademarks are the property of their respective owners.*

@@ -112,3 +112,10 @@ The recent-additions section ranks by `last_edited`. A future iteration may swit
 ## Provenance
 
 Authored 2026-04-30 alongside the home-page-design TOPIC and the design-research draft. The format invariants derive from the Wikipedia Main Page primitive audit (research draft §2). The anti-patterns are operationalised from the cross-cutting failure modes in the wiki-provider-landscape audit (research draft §4). The ratification table reflects the workspace action matrix per `CLAUDE.md` §11 — Master scope, Root scope, Task scope are differentiated.
+
+
+---
+
+*Copyright © 2026 Woodfine Management Corp. All rights reserved.*
+
+*Woodfine Capital Projects™, Woodfine Management Corp™, PointSav Digital Systems™, Totebox Orchestration™, and Totebox Archive™ are trademarks of Woodfine Capital Projects Inc., used in Canada, the United States, Latin America, and Europe. All other trademarks are the property of their respective owners.*
