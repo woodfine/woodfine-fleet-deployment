@@ -18,7 +18,6 @@ The deployment script executes a 4-phase sequence:
 ## III. LIVE RADAR MAINTENANCE
 The `mesh-state.json` file is initially seeded as a static ledger. During standard operations, a cron-based script within the LXC container actively surveys the 2-Node mesh to dynamically update the radar JSON.
 
-
 ---
 
 *Copyright © 2026 Woodfine Management Corp. All rights reserved.*

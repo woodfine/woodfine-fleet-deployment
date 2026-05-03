@@ -21,7 +21,6 @@ Navigation is executed via the physical F-Keys on your keyboard, instantly hot-s
 * **[F6] Bookkeeper:** Financial Ledgers and Capital Deployment metrics.
 * **[F12] Input Machine:** The Secure Gateway. Drag and drop local desktop files here to strip execution permissions and inject them into the Sovereign network.
 
-
 ---
 
 *Copyright © 2026 Woodfine Management Corp. All rights reserved.*

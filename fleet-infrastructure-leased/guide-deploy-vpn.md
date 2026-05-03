@@ -26,7 +26,6 @@ Upon successful execution, the physical egress point will output a **Hub Public 
 
 This cryptographic signature must be recorded in the Woodfine secure ledgers. It acts as the anchor identity for all subsequent node authorizations (e.g., authorizing the MacPro or iMac to enter the sovereign network).
 
-
 ---
 
 *Copyright © 2026 Woodfine Management Corp. All rights reserved.*

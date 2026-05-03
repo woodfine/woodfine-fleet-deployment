@@ -755,7 +755,6 @@ Per the Foundry workspace citations registry (`vault-privategit-source-1/citatio
 *Authored 2026-04-29 in workspace v0.1.83 cycle. Updated when the
 Doorman gains new endpoints, env vars, or operational paths.*
 
-
 ---
 
 *Copyright © 2026 Woodfine Management Corp. All rights reserved.*

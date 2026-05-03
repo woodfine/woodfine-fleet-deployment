@@ -28,7 +28,6 @@ Every command issued to the network follows a strict proposal and authorization 
 * **Verification Prompt:** `[PROPOSED] ACTION: ISOLATE, TARGET: NODE-LAPTOP-A`
 * **Result:** The target node drops all routing tables except the master link to Node 3, freezing its ledgers in place.
 
-
 ---
 
 *Copyright © 2026 Woodfine Management Corp. All rights reserved.*

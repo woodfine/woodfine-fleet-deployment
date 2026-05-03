@@ -11,7 +11,6 @@ To achieve 1:1 parity with the official offline PDF distribution, the human oper
 * [ ] **CSS State Verification**: Ensure the "Digital Infrastructure & Privacy Posture" block is successfully hidden by the `@media print` engine.
 * [ ] **Contact Block Validation**: Verify the physical `.print-contact` block renders seamlessly directly before the legal disclosures.
 
-
 ---
 
 *Copyright © 2026 Woodfine Management Corp. All rights reserved.*

@@ -235,7 +235,6 @@ This guide reflects the workspace v0.1.91 state. If you find behaviour that dive
 
 Authored by Master Claude at workspace v0.1.91 (2026-04-30) by direct observation of live operational state. Validated against `infrastructure/yoyo-manual/README.md` (bootstrap runbook), `bin/yoyo-idle-monitor.sh` (cost-cap monitor), and the workspace v0.1.81 → v0.1.91 commit chain. Cold-start timing measured empirically; disk usage calculated from live provisioning runs; NVIDIA driver compatibility confirmed against DL VM image `common-cu129-ubuntu-2404-nvidia-580`.
 
-
 ---
 
 *Copyright © 2026 Woodfine Management Corp. All rights reserved.*

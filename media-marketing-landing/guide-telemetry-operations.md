@@ -34,7 +34,6 @@ The Tier-2 Cloud Node does not utilize fragile database clusters. All data is ap
 
 Operations utilize a strict "Pull Diode" (`pull-telemetry-ledgers.sh`) to securely download the synthesized `.md` matrices and the raw `.csv` ledgers back to the local terminal. This script enforces a **10-Day Rolling Retention Policy**, mathematically purging any local `.csv` backups older than 10 days to guarantee flawless data hygiene and rapid recovery capabilities.
 
-
 ---
 
 *Copyright © 2026 Woodfine Management Corp. All rights reserved.*

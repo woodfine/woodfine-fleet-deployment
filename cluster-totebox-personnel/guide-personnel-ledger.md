@@ -8,7 +8,6 @@ Operators can export the entire personnel ledger to a flat CSV at any time.
 3. The script extracts `personnel_export.csv` from the cluster node via SSH.
 4. Review output in `./Sovereign-Exports/People/`.
 
-
 ---
 
 *Copyright © 2026 Woodfine Management Corp. All rights reserved.*

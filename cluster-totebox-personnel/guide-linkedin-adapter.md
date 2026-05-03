@@ -16,7 +16,6 @@ Before synchronizing this deployment to the GCP cluster (via `node_sync.sh`), yo
 * **Volume Cap:** The adapter is hard-coded to process a maximum of 75-100 operations per execution cycle to prevent heuristic detection by the target network.
 * **Data Ledger:** The adapter queries the master `service-people` database. It does not store contact data locally, ensuring that if the GCP node is destroyed, no personnel data is compromised.
 
-
 ---
 
 *Copyright © 2026 Woodfine Management Corp. All rights reserved.*

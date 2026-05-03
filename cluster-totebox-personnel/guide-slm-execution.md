@@ -8,7 +8,6 @@ Operators can synchronise the SLM-processed content graph to a local copy at any
 3. The script synchronises `knowledge-graph/` (drafts) and `verified-ledger/` (finalized records) to the local machine without modifying the cluster state.
 4. Review Markdown output in `./Sovereign-Exports/Content/`.
 
-
 ---
 
 *Copyright © 2026 Woodfine Management Corp. All rights reserved.*

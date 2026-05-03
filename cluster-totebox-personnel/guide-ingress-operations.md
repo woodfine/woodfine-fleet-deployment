@@ -24,7 +24,6 @@ If the F8 Terminal indicates a stalled pipeline:
 2. Ensure the target folders (`totebox-ingress`, etc.) physically exist in the Outlook client.
 3. Check the `spool-daemon` status via systemd to ensure the watchdog is actively monitoring `/maildir/new/`.
 
-
 ---
 
 *Copyright © 2026 Woodfine Management Corp. All rights reserved.*

@@ -174,7 +174,6 @@ This keeps cargo's resolver scoped to the wiki crate's dependency graph (which u
 
 The wiki has no scheduled maintenance windows. Restarts are fast (under a second between `systemctl restart` and the next 200 response on `/healthz`). The Tantivy index rebuild on startup is non-blocking — the service answers requests during rebuild, returning empty search results during the rebuild window.
 
-
 ---
 
 *Copyright © 2026 Woodfine Management Corp. All rights reserved.*

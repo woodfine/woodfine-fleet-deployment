@@ -23,7 +23,6 @@ To access specific layers of the architecture, strike the corresponding hardware
   * **Output:** Export the finalized draft as an `.MD` file to the desktop.
   * **Global Export:** Dump the entire current state of the First Derivative (Archetypes, Domains, Themes) as a `.CSV` for external Data Marketplaces.
 
-
 ---
 
 *Copyright © 2026 Woodfine Management Corp. All rights reserved.*

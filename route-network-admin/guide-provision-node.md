@@ -10,7 +10,6 @@
 8. Disconnect external peripheral devices.
 9. Lock the physical terminal interface.
 
-
 ---
 
 *Copyright © 2026 Woodfine Management Corp. All rights reserved.*

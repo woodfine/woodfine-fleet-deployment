@@ -8,7 +8,6 @@ This protocol dictates the physical installation of the host operating system on
 
 *Awaiting exact execution parameters.*
 
-
 ---
 
 *Copyright © 2026 Woodfine Management Corp. All rights reserved.*

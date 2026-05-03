@@ -25,7 +25,6 @@ To extract the archive for an auditor:
 2. Execute: `cp -r /opt/woodfine/cluster-totebox-personnel/ /mnt/encrypted_usb/`
 3. The search index travels with the raw files, ensuring immediate operability off-site.
 
-
 ---
 
 *Copyright © 2026 Woodfine Management Corp. All rights reserved.*
