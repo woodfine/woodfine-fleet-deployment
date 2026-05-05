@@ -50,7 +50,7 @@ The Doorman:
 From the cluster root:
 
 ```bash
-cd /srv/foundry/clones/project-slm/service-slm
+cd /srv/foundry/clones/project-intelligence/service-slm
 cargo build --release -p slm-doorman-server
 ```
 
@@ -67,7 +67,7 @@ sudo /srv/foundry/infrastructure/slm-doorman/bootstrap.sh
 Or, if installing for the first time:
 
 ```bash
-sudo /srv/foundry/clones/project-slm/service-slm/compute/systemd/bootstrap.sh
+sudo /srv/foundry/clones/project-intelligence/service-slm/compute/systemd/bootstrap.sh
 ```
 
 The script:
