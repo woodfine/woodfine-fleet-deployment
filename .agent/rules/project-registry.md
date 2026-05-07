@@ -12,7 +12,7 @@ Deployment prefix taxonomy — see `IT_SUPPORT_Nomenclature_Matrix_V8.md`
 §4 ("fleet-", "route-", "gateway-", "cluster-", "node-", "media-",
 "vault-").
 
-Last updated: 2026-04-22.
+Last updated: 2026-05-07.
 
 ---
 
@@ -22,7 +22,7 @@ Last updated: 2026-04-22.
 |---|---|---|---|
 | cluster-totebox-corporate | Scaffold-coded | cluster | 4 files |
 | cluster-totebox-personnel | Scaffold-coded | cluster | 18 files; contains 701 MB `os-totebox.img` — tracking status TBD, candidate for build-time fetch |
-| cluster-totebox-property | Scaffold-coded | cluster | 4 files; canonical per monorepo rename (was `cluster-totebox-real-property`) |
+| cluster-totebox-property | Scaffold-coded | cluster | 5 files; canonical per monorepo rename (was `cluster-totebox-real-property`); guide-bim-archive-operations.md added 2026-05-07 |
 
 ## Fleet deployments (`fleet-*`)
 
@@ -37,13 +37,17 @@ Last updated: 2026-04-22.
 | Project | State | Type | Notes |
 |---|---|---|---|
 | gateway-interface-command | Scaffold-coded | gateway | 4 files |
+| gateway-knowledge-documentation-1 | Scaffold-coded | gateway | 1 file; guide-knowledge-wiki-sprint-roadmap.md; no scaffold skeleton yet |
+| gateway-orchestration-bim | Active | gateway | 8 files; scaffold skeleton + 4 operational GUIDEs added 2026-05-07 |
+| gateway-orchestration-gis | Scaffold-coded | gateway | 4 files; scaffold skeleton (README + README.es + guide-deployment + guide-provision-node) |
+| gateway-orchestration-gis-1 | Scaffold-coded | gateway | 1 file; guide-gis-adding-a-chain.md; no scaffold skeleton yet |
 
 ## Media deployments (`media-*`)
 
 | Project | State | Type | Notes |
 |---|---|---|---|
 | media-knowledge-corporate | Scaffold-coded | media | 4 files |
-| media-knowledge-distribution | Scaffold-coded | media | 4 files |
+| media-knowledge-distribution | Archived | media | Renamed to media-knowledge-documentation (483bfbb) then removed by Master (6d5cda2, 2026-05-06) — "duplicate of vendor side" |
 | media-knowledge-projects | Scaffold-coded | media | 4 files |
 | media-marketing-landing | Scaffold-coded | media | 17 files |
 
@@ -67,14 +71,14 @@ Last updated: 2026-04-22.
 
 ---
 
-## Summary (2026-04-22 baseline)
+## Summary (2026-05-07)
 
-- **Active:** 0
-- **Scaffold-coded:** 12
-- **Reserved-folder:** 2
+- **Active:** 1
+- **Scaffold-coded:** 16
+- **Reserved-folder:** 1
 - **Defect:** 0
 - **Not-a-project:** 0
 - **Dormant:** 0
-- **Archived:** 0
+- **Archived:** 1
 
-**Total rows:** 14.
+**Total rows:** 19.
