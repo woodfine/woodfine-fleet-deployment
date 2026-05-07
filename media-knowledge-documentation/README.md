@@ -1,0 +1,31 @@
+# MEDIA-KNOWLEDGE-DOCUMENTATION
+
+<div align="center">
+
+[ 🇪🇸 Leer este documento en Español ](./README.es.md)
+
+</div>
+
+**Entity:** PointSav Digital Systems (The Vendor)
+**Taxonomy:** Tier-3 Fleet Node
+**Status:** Active Deployment
+
+---
+
+## I. OPERATIONAL MANDATE
+
+This directory serves as the deployment gateway for the PointSav documentation wiki
+(`documentation.pointsav.com`). It holds operational guides for provisioning, deploying,
+and maintaining the wiki's design system integration and operational configuration.
+
+## II. SOVEREIGN FRAMEWORK DECLARATION
+
+To enforce SOC 3 and DARP compliance, this node is structured to operate on physically
+isolated, Customer-owned architecture. It strictly enforces the Sovereign Data Protocol,
+guaranteeing zero leakage to third-party cloud analytics or foreign intelligence models.
+
+## III. LICENSING
+
+This operational node is governed by the fiduciary parameters of Woodfine Capital
+Projects Inc. Refer to the root `LICENSE` file. All corporate frameworks and ledger
+architectures are strictly reserved.

@@ -48,6 +48,7 @@ Last updated: 2026-05-07.
 |---|---|---|---|
 | media-knowledge-corporate | Scaffold-coded | media | 4 files |
 | media-knowledge-distribution | Archived | media | Renamed to media-knowledge-documentation (483bfbb) then removed by Master (6d5cda2, 2026-05-06) — "duplicate of vendor side" |
+| media-knowledge-documentation | Scaffold-coded | media | 4 files; design-system integration GUIDEs only (dark-mode toggle, design tokens); not operational runbooks; re-ratified 2026-05-07 |
 | media-knowledge-projects | Scaffold-coded | media | 4 files |
 | media-marketing-landing | Scaffold-coded | media | 17 files |
 
@@ -74,11 +75,11 @@ Last updated: 2026-05-07.
 ## Summary (2026-05-07)
 
 - **Active:** 1
-- **Scaffold-coded:** 16
+- **Scaffold-coded:** 17
 - **Reserved-folder:** 1
 - **Defect:** 0
 - **Not-a-project:** 0
 - **Dormant:** 0
 - **Archived:** 1
 
-**Total rows:** 19.
+**Total rows:** 20.
