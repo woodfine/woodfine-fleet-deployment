@@ -1,3 +1,15 @@
+---
+schema: foundry-doc-v1
+title: "Deployment — gateway-orchestration-bim"
+slug: guide-deployment
+type: guide
+status: active
+audience: operators
+bcsc_class: current-fact
+last_edited: 2026-05-08
+editor: pointsav-engineering
+---
+
 # Deployment Guide — gateway-orchestration-bim
 
 Covers the operation of the BIM workflow gateway serving `bim.woodfinegroup.com`. The active deployment instance is `gateway-orchestration-bim-1`.

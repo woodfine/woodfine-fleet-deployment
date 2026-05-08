@@ -1,3 +1,15 @@
+---
+schema: foundry-doc-v1
+title: "Deployment — gateway-orchestration-gis"
+slug: guide-deployment
+type: guide
+status: active
+audience: operators
+bcsc_class: current-fact
+last_edited: 2026-05-08
+editor: pointsav-engineering
+---
+
 # Deployment Guide — gateway-orchestration-gis
 
 Covers the operation of the GIS workflow gateway serving `gis.woodfinegroup.com`. The active deployment instance is `gateway-orchestration-gis-1` on the workspace VM (or eventually the publishing VM per `conventions/publishing-tier-architecture.md`).

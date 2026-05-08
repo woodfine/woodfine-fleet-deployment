@@ -1,3 +1,15 @@
+---
+schema: foundry-doc-v1
+title: "Provision Node — gateway-orchestration-bim"
+slug: guide-provision-node
+type: guide
+status: active
+audience: operators
+bcsc_class: current-fact
+last_edited: 2026-05-08
+editor: pointsav-engineering
+---
+
 # Provision Node Guide — gateway-orchestration-bim
 
 VM-level prerequisites for hosting the BIM workflow gateway.
