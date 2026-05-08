@@ -1,11 +1,15 @@
 ---
 schema: foundry-doc-v1
-document_version: 0.0.1
+title: "Operating the service-slm Doorman on vault-privategit-source-1"
+slug: guide-doorman
+type: guide
+status: active
 audience: workspace-master + operator
-canonical_language: en
+bcsc_class: current-fact
 component: local-doorman.service (slm-doorman-server)
 deployment: vault-privategit-source-1 (foundry-workspace VM)
-last_updated: 2026-04-29
+last_edited: 2026-05-08
+editor: pointsav-engineering
 cites:
   - ni-51-102
 ---

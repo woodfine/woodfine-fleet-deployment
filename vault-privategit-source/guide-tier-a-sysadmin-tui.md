@@ -1,23 +1,13 @@
 ---
-schema: foundry-guide-v1
-state: refined-pending-master-commit
-target_repo: customer/woodfine-fleet-deployment
-target_path: vault-privategit-source/guide-tier-a-sysadmin-tui.md
+schema: foundry-doc-v1
+title: "Operating the Tier A Sysadmin TUI"
+slug: guide-tier-a-sysadmin-tui
+type: guide
+status: active
 audience: operators
-language_protocol: PROSE-GUIDE
-authored: 2026-04-30
-authored_by: master @ /srv/foundry
-refined_by: task-project-language (sub-agent 2026-04-30)
-refined_date: 2026-04-30
-doctrine_version: 0.1.0
-research_done_count: 8
-research_suggested_count: 2
-open_questions_count: 0
-research_provenance: master-empirical-tier-a-swap + slm-cli-design-from-cluster-research
-research_inline: true
-notes_for_editor: |
-  English-only per CLAUDE.md §14. Body is within the 800-1,200 word target.
-  All command examples preserved.
+bcsc_class: forward-looking
+last_edited: 2026-05-08
+editor: pointsav-engineering
 ---
 
 # Operating the Tier A Sysadmin TUI

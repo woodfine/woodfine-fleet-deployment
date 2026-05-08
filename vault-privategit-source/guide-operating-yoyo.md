@@ -1,11 +1,13 @@
 ---
-schema: foundry-guide-v1
+schema: foundry-doc-v1
 title: "Operating the Yo-Yo Tier B Deployment"
-category: vault-privategit-source
-status: stable
-last_edited: 2026-04-30
-editor: pointsav-engineering
+slug: guide-operating-yoyo
+type: guide
+status: active
 audience: operators
+bcsc_class: current-fact
+last_edited: 2026-05-08
+editor: pointsav-engineering
 ---
 
 

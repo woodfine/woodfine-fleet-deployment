@@ -1,3 +1,15 @@
+---
+schema: foundry-doc-v1
+title: "service-slm Doorman — installation and operations"
+slug: guide-doorman-deployment
+type: guide
+status: active
+audience: operators
+bcsc_class: current-fact
+last_edited: 2026-05-08
+editor: pointsav-engineering
+---
+
 # GUIDE-doorman-deployment — service-slm Doorman installation and operations
 
 **Deployment name:** `doorman` (or `slm-doorman` for specificity)  
