@@ -1,3 +1,15 @@
+---
+schema: foundry-doc-v1
+title: "service-message-courier — LinkedIn Automation Adapter"
+slug: guide-linkedin-adapter
+type: guide
+status: active
+audience: operators
+bcsc_class: current-fact
+last_edited: 2026-05-08
+editor: pointsav-engineering
+---
+
 # GUIDE: Physical Egress (service-message-courier)
 
 **Customer:** Woodfine Management Corp.

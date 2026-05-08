@@ -1,3 +1,15 @@
+---
+schema: foundry-doc-v1
+title: "PPN Mesh Execution (the F8 Terminal)"
+slug: guide-mesh-execution
+type: guide
+status: active
+audience: operators
+bcsc_class: current-fact
+last_edited: 2026-05-08
+editor: pointsav-engineering
+---
+
 # 🧭 GUIDE: PPN MESH EXECUTION (THE F8 TERMINAL)
 **Operational Tier:** 3 (Fleet Deployment)
 **Interface:** `os-network-admin` (https://network.woodfinegroup.com)

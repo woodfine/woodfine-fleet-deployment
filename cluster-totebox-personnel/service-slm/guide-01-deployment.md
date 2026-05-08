@@ -1,3 +1,15 @@
+---
+schema: foundry-doc-v1
+title: "SLM Deployment — cluster-totebox-personnel"
+slug: guide-01-deployment
+type: guide
+status: active
+audience: operators
+bcsc_class: forward-looking
+last_edited: 2026-05-08
+editor: pointsav-engineering
+---
+
 # SLM Deployment Guide — cluster-totebox-personnel
 
 Covers deploying the `service-slm` inference stack within the personnel cluster, including the Doorman routing service and the local Tier A backend.

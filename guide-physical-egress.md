@@ -1,3 +1,15 @@
+---
+schema: foundry-doc-v1
+title: "Physical Egress — Regulatory Printing"
+slug: guide-physical-egress
+type: guide
+status: active
+audience: operators
+bcsc_class: current-fact
+last_edited: 2026-05-08
+editor: pointsav-engineering
+---
+
 # GUIDE: Physical Egress (Regulatory Printing)
 **Status:** Operational Mandate | **Taxonomy:** Tier-5-Service
 

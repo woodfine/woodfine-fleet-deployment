@@ -1,3 +1,15 @@
+---
+schema: foundry-doc-v1
+title: "Physical Egress — Cold Storage Backup"
+slug: guide-cold-storage-sync
+type: guide
+status: active
+audience: operators
+bcsc_class: current-fact
+last_edited: 2026-05-08
+editor: pointsav-engineering
+---
+
 # 🧭 GUIDE: PHYSICAL EGRESS (COLD STORAGE BACKUP)
 **Operational Tier:** 3 (Fleet Deployment)
 **Target Node:** cluster-totebox-personnel

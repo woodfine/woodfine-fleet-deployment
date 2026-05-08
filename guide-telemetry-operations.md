@@ -1,3 +1,15 @@
+---
+schema: foundry-doc-v1
+title: "Operational Telemetry Guide"
+slug: guide-telemetry-operations
+type: guide
+status: active
+audience: operators
+bcsc_class: current-fact
+last_edited: 2026-05-08
+editor: pointsav-engineering
+---
+
 # Woodfine Management Corp. | Operational Telemetry Guide
 
 ## Overview

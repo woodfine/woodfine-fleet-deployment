@@ -1,3 +1,15 @@
+---
+schema: foundry-doc-v1
+title: "Mesh Network Orchestration"
+slug: guide-mesh-orchestration
+type: guide
+status: active
+audience: operators
+bcsc_class: forward-looking
+last_edited: 2026-05-08
+editor: pointsav-engineering
+---
+
 # Mesh Network Orchestration Guide
 
 Covers generating WireGuard key pairs and subnet routing tables for the Woodfine private network. The network admin node (`route-network-admin`) holds the master cryptographic keys and authoritative subnet assignments.

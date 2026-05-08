@@ -1,3 +1,15 @@
+---
+schema: foundry-doc-v1
+title: "Ingress Operations and Self-Healing Loop"
+slug: guide-ingress-operations
+type: guide
+status: active
+audience: operators
+bcsc_class: current-fact
+last_edited: 2026-05-08
+editor: pointsav-engineering
+---
+
 # 🧭 GUIDE: INGRESS OPERATIONS & SELF-HEALING LOOP
 **Operational Tier:** 3 (Fleet Deployment)
 **Target Node:** cluster-totebox-personnel-1 (Laptop-A LXC)

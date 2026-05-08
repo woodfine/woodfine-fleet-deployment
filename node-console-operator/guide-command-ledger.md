@@ -1,3 +1,15 @@
+---
+schema: foundry-doc-v1
+title: "Unified Command Ledger Operations"
+slug: guide-command-ledger
+type: guide
+status: active
+audience: operators
+bcsc_class: current-fact
+last_edited: 2026-05-08
+editor: pointsav-engineering
+---
+
 # 🧭 GUIDE: UNIFIED COMMAND LEDGER OPERATIONS
 **Operational Tier:** 3 (Fleet Deployment)
 **Target Node:** node-console-operator

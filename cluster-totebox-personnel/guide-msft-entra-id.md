@@ -1,8 +1,13 @@
 ---
-entity_id: GUIDE_MSFT_ENTRA_ID
-type: GOVERNANCE_MEMO
-domain: INSTITUTIONAL_SECURITY
-status: ACTIVE
+schema: foundry-doc-v1
+title: "Microsoft Entra ID Sovereignty"
+slug: guide-msft-entra-id
+type: guide
+status: active
+audience: operators
+bcsc_class: current-fact
+last_edited: 2026-05-08
+editor: pointsav-engineering
 ---
 
 # GUIDE: MICROSOFT ENTRA ID SOVEREIGNTY
