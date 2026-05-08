@@ -1,3 +1,15 @@
+---
+schema: foundry-doc-v1
+title: "Telemetry Operations and Compliance — media-marketing-landing"
+slug: guide-telemetry-operations
+type: guide
+status: active
+audience: operators
+bcsc_class: current-fact
+last_edited: 2026-05-08
+editor: pointsav-engineering
+---
+
 # 🧭 guide-01: TELEMETRY OPERATIONS & COMPLIANCE
 **Operational Tier:** 3 (Fleet Deployment)
 **Standard:** DS-ADR-06 (Zero-Cookie Architecture)

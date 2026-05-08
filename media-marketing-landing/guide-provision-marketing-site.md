@@ -1,3 +1,15 @@
+---
+schema: foundry-doc-v1
+title: "Provision Node — Marketing Landing Site (Woodfine tenant)"
+slug: guide-provision-marketing-site
+type: guide
+status: active
+audience: operators
+bcsc_class: current-fact
+last_edited: 2026-05-08
+editor: pointsav-engineering
+---
+
 # Provision Node Guide — Marketing Landing Site (Woodfine tenant)
 
 VM-level prerequisites for hosting the Woodfine marketing landing site.

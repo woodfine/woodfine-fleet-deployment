@@ -1,3 +1,15 @@
+---
+schema: foundry-doc-v1
+title: "Deployment — Marketing Landing Site (Woodfine tenant)"
+slug: guide-deployment-marketing-site
+type: guide
+status: active
+audience: operators
+bcsc_class: current-fact
+last_edited: 2026-05-08
+editor: pointsav-engineering
+---
+
 # Deployment Guide — Marketing Landing Site (Woodfine tenant)
 
 Covers the operation of the Woodfine marketing landing site at `home.woodfinegroup.com`. The active deployment instance is `media-marketing-landing-1` — Woodfine customer-tier tenant of `app-mediakit-marketing`.

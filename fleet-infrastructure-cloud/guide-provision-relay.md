@@ -1,3 +1,15 @@
+---
+schema: foundry-doc-v1
+title: "Cloud Relay Provisioning"
+slug: guide-provision-relay
+type: guide
+status: active
+audience: operators
+bcsc_class: forward-looking
+last_edited: 2026-05-08
+editor: pointsav-engineering
+---
+
 # Cloud Relay Provisioning Guide
 
 Covers provisioning the GCP cloud node as the static WireGuard hub for the Woodfine private network. This node has a fixed public IP address and acts as the central relay that all fleet nodes dial into.

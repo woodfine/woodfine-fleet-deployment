@@ -1,3 +1,15 @@
+---
+schema: foundry-doc-v1
+title: "Deploy VPN — Sovereign Overlay Network"
+slug: guide-deploy-vpn
+type: guide
+status: active
+audience: operators
+bcsc_class: current-fact
+last_edited: 2026-05-08
+editor: pointsav-engineering
+---
+
 # OPERATIONAL MANIFEST: SOVEREIGN OVERLAY NETWORK
 
 **ASSET CLASS:** Cyberphysical Infrastructure

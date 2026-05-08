@@ -1,3 +1,15 @@
+---
+schema: foundry-doc-v1
+title: "Bare-Metal Provisioning and Mesh Fusion"
+slug: guide-provision-onprem
+type: guide
+status: active
+audience: operators
+bcsc_class: current-fact
+last_edited: 2026-05-08
+editor: pointsav-engineering
+---
+
 # GUIDE: Bare-Metal Provisioning & Mesh Fusion
 **Customer:** Woodfine Management Corp.
 **Target Environment:** fleet-infrastructure-onprem (Laptop A)

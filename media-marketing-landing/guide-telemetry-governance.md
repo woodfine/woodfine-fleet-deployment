@@ -1,3 +1,15 @@
+---
+schema: foundry-doc-v1
+title: "Telemetry Governance — media-marketing-landing"
+slug: guide-telemetry-governance
+type: guide
+status: active
+audience: operators
+bcsc_class: current-fact
+last_edited: 2026-05-08
+editor: pointsav-engineering
+---
+
 # Telemetry Governance Guide — media-marketing-landing
 
 Covers the data governance posture for the Woodfine Management Corp. marketing landing surface. All telemetry collected through this surface is processed locally under the Totebox Orchestration architecture — no data is routed to third-party analytics platforms.

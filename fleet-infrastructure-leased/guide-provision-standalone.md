@@ -1,3 +1,15 @@
+---
+schema: foundry-doc-v1
+title: "Standalone Node Provisioning"
+slug: guide-provision-standalone
+type: guide
+status: active
+audience: operators
+bcsc_class: forward-looking
+last_edited: 2026-05-08
+editor: pointsav-engineering
+---
+
 # Standalone Node Provisioning Guide
 
 Covers provisioning a leased standalone node (MacBook or other portable hardware) into the Woodfine fleet network via WireGuard. For endpoint-specific configuration (macOS), see `spoke-configs/guide-macos-endpoints.md`.

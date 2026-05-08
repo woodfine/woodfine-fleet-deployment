@@ -1,3 +1,15 @@
+---
+schema: foundry-doc-v1
+title: "Provisioning the Network Ledger (LXC)"
+slug: guide-lxc-network-admin
+type: guide
+status: active
+audience: operators
+bcsc_class: current-fact
+last_edited: 2026-05-08
+editor: pointsav-engineering
+---
+
 # 🧭 GUIDE: PROVISIONING THE NETWORK LEDGER (LXC)
 **Operational Tier:** 3 (Fleet Deployment)
 **Target Node:** fleet-infrastructure-onprem (Laptop A)
