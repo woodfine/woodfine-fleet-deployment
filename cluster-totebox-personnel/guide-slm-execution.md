@@ -27,7 +27,7 @@ Each ingested asset moves through four pipeline stages:
 
 1. **Harvester drop:** the email harvester (see [[guide-ingress-operations]]) lands a `.eml` file into `service-email/maildir/new/`.
 2. **Extraction:** `service-extraction` parses the payload, strips MIME formatting, and constructs a structured Entity Bundle with a transaction identifier.
-3. **SLM classification:** the local Qwen2-0.5B model receives the bundle, evaluates it against the three domain glossaries, and emits archetype + theme labels with a confidence score.
+3. **SLM classification:** the local OLMo-2-0425-1B-Instruct model receives the bundle, evaluates it against the three domain glossaries, and emits archetype + theme labels with a confidence score.
 4. **Content-graph append:** the classified result is appended to the cluster's content graph (`/var/lib/cluster-totebox-personnel/content-graph/<domain>/<ulid>.md`) and the matching personnel record is updated.
 
 Every inference call transits the Doorman boundary and writes an audit-ledger entry to `/var/lib/local-doorman/audit/woodfine/<YYYY-MM>.jsonl` before the upstream model returns. Per-asset latency target on Tier A is under two seconds, dominated by the local model's tokenisation pass.
@@ -46,7 +46,7 @@ The apprenticeship substrate (see [[apprenticeship-substrate]]) tracks per-task-
 
 **Troubleshooting a stalled pipeline:**
 
-1. Verify the Tier A model file is intact: `sha256sum /var/lib/local-slm/Qwen2-0.5B-Instruct-Q4_K_M.gguf`.
+1. Verify the Tier A model file is intact: `sha256sum /var/lib/local-slm/OLMo-2-0425-1B-Instruct-Q4_K_M.gguf`.
 2. Check the env-file Tier A endpoint: `grep SLM_LOCAL_ENDPOINT /etc/local-doorman/local-doorman.env`.
 3. Confirm the domain glossaries are loaded: `ls -la /var/lib/cluster-totebox-personnel/glossaries/{corporate,projects,documentation}.json`.
 4. If all three are healthy and the pipeline is still stalled, restart the SLM service: `sudo systemctl restart local-slm.service` and re-check `journalctl`.

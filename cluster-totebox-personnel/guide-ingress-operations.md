@@ -21,7 +21,7 @@ The Totebox Archive operates an automated, continuous data ingestion loop target
 
 1. **The Diode:** The Harvester pulls a maximum of 9 emails across 3 folders (`totebox-ingress`, `OpenStack`, `PostgresSQL`) and drops them into the `service-email/maildir/new/` spool.
 2. **The Splinter:** The payload is shattered. The `.eml` is secured in cold storage.
-3. **The Intelligence:** Qwen2-0.5B evaluates the text against the **Domain Glossaries** (Corporate, Projects, Documentation), extracting Archetypes and Themes.
+3. **The Intelligence:** OLMo-2-0425-1B-Instruct evaluates the text against the **Domain Glossaries** (Corporate, Projects, Documentation), extracting Archetypes and Themes.
 4. **The Ledger:** The JSON ledgers for personnel and content are autonomously appended and healed.
 
 ## II. THE DOMAIN MATRIX (GLOSSARIES)
