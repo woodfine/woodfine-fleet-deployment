@@ -92,12 +92,14 @@ Heavy archive data — high-resolution architectural drawings, IoT logs, extensi
 
 | Directory | Function | Status |
 |:---|:---|:---|
-| `route-network-admin` | Private network routing and MBA registry | 🟡 Provisioning |
+| `route-network-admin` | Private network routing | 🟡 Provisioning |
 | `fleet-infrastructure-cloud` | GCP cloud relay — active testing | 🟡 Active Testing |
 | `fleet-infrastructure-leased` | Dedicated leased server nodes | 🟡 Provisioning |
 | `fleet-infrastructure-onprem` | On-premises hardware — MacBook Pro (NODE-LAPTOP-A) | 🟡 Provisioning |
 
 The master routing node — iMac 12.1 (NODE-IMAC-12) on the executive's desk — holds the cryptographic keys for the entire network. It dials outbound to the cloud relay. The public internet cannot dial inbound to it. Physical custody of network keys is retained by Woodfine regardless of any cloud provider decision.
+
+There is no central MBA registry. The topology is recorded in the Command Session's `pairings.yaml` and `MANIFEST.md`.
 
 ### Totebox Archives
 

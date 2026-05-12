@@ -84,7 +84,7 @@ El acceso a los archivos de Woodfine no se concede mediante credenciales. Se con
 
 | Directorio | Función | Estado |
 |:---|:---|:---|
-| `route-network-admin` | Enrutamiento de red privada y registro MBA | 🟡 Aprovisionando |
+| `route-network-admin` | Enrutamiento de red privada | 🟡 Aprovisionando |
 | `fleet-infrastructure-cloud` | Nodo de retransmisión en GCP — pruebas activas | 🟡 Pruebas Activas |
 | `fleet-infrastructure-leased` | Nodos de servidor dedicado arrendado | 🟡 Aprovisionando |
 | `fleet-infrastructure-onprem` | Hardware en las instalaciones | 🟡 Aprovisionando |
