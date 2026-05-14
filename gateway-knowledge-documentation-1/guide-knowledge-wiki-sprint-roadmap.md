@@ -4,8 +4,8 @@ title: "Knowledge Wiki — Wikipedia Parity Sprint Roadmap"
 slug: guide-knowledge-wiki-sprint-roadmap
 type: guide
 status: active
-bcsc_class: public-disclosure-safe
-last_edited: 2026-05-07
+bcsc_class: no-disclosure-implication
+last_edited: 2026-05-14
 editor: pointsav-engineering
 ---
 
