@@ -8,8 +8,8 @@ must be closed.
 
 State vocabulary — see `~/Foundry/CLAUDE.md` §8 for definitions.
 
-Deployment prefix taxonomy — see `IT_SUPPORT_Nomenclature_Matrix_V8.md`
-§4 ("fleet-", "route-", "gateway-", "cluster-", "node-", "media-",
+Deployment prefix taxonomy — see `~/Foundry/conventions/nomenclature-taxonomy.md`
+("fleet-", "route-", "gateway-", "cluster-", "node-", "media-",
 "vault-").
 
 Last updated: 2026-05-07.
