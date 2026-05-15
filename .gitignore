@@ -1,1 +1,4 @@
 fleet-infrastructure-leased/spoke-configs/
+cluster-totebox-personnel/*.img
+media-marketing-landing/app-mediakit-telemetry/outbox/RAW_*.csv
+media-marketing-landing/app-mediakit-telemetry/outbox/REPORT_*.md
