@@ -108,7 +108,7 @@ All configuration is environment variables in `/etc/systemd/system/slm-doorman.s
 
 Default configuration points to `local-slm.service`:
 
-```
+```ini
 Environment="SLM_LOCAL_ENDPOINT=http://127.0.0.1:8080"
 Environment="SLM_LOCAL_MODEL=Olmo-3-1125-7B-Think-Q4_K_M.gguf"
 ```
@@ -119,7 +119,7 @@ No setup needed. The Doorman is fully functional in community-tier mode with onl
 
 To enable bursting to external GPU compute, edit `/etc/systemd/system/slm-doorman.service` and uncomment:
 
-```
+```ini
 Environment="SLM_YOYO_ENDPOINT=<GCP Cloud Run URL or RunPod endpoint>"
 Environment="SLM_YOYO_BEARER=<static bearer token from provider>"
 Environment="SLM_YOYO_HOURLY_USD=0.84"  # GCP L4 example
@@ -136,7 +136,7 @@ sudo systemctl restart slm-doorman
 **Cost guardrail:** Tier B is disabled if `SLM_YOYO_ENDPOINT` is not set. No accidental bursts.
 
 **Cost tracking:** The Doorman computes per-call cost as:
-```
+```text
 cost_usd = (hourly_rate / 3,600,000) × inference_time_ms
 ```
 
@@ -148,7 +148,7 @@ To enable calls to external APIs, edit the unit and uncomment for your provider(
 
 **Anthropic Claude:**
 
-```
+```ini
 Environment="SLM_TIER_C_ANTHROPIC_ENDPOINT=https://api.anthropic.com"
 Environment="SLM_TIER_C_ANTHROPIC_API_KEY=sk-..."
 Environment="SLM_TIER_C_ANTHROPIC_INPUT_PER_MTOK_USD=0.0003"
@@ -157,7 +157,7 @@ Environment="SLM_TIER_C_ANTHROPIC_OUTPUT_PER_MTOK_USD=0.0015"
 
 **Google Gemini (same pattern):**
 
-```
+```ini
 Environment="SLM_TIER_C_GEMINI_ENDPOINT=https://generativelanguage.googleapis.com"
 Environment="SLM_TIER_C_GEMINI_API_KEY=..."
 Environment="SLM_TIER_C_GEMINI_INPUT_PER_MTOK_USD=0.000075"
@@ -166,7 +166,7 @@ Environment="SLM_TIER_C_GEMINI_OUTPUT_PER_MTOK_USD=0.0003"
 
 **OpenAI (same pattern):**
 
-```
+```ini
 Environment="SLM_TIER_C_OPENAI_ENDPOINT=https://api.openai.com/v1"
 Environment="SLM_TIER_C_OPENAI_API_KEY=sk-..."
 Environment="SLM_TIER_C_OPENAI_INPUT_PER_MTOK_USD=0.0005"
@@ -188,7 +188,7 @@ Requests without the header or with an unlisted label are denied **before any ne
 
 Once `bin/apprentice.sh` + `bin/capture-edit.py` land (AS-5), enable the training feedback pipeline:
 
-```
+```ini
 Environment="SLM_APPRENTICESHIP_ENABLED=true"
 Environment="FOUNDRY_ROOT=/srv/foundry"
 Environment="FOUNDRY_ALLOWED_SIGNERS=/srv/foundry/identity/allowed_signers"

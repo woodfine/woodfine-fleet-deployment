@@ -40,7 +40,7 @@ Before writing or rewriting anything, read the positive language examples. These
 
 **Read in this order:**
 
-```
+```text
 deployments/vault-privategit-design-1/research/
 ├── brand-voice.md
 ├── design-philosophy.md
@@ -50,7 +50,7 @@ deployments/vault-privategit-design-1/research/
 ```
 
 Also read as positive examples:
-```
+```text
 customer/content-wiki-corporate/     # all 5 articles — correct Bloomberg/FT register
 customer/content-wiki-projects/topic-co-location-methodology.md
 customer/content-wiki-projects/topic-zoning-acquisition-rules.md
@@ -71,7 +71,7 @@ customer/content-wiki-projects/topic-zoning-acquisition-rules.md
 
 With Step 1 findings in hand, author the language token files at:
 
-```
+```text
 vendor/pointsav-design-system/tokens/language/
 ├── register-corporate.json
 ├── register-documentation.json
@@ -105,7 +105,7 @@ vendor/pointsav-design-system/tokens/language/
 
 For each article targeted for rewrite, look up the corresponding entity in the DataGraph. Use these sources:
 
-```
+```text
 clones/project-editorial/.agent/artifacts/datagraph-content-reconciliation-2026-05-07.md
 vendor/pointsav-monorepo/service-content/ontology/topics/topics_documentation.csv
 vendor/pointsav-monorepo/service-content/ontology/topics/topics_corporate.csv
@@ -131,7 +131,7 @@ Fix structural bugs in the DataGraph ontology CSV files before the rewrite so th
 **Owner:** project-intelligence or project-data Task. If running from project-editorial, submit the work via outbox — do not run CSV commits and wiki article commits in the same session.
 
 **Bugs to fix:**
-```
+```text
 vendor/pointsav-monorepo/service-content/ontology/topics/topics_corporate.csv
 → wiki_repo: correct all entries from "content-wiki-documentation" to "content-wiki-corporate"
 → wiki_path: update all entries from "topics/topic-*.md" to "<category>/<slug>.md"

@@ -119,7 +119,7 @@ Drop-in conventions:
 ### 2.4 Env file
 
 Loaded via `EnvironmentFile=` in the unit:
-```
+```text
 /etc/local-doorman/local-doorman.env
 ```
 
@@ -263,12 +263,12 @@ work, `woodfine` for Woodfine deployment work, future tenant labels
 per the customer onboarding flow.
 
 Per-tenant audit ledger paths:
-```
+```text
 /var/lib/local-doorman/audit/<tenant>/<YYYY-MM>.jsonl
 ```
 
 Per-tenant apprenticeship corpus paths:
-```
+```text
 /srv/foundry/data/training-corpus/apprenticeship/<task-type>/<tenant>/
 ```
 
@@ -301,7 +301,7 @@ Tier A inference will block. See §5.1.
 ### 4.2 Audit ledger growth
 
 Path:
-```
+```text
 /var/lib/local-doorman/audit/<tenant>/<YYYY-MM>.jsonl
 ```
 
@@ -329,7 +329,7 @@ moduleId.
 ### 4.3 Apprenticeship corpus growth
 
 Path:
-```
+```text
 /srv/foundry/data/training-corpus/apprenticeship/<task-type>/<tenant>/
 ```
 
@@ -353,7 +353,7 @@ Normal cadence post §7B + §7C ship:
 ### 4.4 Queue depth (post-§7C)
 
 Path (workspace v0.1.83+):
-```
+```text
 /srv/foundry/data/apprenticeship/queue/
 ```
 

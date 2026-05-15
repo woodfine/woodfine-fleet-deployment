@@ -31,7 +31,7 @@ bin/open-archive.sh project-editorial
 
 The script is intended to print an archive summary before opening the session:
 
-```
+```text
 Archive: project-editorial
 Tetrad:  vendor ✓  customer ✓  deployment ✓  wiki ✓
 SLM:     http://localhost:8011 (module: editorial)

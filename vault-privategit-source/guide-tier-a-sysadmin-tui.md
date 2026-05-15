@@ -48,14 +48,14 @@ reasoning), enable Tier B on-demand.
 
 ## Starting a session
 
-```
+```bash
 $ slm-cli
 ```
 
 The TUI opens with a welcome banner showing tenant, current tier, adapter
 version, and connection status:
 
-```
+```text
 service-slm // Totebox Archive System Administrator
 tenant: woodfine | tier: A (local) | adapter: it-support-v0.0.1
 connection: local-doorman:9080 (healthy)
@@ -134,7 +134,7 @@ offline.
 
 If the Tier A specialist stops responding or returns errors:
 
-```
+```bash
 $ sudo systemctl restart local-slm.service
 $ sudo systemctl restart local-doorman.service
 $ slm-cli  # restart the TUI
@@ -148,14 +148,14 @@ disk and warms up). Subsequent responses are fast.
 When your tenant's IT-support adapter is ready (after 200+ verdict-signed
 tuples), an operator with the appropriate identity key deploys it:
 
-```
+```bash
 $ slm-cli /adapters install it-support-woodfine-v0.0.1
 ```
 
 The TUI confirms the adapter is loaded; the next response uses the fine-tuned
 weights. To compare against the base model:
 
-```
+```bash
 $ slm-cli /adapters disable it-support-woodfine-v0.0.1
 ```
 
@@ -167,7 +167,7 @@ Tier A is purpose-routed for sysadmin and IT-support questions. For editorial
 passes (drafting a customer newsletter, refining a long document), bilingual
 generation, or complex reasoning, enable Tier B:
 
-```
+```bash
 $ slm-cli /tier b
 $ <your editorial request>
 ```
@@ -180,7 +180,7 @@ second). Tier B idle-shuts-down after 30 minutes of inactivity to control cost.
 
 When you are ready to monetize your tenant's data assets:
 
-```
+```bash
 $ slm-cli /marketplace enable
 ```
 

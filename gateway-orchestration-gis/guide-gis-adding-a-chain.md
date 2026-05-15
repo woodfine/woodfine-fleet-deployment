@@ -17,7 +17,7 @@ This guide covers the end-to-end process for adding a new retail chain to the co
 
 Each chain requires a YAML file at:
 
-```
+```text
 /srv/foundry/deployments/cluster-totebox-personnel-1/service-fs/service-business/<chain-id>.yaml
 ```
 

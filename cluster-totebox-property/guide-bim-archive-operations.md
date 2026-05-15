@@ -48,7 +48,7 @@ unless stated otherwise.
 A Totebox Archive vault has a fixed directory structure. Do not add or move top-level
 directories; tooling reads from fixed paths.
 
-```
+```text
 <vault>/
 ├── MANIFEST.md                ← Vault identity, asset metadata
 ├── README.md                  ← English description

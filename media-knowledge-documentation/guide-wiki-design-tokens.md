@@ -70,7 +70,7 @@ references `var(--ps-*)` custom properties. The dark-mode init script must appea
 Download WOFF2 files from npm `@ibm/plex` or the IBM Plex GitHub repository. Place in
 `static/fonts/`:
 
-```
+```text
 static/
   fonts/
     IBMPlexSans-Regular.woff2

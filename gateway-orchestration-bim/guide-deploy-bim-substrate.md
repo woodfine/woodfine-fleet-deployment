@@ -57,7 +57,7 @@ token files, regulatory overlays, and climate zone data for the deployment.
 startup.
 
 The systemd unit file is at:
-```
+```text
 pointsav-monorepo/infrastructure/app-orchestration-bim.service
 ```
 

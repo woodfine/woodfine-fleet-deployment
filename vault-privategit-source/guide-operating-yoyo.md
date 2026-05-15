@@ -27,7 +27,7 @@ On the **Yo-Yo VM** (`yoyo-tier-b-1`, us-west1-a, g2-standard-4 with one L4 GPU)
 
 The Doorman knows about Yo-Yo via four environment variables in `/etc/local-doorman/local-doorman.env`:
 
-```
+```bash
 SLM_YOYO_ENDPOINT=http://10.138.0.21:8080
 SLM_YOYO_BEARER=<64-character-hex-token>
 SLM_YOYO_MODEL=olmo-2-32b-instruct-q4
@@ -102,7 +102,7 @@ sudo systemctl edit yoyo-idle-monitor.service
 
 Add:
 
-```
+```ini
 [Service]
 Environment=IDLE_SHUTDOWN_MINUTES=60
 ```

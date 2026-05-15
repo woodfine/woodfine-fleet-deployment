@@ -33,7 +33,7 @@ cluster.
 **Normal mode** — boots Yo-Yo #1, runs the full 4-hour pipeline (2h DataGraph
 + 2h Training):
 
-```
+```bash
 ./scripts/nightly-run.sh
 ```
 
@@ -42,7 +42,7 @@ runs against local Tier A (OLMo 3 7B Q4 on llama-server). Entity extraction
 uses the smaller model. Useful for testing the DataGraph phase without
 incurring Yo-Yo #1 VM costs:
 
-```
+```bash
 ./scripts/nightly-run.sh --no-yoyo
 ```
 
@@ -51,13 +51,13 @@ incurring Yo-Yo #1 VM costs:
 the time budget is exhausted. Use this to verify the pipeline wiring without
 running a full cycle:
 
-```
+```bash
 ./scripts/nightly-run.sh --test-mode
 ```
 
 Phase budgets can be overridden independently via environment variables:
 
-```
+```bash
 DATAGRAPH_SECONDS=300 TRAINING_SECONDS=120 ./scripts/nightly-run.sh
 ```
 
@@ -65,7 +65,7 @@ DATAGRAPH_SECONDS=300 TRAINING_SECONDS=120 ./scripts/nightly-run.sh
 
 After Phase 1 completes, the pipeline writes a health summary to:
 
-```
+```text
 $FOUNDRY_ROOT/data/datagraph-health.json
 ```
 
@@ -92,7 +92,7 @@ nightly run.
 
 To read the health file:
 
-```
+```bash
 jq . /srv/foundry/data/datagraph-health.json
 ```
 
@@ -111,7 +111,7 @@ whether or not entities were extracted. If a parsing bug caused zero-entity
 entries for documents that should have yielded results, clear the ledger file
 (`data/datagraph-processed.txt`) to force re-processing on the next run:
 
-```
+```bash
 > /srv/foundry/data/datagraph-processed.txt
 ```
 
@@ -119,7 +119,7 @@ entries for documents that should have yielded results, clear the ledger file
 
 `corpus-threshold.py` writes marker files to:
 
-```
+```text
 $FOUNDRY_ROOT/data/training-pending/
 ```
 
@@ -136,13 +136,13 @@ progresses through three states:
 
 To list all pending markers:
 
-```
+```bash
 ls /srv/foundry/data/training-pending/
 ```
 
 To inspect a marker:
 
-```
+```bash
 jq . /srv/foundry/data/training-pending/<marker-name>.json
 ```
 
@@ -160,7 +160,7 @@ and is not suitable for a reliable nightly schedule.
 
 To rebuild the image:
 
-```
+```bash
 cd service-slm/compute/packer
 packer build yoyo-image.pkr.hcl
 ```
@@ -176,7 +176,7 @@ Yo-Yo #1.
 Once the image is rebuilt and deployed to Yo-Yo #1, enable the training
 service on the Yo-Yo VM:
 
-```
+```bash
 sudo systemctl enable --now lora-training.service
 ```
 
@@ -191,7 +191,7 @@ to GCS by `adapter-publish.service`.
 Run the Yo-Yo flow tests to verify the DataGraph and training paths without
 running a full nightly cycle:
 
-```
+```bash
 ./scripts/test-yoyo-flows.sh
 ```
 

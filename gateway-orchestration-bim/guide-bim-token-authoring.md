@@ -84,7 +84,7 @@ The Regulation zone adds jurisdiction-specific requirements to the token. Each e
 one constraint from one jurisdiction.
 
 **Overlay file location:**
-```
+```text
 woodfine-design-bim/regulation/<jurisdiction-code>/
 ├── overlay-<element-type>.ids     ← IDS 1.0 constraint file
 └── exclusion-<element-type>.ifc   ← IFC geometric fragment (if applicable)

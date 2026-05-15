@@ -270,13 +270,13 @@ pub fn render_infobox(fields: &serde_yaml::Mapping) -> String {
 ```
 
 **Article syntax:**
-````
+```text
 ```infobox
 Name: PointSav Digital Systems
 Founded: 2024
 Jurisdiction: British Columbia
 ```
-````
+```text
 
 ---
 
@@ -309,7 +309,7 @@ Render as a collapsible `<table class="navbox">`. The existing wikilink resolver
 
 New handler `recent_changes()` — call `git log --pretty=format:"%H|%ae|%ad|%s" --date=short -n 100` across the content directory. Parse output into a `Vec<ChangeEntry>` struct and render an HTML table:
 
-```
+```text
 | Time | Article | Author | Summary |
 ```
 
@@ -395,7 +395,7 @@ ins { background: #66ff66; text-decoration: none; }
 **File:** `pointsav-monorepo/app-mediakit-knowledge/src/server.rs`
 
 Add endpoint:
-```
+```text
 GET /api/complete?q={prefix}
 → JSON array of {slug, title} for articles whose title starts with or contains q
 → max 8 results, ranked by title match quality
