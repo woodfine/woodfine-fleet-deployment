@@ -1,7 +1,7 @@
 ---
 schema: foundry-doc-v1
 title: "MacBook Air Endpoint (Mexico)"
-slug: guide-peter-macbook
+slug: guide-endpoint-macbook
 type: guide
 status: active
 audience: operators
@@ -14,14 +14,14 @@ editor: pointsav-engineering
 
 **ASSET CLASS:** Client Endpoint Provisioning
 **TARGET HARDWARE:** Apple MacBook Air
-**OPERATOR:** Peter
+**OPERATOR:** Principal Manager
 **EXECUTING ENTITY:** Woodfine Management Corp
 
 ## 1. STRATEGIC OBJECTIVE
 This manifest governs the procedure for integrating your remote MacBook Air into the sovereign corporate overlay network. Upon completion, 100% of your digital traffic will be cryptographically tunneled directly to the Woodfine physical egress router, securing your connection while operating internationally.
 
 ## 2. PREREQUISITES
-You require your unique cryptographic configuration file: `peter-mexico.conf`. 
+You require your unique cryptographic configuration file: `endpoint-mexico.conf`. 
 *(Note: This file is mathematically tied to your specific MacBook Air. Do not install it on any other device).*
 
 ## 3. OPERATIONAL EXECUTION
@@ -35,7 +35,7 @@ You require your unique cryptographic configuration file: `peter-mexico.conf`.
 * A WireGuard icon will appear in the top macOS Menu Bar.
 * Click the Menu Bar icon and select **"Manage Tunnels"**.
 * Click the **"+"** icon (or "Import Tunnel(s) from File") in the bottom left corner.
-* Select your `peter-mexico.conf` file.
+* Select your `endpoint-mexico.conf` file.
 * macOS will prompt for permission to add a VPN configuration. Click **"Allow"** and enter your Mac password or use TouchID.
 
 **Step 3: Network Activation & Visual Confirmation**
@@ -44,7 +44,7 @@ You require your unique cryptographic configuration file: `peter-mexico.conf`.
 * To disconnect, click the Menu Bar icon and click the active tunnel name to toggle it off.
 
 ## 4. SUPPORT PROTOCOL
-If you experience connectivity drops, verify your local internet connection in Mexico first. If the local connection is stable but the tunnel fails, contact Jennifer on the internal support desk to verify the Woodfine Hub's routing status.
+If you experience connectivity drops, verify your local internet connection in Mexico first. If the local connection is stable but the tunnel fails, contact the PointSav support desk to verify the Woodfine Hub's routing status.
 
 ---
 

@@ -69,7 +69,7 @@ Managing institutional-grade records should not require an IT department. Woodfi
 
 ### Machine-Based Authorization
 
-Access to Woodfine's archives is not granted through credentials. It is granted through the physical topology of the network. If two machines are not cryptographically paired, they cannot communicate. There is no credentials database to steal because there are no credentials. Access control is defined by the wiring diagram — an architecture Peter Woodfine describes as Geometric Security.
+Access to Woodfine's archives is not granted through credentials. It is granted through the physical topology of the network. If two machines are not cryptographically paired, they cannot communicate. There is no credentials database to steal because there are no credentials. Access control is defined by the wiring diagram — an architecture Woodfine describes as Geometric Security.
 
 ### Cold Storage Entanglement
 
