@@ -22,6 +22,6 @@ This protocol dictates the physical installation of the host operating system on
 
 ---
 
-*Copyright © 2026 Woodfine Management Corp. All rights reserved.*
+*Copyright © 2026 Woodfine Capital Projects Inc. All rights reserved.*
 
 *Woodfine Capital Projects™, Woodfine Management Corp™, PointSav Digital Systems™, Totebox Orchestration™, and Totebox Archive™ are trademarks of Woodfine Capital Projects Inc., used in Canada, the United States, Latin America, and Europe. All other trademarks are the property of their respective owners.*
