@@ -51,6 +51,7 @@ companion-file tier.
 | `media-marketing-landing/` | Marketing landing page media node |
 | `node-console-operator/` | Console operator node |
 | `route-network-admin/` | Private network routing node |
+| `foundry-workspace/` | Foundry workspace platform node — operational guides for the AI-assisted development environment |
 | `vault-privategit-source/` | Source control vault node |
 
 ## Misplacement procedure

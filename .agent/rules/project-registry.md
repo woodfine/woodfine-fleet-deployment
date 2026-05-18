@@ -64,6 +64,12 @@ Last updated: 2026-05-07.
 |---|---|---|---|
 | route-network-admin | Scaffold-coded | route | 5 files |
 
+## Foundry workspace deployments
+
+| Project | State | Type | Notes |
+|---|---|---|---|
+| foundry-workspace | Scaffold-coded | workspace | 6 files; operational guides for AI-assisted dev environment; added 2026-05-18 |
+
 ## Vault deployments (`vault-*`)
 
 | Project | State | Type | Notes |
@@ -72,14 +78,14 @@ Last updated: 2026-05-07.
 
 ---
 
-## Summary (2026-05-07)
+## Summary (2026-05-18)
 
 - **Active:** 1
-- **Scaffold-coded:** 17
+- **Scaffold-coded:** 18
 - **Reserved-folder:** 1
 - **Defect:** 0
 - **Not-a-project:** 0
 - **Dormant:** 0
 - **Archived:** 1
 
-**Total rows:** 20.
+**Total rows:** 21.
