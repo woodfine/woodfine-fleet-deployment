@@ -30,10 +30,22 @@ companion-file tier.
 | `.agent/` | Engine-agnostic agent state (canonical; `.claude/` is a backward-compat symlink per AGENT.md) |
 | `.github/` | GitHub CI / templates |
 
+## Allowed root-tier guides (fleet-wide scope only)
+
+These guides cover cross-deployment topics with no natural per-deployment home.
+Per-deployment guides live inside their deployment subdirectory; these are explicit exceptions.
+
+| File | Purpose |
+|---|---|
+| `guide-mesh-execution.md` | Fleet-wide PPN mesh execution (F8 Terminal) |
+| `guide-physical-egress.md` | Fleet-wide physical egress / regulatory printing |
+| `guide-telemetry-operations.md` | Fleet-wide operational telemetry |
+
 *Add per-repo content directories below this line.*
 
 | Directory | Purpose |
 |---|---|
+| `cluster-intelligence/` | Intelligence cluster — AI pipeline operational guides |
 | `cluster-totebox-corporate/` | CorporateArchive — financial records, minute books, statutory ledgers |
 | `cluster-totebox-personnel/` | PersonnelArchive — identity records, contact history |
 | `cluster-totebox-property/` | PropertyArchive — real estate and property records |
