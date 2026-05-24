@@ -12,7 +12,7 @@ Deployment prefix taxonomy — see `~/Foundry/conventions/nomenclature-taxonomy.
 ("fleet-", "route-", "gateway-", "cluster-", "node-", "media-",
 "vault-").
 
-Last updated: 2026-05-07.
+Last updated: 2026-05-24.
 
 ---
 
@@ -20,7 +20,7 @@ Last updated: 2026-05-07.
 
 | Project | State | Type | Notes |
 |---|---|---|---|
-| cluster-intelligence | Scaffold-coded | cluster | 1 file; `guide-yo-yo-nightly-pipeline.md` blocked on Yo-Yo rename (Do-Not-Use term); tracked in E4 triage |
+| cluster-intelligence | Scaffold-coded | cluster | 1 file; `guide-elastic-compute-nightly-pipeline.md` — E4 language pass complete 2026-05-24 (renamed from guide-yo-yo-nightly-pipeline via git mv, commit 5411008) |
 | cluster-totebox-corporate | Scaffold-coded | cluster | 4 files |
 | cluster-totebox-personnel | Scaffold-coded | cluster | 17 files; os-totebox.img removed 2026-05-15 (binary, gitignored) |
 | cluster-totebox-property | Scaffold-coded | cluster | 5 files; canonical per monorepo rename (was `cluster-totebox-real-property`); guide-bim-archive-operations.md added 2026-05-07 |
