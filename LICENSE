@@ -1,12 +1,12 @@
 PointSav All Rights Reserved License
 Version 1.0 — Effective 2026-04-20
-Copyright (c) 2026 Woodfine Capital Projects Inc. All rights reserved.
+Copyright © 2026 Woodfine Capital Projects Inc. All rights reserved.
 
 PREAMBLE
 
 This license governs public operational reference material published by
 Woodfine Capital Projects Inc. ("Woodfine"), including PointSav Digital
-Systems(TM) and Woodfine Management Corp. outputs, under the
+Systems™ and Woodfine Management Corp™ outputs, under the
 "PointSav-ARR" designation per the factory-release-engineering license
 matrix. It is intended for repositories that are made publicly visible
 for transparency, audit, or reference — NOT for repositories intended to
@@ -26,8 +26,8 @@ contained in a repository to which this license is applied.
 "You" means the individual or entity exercising rights under this license.
 
 "Woodfine Marks" means the trademarks, service marks, trade dress, logos,
-and names of Woodfine Capital Projects Inc., PointSav Digital Systems(TM),
-Woodfine Management Corp., and their affiliates, whether registered or not.
+and names of Woodfine Capital Projects Inc., PointSav Digital Systems™,
+Woodfine Management Corp™, and their affiliates, whether registered or not.
 
 --------------------------------------------------------------------------------
 2. GRANT OF RIGHTS
@@ -63,11 +63,11 @@ Except as expressly granted in Section 2, You MAY NOT:
   (f) use the Material to train, fine-tune, or otherwise develop any
       machine-learning model without a separate written agreement;
   (g) use the Material in any manner that competes with Woodfine or
-      PointSav Digital Systems(TM).
+      PointSav Digital Systems™.
 
 No exceptions are made for security researchers, named partners, or
-reviewers acting under non-disclosure agreements. Any broader use by
-such parties requires a separate written agreement with Woodfine.
+reviewers acting under non-disclosure agreements for uses beyond Section 2.
+Any broader use by such parties requires a separate written agreement with Woodfine.
 
 --------------------------------------------------------------------------------
 4. TRADEMARK
@@ -82,16 +82,22 @@ TRADEMARK.md even where the underlying copyrightable elements are
 permitted to be viewed under Section 2.
 
 --------------------------------------------------------------------------------
-5. DESIGN SYSTEM
+5. DESIGN SYSTEM (HISTORICAL — RELICENSED)
 --------------------------------------------------------------------------------
 
-The pointsav-design-system repository is licensed under this license.
-Third parties — including partners, franchisees, and vendors building
-interfaces — may not use its tokens, components, or patterns without
-a separate written agreement with Woodfine. Interfaces that need to
-interoperate visually with Woodfine products must obtain such an
-agreement or must be designed independently without reference to the
-design system's protected elements.
+The pointsav-design-system repository was previously licensed under
+this license. Effective 2026-05-08, that repository was relicensed to
+Apache License, Version 2.0 to match the open-source convention used
+by IBM Carbon, Adobe Spectrum, and other vendor-backed design systems.
+This section is retained for historical reference and does not govern
+the current state of pointsav-design-system. See LICENSE-MATRIX.md for
+the canonical repo-license assignments.
+
+Trademark and trade-dress elements (PointSav and Woodfine word marks,
+logos, brand colors as source identifiers, distinctive typography) in
+that repository remain governed by the TRADEMARK.md policy and are
+NOT granted by the Apache 2.0 license — Apache 2.0 §6 explicitly
+excludes trademark grants.
 
 --------------------------------------------------------------------------------
 6. WARRANTY DISCLAIMER
@@ -120,7 +126,7 @@ EXCEED ONE HUNDRED CANADIAN DOLLARS (CAD $100).
 
 This license terminates automatically and without notice if You breach
 any of its terms. Upon termination, You must cease all use of the
-Material and destroy all copies in Your possession. Sections 3, 6, 7,
+Material and destroy all copies in Your possession. Sections 3, 4, 6, 7,
 9, and 10 survive termination.
 
 --------------------------------------------------------------------------------
