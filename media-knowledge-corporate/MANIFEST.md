@@ -27,7 +27,7 @@ Markdown content tree as a Wikipedia-shaped wiki via the `app-mediakit-knowledge
 binary.
 
 Target Domain: `corporate.woodfinegroup.com`
-Default bind: `127.0.0.1:9092`.
+Default bind: `127.0.0.1:9095`.
 
 ## Source crate
 
