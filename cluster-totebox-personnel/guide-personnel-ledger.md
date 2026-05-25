@@ -6,16 +6,19 @@ type: guide
 status: active
 audience: operators
 bcsc_class: current-fact
-last_edited: 2026-05-08
+last_edited: 2026-05-25
 editor: pointsav-engineering
 ---
 
-# GUIDE: Personnel Ledger Operations
+# Guide — Personnel Ledger Operations
 
-**Operational Tier:** 3 (Fleet Deployment)
-**Target Node:** cluster-totebox-personnel-1
+## Prerequisites
 
-## 1. Overview
+- SSH access to the cluster-totebox-personnel node.
+- `service-slm` and `service-extraction` services running on the cluster.
+- Read access to `/var/lib/cluster-totebox-personnel/personnel-ledger.json`.
+
+## Overview
 
 The personnel ledger is the canonical JSON flat-file record of every contact known to the cluster. It is populated by `service-extraction` from inbound email and authored append-only by the `service-slm` daemon. The ledger is the cluster's authoritative answer to the question "who has the cluster heard from, in what role, and when?" — a question every downstream service that enriches content with contact context relies on.
 

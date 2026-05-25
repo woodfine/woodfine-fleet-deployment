@@ -6,7 +6,7 @@ type: guide
 status: active
 audience: operators
 bcsc_class: current-fact
-last_edited: 2026-05-08
+last_edited: 2026-05-25
 editor: pointsav-engineering
 ---
 
@@ -14,7 +14,7 @@ editor: pointsav-engineering
 
 **Deployment name:** `doorman` (or `slm-doorman` for specificity)  
 **Catalog:** `vendor/pointsav-fleet-deployment/slm-doorman/`  
-**Instance:** `~/Foundry/deployments/slm-doorman-1/` (workspace dogfood instance)
+**Instance:** `deployments/slm-doorman-1/` (workspace dogfood instance)
 
 ---
 
@@ -437,7 +437,7 @@ sudo systemctl status slm-doorman  # will show parse errors
 - `service-slm/compute/systemd/` — Unit file and bootstrap templates
 - `infrastructure/local-slm/README.md` — Tier A setup
 - `infrastructure/slm-yoyo/` — Tier B (Yo-Yo) infrastructure (if deployed)
-- `DOCTRINE.md` §III — Doorman as the foundational security boundary
+- `service-slm/ARCHITECTURE.md` §III — Doorman as the foundational security boundary
 
 
 ---

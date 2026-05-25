@@ -1,14 +1,28 @@
-# Node Provisioning Guide | Guía de Provisión de Nodo
+---
+schema: foundry-doc-v1
+title: "Provision Node — cluster-totebox-personnel"
+slug: guide-provision-node
+type: guide
+status: scaffold
+audience: operators
+bcsc_class: customer-internal
+last_edited: 2026-05-25
+editor: pointsav-engineering
+---
 
-1. Power the physical server hardware.
-2. Insert the secure boot drive.
-3. Initialize the hardware abstraction layer.
-4. Execute the cryptographic handshake protocol.
-5. Verify the machine-based authorization key.
-6. Mount the isolated data container.
-7. Establish the one-way network diode.
-8. Disconnect external peripheral devices.
-9. Lock the physical terminal interface.
+# Provision Node Guide — cluster-totebox-personnel
+
+This guide covers provisioning a new node for the personnel archive cluster. Full provisioning steps will be documented when the cluster moves from scaffold-coded to active state.
+
+## Prerequisites
+
+- Node hardware (or VM) available with network connectivity.
+- Access credentials for the cluster's private network segment.
+- SSH access to the target node.
+
+## Steps
+
+Detailed provisioning steps are pending. Refer to `guide-deployment.md` in this directory for current deployment state.
 
 ---
 

@@ -6,20 +6,23 @@ type: guide
 status: active
 audience: operators
 bcsc_class: current-fact
-last_edited: 2026-05-08
+last_edited: 2026-05-25
 editor: pointsav-engineering
 ---
 
-# Woodfine Management Corp. | Operational Telemetry Guide
+# Guide — Fleet Telemetry Operations
 
-## Overview
-This guide details the operational execution for retrieving asset ledgers and telemetry reports from the cloud environment to local physical nodes. 
+This guide covers retrieving telemetry reports and raw data ledgers from the cloud node to local operator machines. Two scripts in `media-marketing-landing/` handle this: one that triggers report generation on the cloud node, and one that pulls the generated files down.
 
-## Execution Sub-Routines
-All execution scripts reside in `/media-marketing-landing/`.
+## Prerequisites
 
-1. **Synthesis Trigger (`tool-telemetry-synthesizer.sh`)**: Commands the cloud node to format raw data into human-readable Markdown reports.
-2. **Strict Pull Diode (`tool-telemetry-pull.sh`)**: Secures a one-way transfer of generated reports and raw `.csv` ledger assets to the local machine, enforcing a localized 9-day retention cycle.
+- SSH access to the cloud telemetry node.
+- The telemetry scripts (`tool-telemetry-synthesizer.sh`, `tool-telemetry-pull.sh`) present in the `media-marketing-landing/` directory.
+
+## Procedure
+
+1. **Generate reports:** Run `tool-telemetry-synthesizer.sh` to format raw cloud data into Markdown reports on the cloud node.
+2. **Pull to local:** Run `tool-telemetry-pull.sh` to transfer the reports and raw `.csv` ledger files to the local machine. The script enforces a 9-day local retention policy and removes older local backups automatically.
 
 ---
 

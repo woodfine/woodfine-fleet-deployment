@@ -6,37 +6,41 @@ type: guide
 status: active
 audience: operators
 bcsc_class: current-fact
-last_edited: 2026-05-08
+last_edited: 2026-05-25
 editor: pointsav-engineering
 ---
 
-# OPERATIONAL MANIFEST: SOVEREIGN OVERLAY NETWORK
+# Guide — Deploy WireGuard VPN Hub (Leased Node)
 
-**ASSET CLASS:** Cyberphysical Infrastructure
-**TARGET LEDGER:** `fleet-infrastructure-leased` (Laptop-B)
-**PROCUREMENT VENDOR:** PointSav Digital Systems
-**EXECUTING ENTITY:** Woodfine Management Corp.
+This guide covers deploying `service-vpn` to a leased laptop node to establish the WireGuard routing hub for the Woodfine private network. The hub node receives a static private IP and acts as the anchor for all fleet spokes. The expected outcome is a running WireGuard hub that outputs a public key for spoke registration.
 
-## 1. STRATEGIC OBJECTIVE
-Deployment of `service-vpn` to establish a sovereign, vendor-agnostic routing hub. This capability ensures that internal Woodfine Management Corp. digital traffic is cryptographically isolated from public internet architecture and third-party control planes.
+## Prerequisites
 
-## 2. VENDOR PAYLOAD ACQUISITION
-The provisioning asset is supplied by PointSav Digital Systems. 
+- SSH access to the leased laptop node (Laptop-B) with `sudo` privileges.
+- The `provision_wireguard_hub.sh` script from the `pointsav-monorepo/service-vpn/` source directory.
+- Local network connectivity to the target node.
 
-**Secure Transit Protocol:**
-Initiate a secure local transfer of the Vendor payload to the leased hardware asset.
+## Procedure
 
-`scp /home/mathew/Foundry/pointsav-monorepo/service-vpn/provision_wireguard_hub.sh user@<LOCAL_IP_OF_LAPTOP_B>:/tmp/`
+### Step 1 — Transfer the provisioning script
 
-## 3. OPERATIONAL EXECUTION
-Execute the Vendor payload on the target asset with elevated system privileges to align the kernel network stack and generate the root cryptographic identity.
+Copy the script to the target node:
 
-`ssh user@<LOCAL_IP_OF_LAPTOP_B> "sudo /tmp/provision_wireguard_hub.sh"`
+```bash
+scp pointsav-monorepo/service-vpn/provision_wireguard_hub.sh user@<LOCAL_IP_OF_LAPTOP_B>:/tmp/
+```
 
-## 4. ASSET LEDGER REGISTRATION
-Upon successful execution, the physical egress point will output a **Hub Public Key**. 
+### Step 2 — Execute the provisioning script
 
-This cryptographic signature must be recorded in the Woodfine secure ledgers. It acts as the anchor identity for all subsequent node authorizations (e.g., authorizing the MacPro or iMac to enter the sovereign network).
+Run the script with elevated privileges on the target node:
+
+```bash
+ssh user@<LOCAL_IP_OF_LAPTOP_B> "sudo /tmp/provision_wireguard_hub.sh"
+```
+
+### Step 3 — Record the hub public key
+
+The script outputs a WireGuard **Hub Public Key** on completion. Record this key in `INVENTORY.yaml` at the repository root. It is the anchor identity for all subsequent spoke authorizations (MacBook, iMac, etc.).
 
 ---
 

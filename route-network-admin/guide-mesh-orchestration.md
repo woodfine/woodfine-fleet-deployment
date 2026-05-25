@@ -6,13 +6,20 @@ type: guide
 status: active
 audience: operators
 bcsc_class: forward-looking
-last_edited: 2026-05-08
+last_edited: 2026-05-25
 editor: pointsav-engineering
 ---
 
 # Mesh Network Orchestration Guide
 
-Covers generating WireGuard key pairs and subnet routing tables for the Woodfine private network. The network admin node (`route-network-admin`) holds the master cryptographic keys and authoritative subnet assignments.
+Covers generating WireGuard key pairs and subnet routing tables for the Woodfine private network. The network admin node (`route-network-admin`) holds the master cryptographic keys and authoritative subnet assignments. Complete this guide before provisioning any spoke nodes.
+
+## Prerequisites
+
+- SSH access to each fleet node (cloud relay, on-premises, and leased endpoints).
+- WireGuard installed on all nodes: `sudo apt-get install wireguard`
+- Secure local storage for private keys (never committed to git or transmitted).
+- Write access to `INVENTORY.yaml` in this repository.
 
 This guide is in development. The steps below reflect the design intent; exact IP ranges and peer list will be documented when the route-network-admin cluster moves to Active state.
 

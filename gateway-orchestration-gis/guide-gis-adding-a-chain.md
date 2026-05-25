@@ -4,12 +4,19 @@ title: "Guide: Adding a New Chain to the GIS Pipeline"
 slug: guide-gis-adding-a-chain
 deployment: gateway-orchestration-gis-1
 type: guide
-last_edited: 2026-05-07
+last_edited: 2026-05-25
 editor: pointsav-engineering
 bcsc_class: internal
 ---
 
-This guide covers the end-to-end process for adding a new retail chain to the co-location intelligence platform. All commands run from the `pointsav-monorepo/app-orchestration-gis/` directory on the workspace VM.
+This guide covers the end-to-end process for adding a new retail chain to the co-location intelligence platform. All commands run from the `pointsav-monorepo/app-orchestration-gis/` directory on the workspace VM. The expected outcome is the new chain's data ingested, classified, and deployed to the live GIS map tiles.
+
+## Prerequisites
+
+- Access to the `pointsav-monorepo/app-orchestration-gis/` directory on the workspace VM.
+- `python3` and `jq` available on PATH.
+- The Wikidata QID for the chain (or OSM tag equivalent) identified before starting.
+- The deployment instance directory (`deployments/gateway-orchestration-gis-1/www/`) writable.
 
 ---
 
@@ -147,7 +154,7 @@ cp pointsav-monorepo/app-orchestration-gis/www/index.html \
 ```bash
 git add pointsav-monorepo/app-orchestration-gis/config.py \
         pointsav-monorepo/app-orchestration-gis/www/index.html
-~/Foundry/bin/commit-as-next.sh "GIS: add <chain-id> — <N> records, <outcome>"
+bin/commit-as-next.sh "GIS: add <chain-id> — <N> records, <outcome>"
 ```
 
 Stage the YAML separately if it is tracked in the cluster repo. The JSONL and cleansed-clusters.jsonl are in the Totebox deployment (not tracked in Git).

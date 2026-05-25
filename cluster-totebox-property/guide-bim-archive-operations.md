@@ -5,7 +5,7 @@ slug: guide-bim-archive-operations
 type: guide
 status: active
 bcsc_class: customer-internal
-last_edited: 2026-05-17
+last_edited: 2026-05-25
 editor: pointsav-engineering
 ---
 

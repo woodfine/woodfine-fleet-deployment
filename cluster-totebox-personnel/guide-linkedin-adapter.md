@@ -6,27 +6,40 @@ type: guide
 status: active
 audience: operators
 bcsc_class: current-fact
-last_edited: 2026-05-08
+last_edited: 2026-05-25
 editor: pointsav-engineering
 ---
 
-# GUIDE: Physical Egress (service-message-courier)
+# Guide — LinkedIn Automation Adapter
 
-**Customer:** Woodfine Management Corp.
-**Target Environment:** cluster-GCP-free (Private Cloud)
-**Operation:** LinkedIn Automation Adapter Injection
+This guide covers deploying the LinkedIn egress adapter for `service-message-courier` to the personnel cluster. The adapter automates outbound LinkedIn messaging via the cluster's private cloud node, subject to a built-in volume cap to prevent heuristic detection.
 
-## 1. Operational Overview
-This document governs the physical egress of automated messaging from Woodfine's Private Cloud into the LinkedIn network. We utilize the generic `service-message-courier` provided by PointSav Digital Systems and inject our proprietary LinkedIn execution adapter.
+## Prerequisites
 
-## 2. The Injection Protocol
-Before synchronizing this deployment to the GCP cluster (via `node_sync.sh`), you must place the physical execution script into the isolated adapter directory.
+- Access to the `service-message-courier/private-adapters/` directory on the cluster node.
+- `node_sync.sh` available for syncing the deployment to the GCP cluster.
+- The `linkedin-egress.py` adapter script provided by the operator.
 
-**Target Location:** `/home/mathew/deployments/woodfine-fleet-deployment/cluster-totebox-personnel/service-message-courier/private-adapters/linkedin-egress.py`
+## Procedure
 
-## 3. Operational Constraints (Risk Mitigation)
-* **Volume Cap:** The adapter is hard-coded to process a maximum of 75-100 operations per execution cycle to prevent heuristic detection by the target network.
-* **Data Ledger:** The adapter queries the master `service-people` database. It does not store contact data locally, ensuring that if the GCP node is destroyed, no personnel data is compromised.
+### Step 1 — Place the adapter script
+
+Copy the adapter script to the isolated adapter directory before syncing the deployment:
+
+**Target path:** `service-message-courier/private-adapters/linkedin-egress.py`
+
+### Step 2 — Sync to the cluster
+
+Run `node_sync.sh` to push the updated adapter to the GCP cluster node.
+
+## Operational constraints
+
+| Constraint | Value |
+|---|---|
+| Volume cap per execution cycle | 75–100 operations |
+| Contact data storage | None on the cluster node; queries `service-people` at runtime only |
+
+The volume cap is hard-coded in the adapter. Do not modify it without operator approval.
 
 ---
 

@@ -6,16 +6,19 @@ type: guide
 status: active
 audience: operators
 bcsc_class: current-fact
-last_edited: 2026-05-08
+last_edited: 2026-05-25
 editor: pointsav-engineering
 ---
 
-# GUIDE: service-slm Execution Pipeline
+# Guide — service-slm Execution Pipeline
 
-**Operational Tier:** 3 (Fleet Deployment)
-**Target Node:** cluster-totebox-personnel-1
+## Prerequisites
 
-## 1. Overview
+- `local-slm.service` running on the cluster node (Tier A inference engine).
+- `local-doorman.service` running and listening on `127.0.0.1:9080`.
+- Domain glossary files present at `/var/lib/cluster-totebox-personnel/glossaries/`.
+
+## Overview
 
 The cluster runs a local `service-slm` Tier A inference engine that evaluates every ingested asset against the three domain glossaries (corporate, projects, documentation), extracts archetypes and themes, and writes the result to the content graph. This cluster operates **Tier A only** — no Tier B GPU burst or Tier C external API calls originate here. The local-only posture keeps every inference call on the cluster node and avoids any per-call cost.
 

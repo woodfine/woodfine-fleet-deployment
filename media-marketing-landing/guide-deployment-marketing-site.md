@@ -6,7 +6,7 @@ type: guide
 status: active
 audience: operators
 bcsc_class: current-fact
-last_edited: 2026-05-08
+last_edited: 2026-05-25
 editor: pointsav-engineering
 ---
 
@@ -29,7 +29,7 @@ The landing site presents WordPress-familiar navigation: `/wp-admin`-style Dashb
 ## Bring-up sequence
 
 1. Install binary at `/usr/local/bin/app-mediakit-marketing` (Master scope; operator-presence sudo).
-2. Create `local-marketing.service` systemd unit pointing at `~/Foundry/deployments/media-marketing-landing-1/`.
+2. Create `local-marketing.service` systemd unit pointing at the deployment instance directory (e.g. `deployments/media-marketing-landing-1/`).
 3. Configure environment:
    - `SERVICE_MARKETING_MODULE_ID=woodfine`
    - `SERVICE_MARKETING_CONTENT_DIR=/srv/marketing-woodfine/content/`
@@ -57,7 +57,7 @@ Marketing landing runs on a $7/mo Tier 0 node:
 
 - Authentication: dev-mode passthrough until operator seeds `MARKETING_PASSWORD_HASH`
 - Monitoring: nginx access log + service-marketing journal
-- WORM ledger: every page edit produces a versioned tuple at `~/Foundry/data/marketing-ledger/<tenant>/<YYYY-MM>.jsonl`
+- WORM ledger: every page edit produces a versioned tuple at `/var/lib/local-marketing/audit/<tenant>/<YYYY-MM>.jsonl`
 
 ## When this site graduates to its own VM
 

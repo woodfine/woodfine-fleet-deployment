@@ -6,11 +6,21 @@ type: guide
 status: active
 audience: operators
 bcsc_class: current-fact
-last_edited: 2026-05-08
+last_edited: 2026-05-25
 editor: pointsav-engineering
 ---
 
 
+
+# Guide — Operating the Yo-Yo Tier B Deployment
+
+This guide describes the operator-facing tasks for the Yo-Yo (Tier B) deployment on the workspace VM. It complements `infrastructure/yoyo-manual/README.md`, which is the bootstrap runbook. This guide covers operations after first boot — verifying health, managing the idle cost cap, handling model upgrades, and decommissioning.
+
+## Prerequisites
+
+- The Yo-Yo VM (`yoyo-tier-b-1`) provisioned and running, or access to start it via `gcloud`.
+- `local-doorman.service` running on the workspace VM.
+- `gcloud` CLI authenticated and configured for the `woodfine-node-gcp-free` project.
 
 This guide describes the operator-facing tasks for the Yo-Yo (Tier B) deployment on the workspace VM. It complements `infrastructure/yoyo-manual/README.md`, which is the bootstrap runbook. This guide covers operations after first boot.
 
@@ -20,7 +30,7 @@ The Yo-Yo deployment consists of three runtime components on two GCE VMs:
 
 On the **workspace VM** (`foundry-workspace`, us-west1-a, e2-standard-4):
 - `local-doorman.service` — Rust binary at `/usr/local/bin/slm-doorman-server`. Routes inference requests to Tier A, Tier B, or Tier C. Holds bearer tokens. Writes audit ledger.
-- `yoyo-idle-monitor.timer` and `yoyo-idle-monitor.service` — bash cost-cap monitor at `/srv/foundry/bin/yoyo-idle-monitor.sh`. Polls Yo-Yo every 5 minutes; stops the VM after 30 minutes idle.
+- `yoyo-idle-monitor.timer` and `yoyo-idle-monitor.service` — bash cost-cap monitor at `bin/yoyo-idle-monitor.sh`. Polls Yo-Yo every 5 minutes; stops the VM after 30 minutes idle.
 
 On the **Yo-Yo VM** (`yoyo-tier-b-1`, us-west1-a, g2-standard-4 with one L4 GPU):
 - `yoyo-llama-server.service` — `llama.cpp` C++ binary at `/opt/llama.cpp/build/bin/llama-server`. Serves OLMo 2 32B Instruct Q4_K_S over HTTP at `127.0.0.1:8080` and the VM's internal IP. Bearer-authenticated.
@@ -228,7 +238,7 @@ The workspace VM continues to operate Tier A only. Briefs that needed Tier B (gr
 
 ## When something does not match this guide
 
-This guide reflects the workspace v0.1.91 state. If you find behaviour that diverges from what is documented here, the divergence is either a regression to investigate or an enhancement to backfill into this guide. Either way, surface via the Master inbox (on the Foundry workspace VM) so the next workspace session can address it.
+This guide reflects the workspace v0.1.91 state. If you find behaviour that diverges from what is documented here, the divergence is either a regression to investigate or an enhancement to backfill into this guide. Either way, surface via the workspace outbox so the P1 administrator can address it at the next session.
 
 
 ---

@@ -6,23 +6,18 @@ type: guide
 status: active
 audience: operators
 bcsc_class: current-fact
-last_edited: 2026-05-08
+last_edited: 2026-05-25
 editor: pointsav-engineering
 ---
 
-# OPERATIONAL MANIFEST: MACBOOK AIR ENDPOINT (MEXICO)
+# Guide — MacBook Air Endpoint (Mexico)
 
-**ASSET CLASS:** Client Endpoint Provisioning
-**TARGET HARDWARE:** Apple MacBook Air
-**OPERATOR:** Principal Manager
-**EXECUTING ENTITY:** Woodfine Management Corp
+This guide covers installing and activating the WireGuard VPN tunnel on a MacBook Air operating remotely. Upon completion, the endpoint's traffic routes through the Woodfine private network hub.
 
-## 1. STRATEGIC OBJECTIVE
-This manifest governs the procedure for integrating your remote MacBook Air into the sovereign corporate overlay network. Upon completion, 100% of your digital traffic will be cryptographically tunneled directly to the Woodfine physical egress router, securing your connection while operating internationally.
+## Prerequisites
 
-## 2. PREREQUISITES
-You require your unique cryptographic configuration file: `endpoint-mexico.conf`. 
-*(Note: This file is mathematically tied to your specific MacBook Air. Do not install it on any other device).*
+- Your unique WireGuard configuration file: `endpoint-mexico.conf`. This file is tied to your specific device; do not install it on another device.
+- macOS administrator privileges to authorize the VPN network extension.
 
 ## 3. OPERATIONAL EXECUTION
 

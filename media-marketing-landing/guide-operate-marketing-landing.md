@@ -5,7 +5,7 @@ slug: guide-operate-marketing-landing
 type: guide
 status: active
 bcsc_class: customer-internal
-last_edited: 2026-05-07
+last_edited: 2026-05-25
 editor: pointsav-engineering
 ---
 

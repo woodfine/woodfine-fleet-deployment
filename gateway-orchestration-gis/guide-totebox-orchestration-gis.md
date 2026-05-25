@@ -9,7 +9,7 @@ status: active
 audience: vendor-internal
 bcsc_class: internal
 language_protocol: PROSE-GUIDE
-last_edited: 2026-05-02
+last_edited: 2026-05-25
 editor: pointsav-engineering
 cites:
   - totebox-orchestration-convention

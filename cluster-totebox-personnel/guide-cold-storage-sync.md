@@ -1,34 +1,41 @@
 ---
 schema: foundry-doc-v1
-title: "Physical Egress — Cold Storage Backup"
+title: "Cold Storage Backup — Personnel Archive"
 slug: guide-cold-storage-sync
 type: guide
 status: active
 audience: operators
 bcsc_class: current-fact
-last_edited: 2026-05-08
+last_edited: 2026-05-25
 editor: pointsav-engineering
 ---
 
-# 🧭 GUIDE: PHYSICAL EGRESS (COLD STORAGE BACKUP)
-**Operational Tier:** 3 (Fleet Deployment)
-**Target Node:** cluster-totebox-personnel
+# Guide — Cold Storage Backup (Personnel Archive)
 
----
+This guide covers executing a quarterly cold-storage backup of the personnel archive maildir to a local physical drive. Because the archive uses flat-file storage, no export tools or vendor software are required — a standard `rsync` command produces a 1:1 copy.
 
-## I. EXECUTIVE SUMMARY
-This guide outlines the Terminal Priority commands required to execute a physical egress of the Immutable Ledger. 
+## Prerequisites
 
-Because the Totebox Architecture utilizes flat-file Entity Bundles (Files over Databases), the Customer maintains absolute custodial ownership of the data. No proprietary export tools or vendor approvals are required to back up the corporate history.
+- A secure external hard drive mounted at `/Volumes/Woodfine-Cold-Storage/`.
+- Network access to the personnel archive node (`136.117.130.104`).
+- SSH credentials for the `admin` account on the archive node.
 
-## II. EXECUTION PROTOCOL
-To execute a quarterly cold-storage mirror, plug a secure hard drive into the Tier 1 Command Authority (iMac 12.1) and execute the following network sync command:
+## Procedure
+
+Plug the secure hard drive into the operator workstation and run:
 
 ```bash
 rsync -avz --progress admin@136.117.130.104:/assets/personnel-maildir/ /Volumes/Woodfine-Cold-Storage/personnel-maildir/
 ```
 
-This mathematical transfer guarantees an exact 1:1 physical clone of the entire operational communication history, ensuring complete disaster recovery capability even if the cloud relay is destroyed.
+## Expected Outcome
+
+`rsync` completes with no errors. The `/Volumes/Woodfine-Cold-Storage/personnel-maildir/` directory is an exact copy of the archive node's maildir. Verify with:
+
+```bash
+rsync --dry-run -avz admin@136.117.130.104:/assets/personnel-maildir/ /Volumes/Woodfine-Cold-Storage/personnel-maildir/
+# Expected: 0 files to transfer
+```
 
 ---
 

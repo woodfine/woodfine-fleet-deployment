@@ -5,9 +5,13 @@ slug: guide-elastic-compute-nightly-pipeline
 type: guide
 status: active
 bcsc_class: public-disclosure-safe
-last_edited: 2026-05-24
+last_edited: 2026-05-25
 editor: pointsav-engineering
 ---
+
+# Guide — Elastic Compute #1 Nightly Pipeline
+
+This guide covers running the nightly entity-extraction and model-training pipeline against the DataGraph. The pipeline operates in two phases: DataGraph rebuild (Phase 1, entity extraction via local doorman and service-content) and training marker dispatch (Phase 2, corpus threshold check and LoRA adapter preparation). The expected outcome is an updated entity count in `datagraph-health.json` and, when corpus thresholds are met, a `.json` training marker in the pending directory.
 
 ## Prerequisites
 

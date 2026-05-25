@@ -1,10 +1,28 @@
+---
+schema: foundry-doc-v1
+title: "Deployment — media-knowledge-projects"
+slug: guide-deployment
+type: guide
+status: scaffold
+audience: operators
+bcsc_class: customer-internal
+last_edited: 2026-05-25
+editor: pointsav-engineering
+---
+
 # Deployment Guide — media-knowledge-projects
 
-Covers initial deployment of the project knowledge wiki instance (`app-mediakit-knowledge`), serving project-specific documentation for active Woodfine operations.
+Covers initial deployment of the projects knowledge wiki instance (`app-mediakit-knowledge`), serving project-specific documentation for active Woodfine operations.
 
-This cluster is in the scaffold phase. Full deployment procedures will be documented when the cluster moves to Active state. For current node configuration and service inventory, refer to `README.md` in this directory.
+This cluster is in the scaffold phase. Full deployment procedures will be documented when the cluster moves to active state. For current node configuration and service inventory, refer to `README.md` in this directory.
 
 When this cluster is deployed, this guide will cover: binary installation, systemd unit configuration, environment file setup, and post-deploy smoke verification.
+
+## Prerequisites
+
+- Node provisioned per `guide-provision-node.md`.
+- nginx and certbot installed on the target VM.
+- DNS A record for the projects wiki domain resolving to the VM's public IP.
 
 ---
 

@@ -5,9 +5,15 @@ slug: guide-claude-code-hooks-installed
 type: guide
 status: active
 bcsc_class: customer-internal
-last_edited: 2026-05-18
+last_edited: 2026-05-25
 editor: pointsav-engineering
 ---
+
+# Guide — Claude Code Hooks Installed in the Workspace
+
+This guide documents the five Claude Code hooks that fire automatically in workspace sessions. The hooks enforce identity-store safety, surface resource saturation early, and capture session telemetry. No configuration is needed to activate them — they are installed in `.agent/engines/claude-code/settings.json` and fire on matching tool calls.
+
+## What fires when
 
 The workspace ships five hooks via `.agent/engines/claude-code/settings.json`. They fire
 automatically whenever a Claude Code session is opened under `/srv/foundry/`. Each is a
@@ -19,7 +25,7 @@ small bash script under `bin/hooks/`.
 
 - `pretool-chmod-identity-block.sh` — refuses Bash commands matching `chmod.*identity/`.
   Closes the chmod-revert class. If you genuinely need to chmod against the identity store,
-  surface to the Command Session via outbox.
+  surface the issue via the workspace outbox for the P1 administrator.
 
 - `pretool-cargo-load-guard.sh` — warns (does not block) on cargo invocations when 1-minute
   load average exceeds 8 on the 4-vCPU VM. Two developers running parallel builds saturate

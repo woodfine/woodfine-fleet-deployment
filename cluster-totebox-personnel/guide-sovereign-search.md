@@ -6,17 +6,23 @@ type: guide
 status: active
 audience: operators
 bcsc_class: current-fact
-last_edited: 2026-05-08
+last_edited: 2026-05-25
 editor: pointsav-engineering
 ---
 
-# GUIDE: Sovereign Search Operations
-**Customer:** Woodfine Management Corp.
-**Target Environment:** cluster-totebox-personnel
-**Operation:** Flat-File Indexing & Retrieval
+# Guide — Cluster Search Operations
 
-## 1. Operational Overview
-The Sovereign Search architecture decouples data persistence from data retrieval. It operates in two phases: The Forge (Indexing) and The Strike (Querying).
+This guide covers operating the Tantivy-based full-text search index on the personnel cluster. The index auto-updates when new `.md` or `.json` assets are written, and is queried via the `app-interface-command` terminal. Two operations are covered: verifying the index is current and running a search query.
+
+## Prerequisites
+
+- The Tantivy-based indexer service running on the cluster node.
+- `app-interface-command` accessible (console.woodfinegroup.com or local terminal).
+- For DARP extraction: an encrypted external volume mounted and write access to copy the archive.
+
+## Overview
+
+The search architecture separates data persistence from data retrieval. Two phases: indexing (writes the search index from flat files) and querying (reads the index to return results).
 
 ## 2. The Forge (Automated Indexing)
 When new assets (`.md` artifacts from `service-content` or `.json` ledgers from `service-people`) are written to the Totebox, the Tantivy-based indexer automatically awakens.

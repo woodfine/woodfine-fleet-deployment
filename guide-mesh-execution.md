@@ -6,27 +6,26 @@ type: guide
 status: active
 audience: operators
 bcsc_class: current-fact
-last_edited: 2026-05-08
+last_edited: 2026-05-25
 editor: pointsav-engineering
 ---
 
-# 🧭 GUIDE: PPN MESH EXECUTION (THE F8 TERMINAL)
-**Operational Tier:** 3 (Fleet Deployment)
-**Interface:** `os-network-admin` (https://network.woodfinegroup.com)
+# Guide — Private Network Mesh Execution (F8 Terminal)
 
----
+This guide covers using the F8 Terminal at `network.woodfinegroup.com` to issue commands to the Woodfine private network fleet. Every command follows a two-step verify-and-execute flow before being broadcast to nodes.
 
-## I. OPERATIONAL POSTURE
-The F8 Terminal is the primary interface for managing the PointSav Private Network (PPN). It utilizes a Zero-Broker UDP broadcast matrix to execute commands across distributed fleet nodes simultaneously. 
+## Prerequisites
 
-Because the terminal utilizes the `system-slm` Semantic Router, operators may input commands in natural English. To ensure operational safety, all inputs are subject to a mandatory Human-in-the-Loop (HITL) verification sequence.
+- Access to `network.woodfinegroup.com` from a connected fleet node.
+- The network admin interface (`os-network-admin`) running in the LXC container (see `fleet-infrastructure-onprem/guide-lxc-network-admin.md`).
 
-## II. THE TWO-STEP EXECUTION PROTOCOL
-Every command issued to the network follows a strict proposal and authorization flow:
+## Command execution flow
 
-1. **Submit Intent:** The operator types an instruction (e.g., `Lock down the laptop node`).
-2. **Verify Translation:** The terminal halts and displays the machine-translated payload proposed by the SLM (e.g., `ACTION: ISOLATE, TARGET: NODE-LAPTOP-A`).
-3. **Authorize Execution:** The operator must visually verify the accuracy of the translation and actively click `EXECUTE` to broadcast the command to the physical network.
+Every command issued to the network follows a proposal and authorization flow:
+
+1. **Submit intent:** Type an instruction in plain language (e.g., `Lock down the laptop node`).
+2. **Verify translation:** The terminal displays the machine-translated payload (e.g., `ACTION: ISOLATE, TARGET: NODE-LAPTOP-A`). Review it for accuracy before proceeding.
+3. **Authorize execution:** Click `EXECUTE` to broadcast the verified command to the network.
 
 ## III. COMMAND EXAMPLES
 

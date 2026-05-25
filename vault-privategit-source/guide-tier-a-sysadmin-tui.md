@@ -6,7 +6,7 @@ type: guide
 status: active
 audience: operators
 bcsc_class: forward-looking
-last_edited: 2026-05-08
+last_edited: 2026-05-25
 editor: pointsav-engineering
 ---
 
@@ -223,9 +223,8 @@ items, not silently absorbed.
 
 ## References
 
-- Doctrine: claims #45 (TUI-as-Corpus-Producer), #49 (Tier 0 Sovereign
-  Specialist), #54 (Substrate-Without-Inference Base Case)
-- Conventions: `tui-corpus-producer.md`,
+- Architecture references: TUI-as-Corpus-Producer, Tier 0 Sovereign Specialist, Substrate-Without-Inference Base Case
+- Architecture documents: `tui-corpus-producer.md`,
   `tier-zero-customer-side-sovereign-specialist.md`,
   `substrate-without-inference-base-case.md`
 - Engineering reference: `vendor/pointsav-monorepo/service-slm/crates/slm-cli/`

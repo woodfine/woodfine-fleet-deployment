@@ -6,19 +6,31 @@ type: guide
 status: active
 audience: operators
 bcsc_class: current-fact
-last_edited: 2026-05-08
+last_edited: 2026-05-25
 editor: pointsav-engineering
 ---
 
-# GUIDE: Bare-Metal Provisioning & Mesh Fusion
-**Customer:** Woodfine Management Corp.
-**Target Environment:** fleet-infrastructure-onprem (Laptop A)
-**Operation:** OS Installation & PPN Spoke Binding
+# Guide — Bare-Metal Provisioning and Mesh Binding
 
-## 1. Operational Overview
-This protocol dictates the physical installation of the host operating system on Laptop A and the subsequent cryptographic fusion to the PointSav Private Network via the GCP anchor.
+This guide covers installing the host operating system on the on-premises hardware node and binding it to the Woodfine private network via the GCP cloud relay. The expected outcome is a running Linux node connected to the `10.50.0.x` mesh with WireGuard active.
 
-*Awaiting exact execution parameters.*
+## Prerequisites
+
+- Physical hardware (Laptop A) available with installation media.
+- WireGuard peer configuration for this node generated from `route-network-admin/guide-mesh-orchestration.md`.
+- GCP cloud relay running (see `fleet-infrastructure-cloud/guide-provision-relay.md`).
+
+## Steps
+
+Exact execution parameters are pending. The provisioning sequence will be:
+
+1. Install the operating system from installation media.
+2. Install WireGuard: `sudo apt-get install wireguard`.
+3. Write the node's `wg0.conf` with the private key and peer entries from the mesh configuration.
+4. Enable WireGuard: `sudo systemctl enable --now wg-quick@wg0`.
+5. Verify connectivity to the mesh hub: `ping 10.50.0.1`.
+
+Full configuration will be documented when exact IP ranges and peer keys are ratified.
 
 ---
 

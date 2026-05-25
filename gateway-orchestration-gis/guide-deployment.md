@@ -6,13 +6,20 @@ type: guide
 status: active
 audience: operators
 bcsc_class: current-fact
-last_edited: 2026-05-08
+last_edited: 2026-05-25
 editor: pointsav-engineering
 ---
 
 # Deployment Guide — gateway-orchestration-gis
 
 Covers the operation of the GIS workflow gateway serving `gis.woodfinegroup.com`. The active deployment instance is `gateway-orchestration-gis-1` on the workspace VM (or eventually the publishing VM per `conventions/publishing-tier-architecture.md`).
+
+## Prerequisites
+
+- Node provisioned per `guide-provision-node.md`.
+- `app-orchestration-gis` binary built from source.
+- nginx and certbot installed on the host.
+- DNS A record `gis.woodfinegroup.com` resolving to the host's public IP.
 
 ## Stack composition
 
@@ -24,12 +31,12 @@ Covers the operation of the GIS workflow gateway serving `gis.woodfinegroup.com`
 ## Bring-up sequence
 
 1. Install binary at `/usr/local/bin/app-orchestration-gis` (Master scope; operator-presence sudo).
-2. Create `local-orchestration-gis.service` systemd unit pointing at `~/Foundry/deployments/gateway-orchestration-gis-1/`.
+2. Create `local-orchestration-gis.service` systemd unit pointing at the deployment instance directory (e.g. `deployments/gateway-orchestration-gis-1/`).
 3. Configure nginx vhost for `gis.woodfinegroup.com` reverse-proxying to `127.0.0.1:9094`.
 4. Issue Let's Encrypt cert via certbot.
 5. Smoke test: `curl https://gis.woodfinegroup.com/healthz`.
 
-Per-instance config (data paths, port, module_id) lives in the deployment instance MANIFEST at `~/Foundry/deployments/gateway-orchestration-gis-1/MANIFEST.md`.
+Per-instance config (data paths, port, module_id) lives in the deployment instance MANIFEST at `deployments/gateway-orchestration-gis-1/MANIFEST.md`.
 
 ## Operational notes
 

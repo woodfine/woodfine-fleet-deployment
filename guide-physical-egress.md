@@ -6,17 +6,24 @@ type: guide
 status: active
 audience: operators
 bcsc_class: current-fact
-last_edited: 2026-05-08
+last_edited: 2026-05-25
 editor: pointsav-engineering
 ---
 
-# GUIDE: Physical Egress (Regulatory Printing)
-**Status:** Operational Mandate | **Taxonomy:** Tier-5-Service
+# Guide — Regulatory Printing (Physical Egress)
 
-## 📜 Standard Operating Procedure (SOP)
-To achieve 1:1 parity with the official offline PDF distribution, the human operator must enforce the following browser print settings prior to physical output.
+This guide covers the browser print settings required to produce compliant printed output from Woodfine web documents. The correct settings ensure output matches the official offline PDF distribution exactly.
 
-### Configuration Checklist
+## Prerequisites
+
+- A browser-accessible Woodfine document ready for printing.
+- A connected printer.
+
+## Print configuration checklist
+
+To achieve 1:1 parity with the official offline PDF distribution, apply the following browser print settings before printing:
+
+### Settings
 * [ ] **Orientation**: Portrait.
 * [ ] **Headers/Footers**: OFF. (This prevents the browser from injecting the host URL timestamp at the document margins).
 * [ ] **Margins**: Set to "Default" or exactly "0.5in".

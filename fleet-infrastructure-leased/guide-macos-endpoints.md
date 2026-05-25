@@ -6,19 +6,17 @@ type: guide
 status: active
 audience: operators
 bcsc_class: current-fact
-last_edited: 2026-05-08
+last_edited: 2026-05-25
 editor: pointsav-engineering
 ---
 
-# OPERATIONAL MANIFEST: macOS SOVEREIGN ENDPOINT CONFIGURATION
+# Guide — macOS Endpoint Configuration
 
-**ASSET CLASS:** Client Endpoint Provisioning
-**TARGET HARDWARE:** Apple macOS (MacBook Air / MacPro)
-**PROCUREMENT VENDOR:** PointSav Digital Systems
-**EXECUTING ENTITY:** Woodfine Management Corp.
+This guide covers installing and activating the WireGuard VPN tunnel on a Woodfine macOS endpoint. The endpoint connects to the Woodfine private network hub, routing all digital traffic through the corporate egress router. Upon completion, the WireGuard tunnel is active and the endpoint is connected to the Woodfine private network.
 
-## 1. STRATEGIC OBJECTIVE
-This manifest governs the procedure for integrating Woodfine macOS hardware into the sovereign corporate overlay network (the Hub). Upon completion, 100% of the endpoint's digital traffic will be cryptographically tunneled through the primary Woodfine physical egress router, bypassing third-party surveillance and local network restrictions.
+## 1. Purpose
+
+Integrating a Woodfine macOS device into the private overlay network routes the endpoint's traffic through the corporate egress router, isolating it from local network restrictions.
 
 ## 2. PREREQUISITES
 1. The endpoint operator must obtain their unique cryptographic configuration file (`.conf`) from the Woodfine Asset Ledger (e.g., `peter-mexico.conf` or `jennifer-macpro.conf`). **Do not share these files; they are mathematically tied to individual hardware.**
@@ -44,7 +42,7 @@ This manifest governs the procedure for integrating Woodfine macOS hardware into
 * To disconnect, simply click the Menu Bar icon and click the active tunnel name to toggle it off.
 
 ## 4. SUPPORT PROTOCOL
-If the handshake fails (no internet connectivity when activated), verify the physical internet connection. If the physical connection is stable, contact internal Woodfine support (Jennifer) to verify the Hub's public IP address has not rotated.
+If the handshake fails (no internet connectivity when activated), verify the physical internet connection. If the physical connection is stable, contact the Woodfine network administrator to verify the Hub's public IP address has not rotated.
 
 ---
 

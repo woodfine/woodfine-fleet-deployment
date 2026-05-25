@@ -5,9 +5,19 @@ slug: guide-foundry-vm-resource-recovery
 type: guide
 status: active
 bcsc_class: customer-internal
-last_edited: 2026-05-18
+last_edited: 2026-05-25
 editor: pointsav-engineering
 ---
+
+# Guide — Recovering the Workspace VM from Resource Pressure
+
+This guide is the recovery playbook for when the workspace VM becomes CPU- or memory-saturated. Follow when `foundry-health.sh` reports CRITICAL or when the VM is noticeably slow. The expected outcome is load average returning to 2× vCPU count or below and all services responding.
+
+## Prerequisites
+
+- SSH or local console access to the workspace VM.
+- `sudo` access on the VM.
+- `foundry-health.sh` available on the PATH.
 
 When `bin/foundry-health.sh` reports CRITICAL or operators report the VM feels slow,
 this is the recovery playbook. Tested 2026-05-18 against a load average of 70 with
@@ -87,7 +97,7 @@ as the kernel reclaims pages.
   natural restart (deploy, reboot, scheduled maintenance).
 
 - Do not `chmod` against `/srv/foundry/identity/` to "fix" SSH signing failures. The keys
-  are deliberately 0600. If signing fails, surface via outbox to the Command Session.
+  are deliberately 0600. If signing fails, surface the error via the workspace outbox for the P1 administrator to investigate.
 
 ## After
 

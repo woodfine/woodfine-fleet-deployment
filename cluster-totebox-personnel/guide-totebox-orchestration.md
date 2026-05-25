@@ -6,20 +6,26 @@ type: guide
 status: active
 audience: operators
 bcsc_class: current-fact
-last_edited: 2026-05-08
+last_edited: 2026-05-25
 editor: pointsav-engineering
 ---
 
-# 🧭 GUIDE: TOTEBOX ORCHESTRATION & AUTONOMOUS SYNTHESIS
-**Operational Tier:** 3 (Fleet Deployment)
-**Target Node:** cluster-totebox-personnel-1
+# Guide — Cluster Orchestration and Autonomous Synthesis
 
----
+This guide describes the autonomous data synthesis pipeline running on the personnel cluster. The pipeline continuously reads cold-stored email files, classifies them via the local SLM, and outputs taxonomy derivative files — archetypes, domains, and themes — as flat `.csv` and `.md` files.
 
-## I. EXECUTIVE SUMMARY
-This guide defines the operational intelligence pipeline utilized within the Totebox Archive. 
+## Prerequisites
 
-The Totebox Archive utilizes a **Derivative Architecture**. It physically separates Storage (raw `.eml` files on disk) from Sense-Making (the First Derivative taxonomy files continuously updated by the SLM daemon).
+- `service-email`, `service-slm`, and `service-extraction` running on the cluster node.
+- Domain glossaries seeded (corporate, projects, documentation) or starting from a zero-state.
+- The deduplication cron job configured and active.
+
+## Architecture
+
+The cluster uses a Derivative Architecture. Storage and sense-making are separated:
+
+- **Base Assets:** Raw `.eml` files stored in cold storage.
+- **First Derivative:** Taxonomy files (archetypes, chart of accounts, domains, themes) written continuously by the SLM daemon.
 
 ## II. THE SYNTHESIS LOOP (THE MADISON AVENUE ENGINE)
 The system operates a continuous, self-healing loop in the background:

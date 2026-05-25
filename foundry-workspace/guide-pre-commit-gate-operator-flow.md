@@ -5,9 +5,18 @@ slug: guide-pre-commit-gate-operator-flow
 type: guide
 status: active
 bcsc_class: customer-internal
-last_edited: 2026-05-18
+last_edited: 2026-05-25
 editor: pointsav-engineering
 ---
+
+# Guide — Working with the Workspace Pre-Commit Gate
+
+Every workspace and archive repo carries a pre-commit hook that runs three checks before any commit lands. This guide covers what each check rejects, how to bypass legitimately, and what to log when you do. The expected outcome is commits that pass all three checks — or a documented bypass with a follow-up action logged.
+
+## Prerequisites
+
+- A workspace or archive repo with the pre-commit hook installed (done automatically by `new-archive.sh`).
+- The `commit-as-next.sh` helper available at `bin/commit-as-next.sh`.
 
 Every workspace and archive repo carries a pre-commit hook that runs three checks before
 any commit lands. This guide covers what each check rejects, how to bypass legitimately,
@@ -79,8 +88,7 @@ If everything is broken and you must commit immediately:
 git commit --no-verify -m "EMERGENCY: <reason>"
 ```
 
-This skips every workspace check and every standard git hook. Log immediately to inbox and
-NOTAM. Expect a Command-Session-led audit afterwards.
+This skips every workspace check and every standard git hook. Log immediately to the workspace inbox and NOTAM. The P1 administrator will audit the bypass at the next workspace session.
 
 ## What the gate does NOT cover
 

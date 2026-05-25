@@ -8,7 +8,7 @@ audience: workspace-master + operator
 bcsc_class: current-fact
 component: local-doorman.service (slm-doorman-server)
 deployment: vault-privategit-source-1 (foundry-workspace VM)
-last_edited: 2026-05-08
+last_edited: 2026-05-25
 editor: pointsav-engineering
 cites:
   - ni-51-102
@@ -715,7 +715,7 @@ systemd only loads `*.conf` files from drop-in directories.
 
 ## 8. Reference / cross-links
 
-Conventions (architecture and design rationale):
+Architecture and design references:
 - `[[four-tier-slm-substrate]]` — Tier 0/1/2/3 ladder
 - `[[api-key-boundary-discipline]]` — keys at the gateway only
 - `[[apprenticeship-substrate]]` — brief / verdict / shadow
@@ -739,12 +739,12 @@ Source (cluster Task scope):
 - `pointsav-monorepo/service-slm/crates/slm-doorman-server/` — Doorman crate source
 - `pointsav-monorepo/service-slm/ARCHITECTURE.md` — per-project architecture
 
-Doctrine anchors:
-- `DOCTRINE.md` claim #16 — Optional Intelligence (Rings 1+2 functional without Ring 3)
-- `DOCTRINE.md` claim #17 — Transparent multi-tier compute routing
-- `DOCTRINE.md` claim #22 — Adapter Composition Algebra
-- `DOCTRINE.md` claim #32 — Apprenticeship Substrate
-- `DOCTRINE.md` claim #40 — Four-Tier SLM Substrate Ladder
+Architecture anchors:
+- Optional Intelligence: Rings 1+2 functional without Ring 3
+- Transparent multi-tier compute routing
+- Adapter Composition Algebra
+- Apprenticeship Substrate
+- Four-Tier SLM Substrate Ladder
 
 ---
 

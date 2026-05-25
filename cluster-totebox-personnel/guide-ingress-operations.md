@@ -6,35 +6,44 @@ type: guide
 status: active
 audience: operators
 bcsc_class: current-fact
-last_edited: 2026-05-08
+last_edited: 2026-05-25
 editor: pointsav-engineering
 ---
 
-# 🧭 GUIDE: INGRESS OPERATIONS & SELF-HEALING LOOP
-**Operational Tier:** 3 (Fleet Deployment)
-**Target Node:** cluster-totebox-personnel-1 (Laptop-A LXC)
+# Guide — Ingress Operations and Self-Healing Loop
 
----
+This guide covers operating the automated email ingestion pipeline for the personnel cluster. The pipeline harvests inbound email from `info@woodfine.co`, processes it through the local SLM classification layer, and appends classified records to the personnel and content ledgers.
 
-## I. THE EVENT-DRIVEN PIPELINE
-The Totebox Archive operates an automated, continuous data ingestion loop targeting `info@woodfine.co`. 
+## Prerequisites
 
-1. **The Diode:** The Harvester pulls a maximum of 9 emails across 3 folders (`totebox-ingress`, `OpenStack`, `PostgresSQL`) and drops them into the `service-email/maildir/new/` spool.
-2. **The Splinter:** The payload is shattered. The `.eml` is secured in cold storage.
-3. **The Intelligence:** OLMo-2-0425-1B-Instruct evaluates the text against the **Domain Glossaries** (Corporate, Projects, Documentation), extracting Archetypes and Themes.
-4. **The Ledger:** The JSON ledgers for personnel and content are autonomously appended and healed.
+- The `spool-daemon` systemd service running on the cluster node.
+- Microsoft Graph API credentials stored in `service-email/auth-credentials.env`.
+- The target Outlook folders (`totebox-ingress`, `OpenStack`, `PostgresSQL`) present in the Outlook account.
 
-## II. THE DOMAIN MATRIX (GLOSSARIES)
-The active intelligence extracted by the SLM is strictly mapped 1:1:1 against the core encyclopedic backbone of the enterprise:
-* `content-wiki-corporate` (Institutional Governance)
-* `content-wiki-projects` (Real Estate Ledgers)
-* `content-wiki-documentation` (PointSav Architecture)
+## The pipeline stages
 
-## III. TROUBLESHOOTING INGESTION
-If the F8 Terminal indicates a stalled pipeline:
-1. Verify the MSFT Graph API tokens in `service-email/auth-credentials.env`.
-2. Ensure the target folders (`totebox-ingress`, etc.) physically exist in the Outlook client.
-3. Check the `spool-daemon` status via systemd to ensure the watchdog is actively monitoring `/maildir/new/`.
+The pipeline runs continuously:
+
+1. **Harvest:** The email harvester pulls a maximum of 9 emails across the 3 target folders and drops them into `service-email/maildir/new/`.
+2. **Store:** The raw `.eml` file is moved to cold storage.
+3. **Classify:** The local OLMo model evaluates the text against the domain glossaries (corporate, projects, documentation), extracting archetypes and themes.
+4. **Append:** The JSON ledgers for personnel and content are updated with the classification result.
+
+## Domain glossaries
+
+The SLM classification maps inbound email against three domain glossaries:
+
+| Glossary | Purpose |
+|---|---|
+| `content-wiki-corporate` | Institutional governance |
+| `content-wiki-projects` | Real estate ledgers |
+| `content-wiki-documentation` | Platform architecture |
+
+## Troubleshooting a stalled pipeline
+
+1. Verify the Graph API tokens are current: check `service-email/auth-credentials.env` for expiry.
+2. Confirm the target Outlook folders exist in the connected account (`totebox-ingress`, `OpenStack`, `PostgresSQL`).
+3. Check the `spool-daemon` service status: `sudo systemctl status spool-daemon`.
 
 ---
 

@@ -6,13 +6,20 @@ type: guide
 status: active
 audience: operators
 bcsc_class: current-fact
-last_edited: 2026-05-08
+last_edited: 2026-05-25
 editor: pointsav-engineering
 ---
 
 # Deployment Guide — gateway-orchestration-bim
 
 Covers the operation of the BIM workflow gateway serving `bim.woodfinegroup.com`. The active deployment instance is `gateway-orchestration-bim-1`.
+
+## Prerequisites
+
+- Node provisioned per `guide-provision-node.md`.
+- `app-orchestration-bim` binary built from source (pending project-bim Task v0.0.1 signal).
+- nginx and certbot installed on the host.
+- DNS A record `bim.woodfinegroup.com` resolving to the host's public IP.
 
 ## Stack composition
 
@@ -24,7 +31,7 @@ Covers the operation of the BIM workflow gateway serving `bim.woodfinegroup.com`
 ## Bring-up sequence
 
 1. Install binary at `/usr/local/bin/app-orchestration-bim` (Master scope; operator-presence sudo).
-2. Create `local-orchestration-bim.service` systemd unit pointing at `~/Foundry/deployments/gateway-orchestration-bim-1/`.
+2. Create `local-orchestration-bim.service` systemd unit pointing at the deployment instance directory (e.g. `deployments/gateway-orchestration-bim-1/`).
 3. Configure nginx vhost for `bim.woodfinegroup.com` reverse-proxying to the allocated local port.
 4. Issue Let's Encrypt cert via certbot.
 5. Smoke test: `curl https://bim.woodfinegroup.com/healthz`.

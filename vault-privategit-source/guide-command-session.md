@@ -1,3 +1,15 @@
+---
+schema: foundry-doc-v1
+title: "Running a Command Session"
+slug: guide-command-session
+type: guide
+status: active
+audience: operators
+bcsc_class: customer-internal
+last_edited: 2026-05-25
+editor: pointsav-engineering
+---
+
 # Guide — Running a Command Session
 
 The Command Session is the hub of the Totebox Orchestration workspace. It owns the identity store, workspace documentation, and cross-archive coordination. This guide describes what a Command Session does and how to run one.
@@ -5,6 +17,15 @@ The Command Session is the hub of the Totebox Orchestration workspace. It owns t
 This guide describes the planned operational workflow. The `app-orchestration-command` aggregator and several `bin/` entry points are intended; the file-based session protocol is operationally live today.
 
 > **P1 scope.** The Command Session requires a P1 (System Administrator) pairing set. Contributors at P2 or P3 should open an archive instead, using `bin/open-archive.sh` (see `guide-open-archive.md`).
+
+---
+
+## Prerequisites
+
+- P1 (System Administrator) access on the workspace VM.
+- SSH key for the workspace VM present and loaded.
+- `claude` CLI installed and authenticated.
+- Working directory is the workspace root (not inside any `clones/` subdirectory).
 
 ---
 

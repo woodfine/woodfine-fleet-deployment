@@ -5,7 +5,7 @@ slug: guide-knowledge-wiki-sprint-roadmap
 type: guide
 status: active
 bcsc_class: no-disclosure-implication
-last_edited: 2026-05-14
+last_edited: 2026-05-25
 editor: pointsav-engineering
 ---
 
@@ -421,7 +421,7 @@ Per-article verification status rendered as a coloured ribbon at the top of the 
 
 #### E2: Research Trail Footer
 
-Per-article provenance block rendered as a collapsible `<details>` at the end of the article body. Reads five frontmatter fields already present in `foundry-draft-v1` schema: `research_trail.method`, `research_trail.depth`, `research_trail.confidence`, `research_trail.limitations`, and the article's `last_edited` date. Renders as a structured section below "External links" and above the navboxes.
+Per-article provenance block rendered as a collapsible `<details>` at the end of the article body. Reads five frontmatter fields already present in the article schema: `research_trail.method`, `research_trail.depth`, `research_trail.confidence`, `research_trail.limitations`, and the article's `last_edited` date. Renders as a structured section below "External links" and above the navboxes.
 
 #### E3: Doorman editor integration
 

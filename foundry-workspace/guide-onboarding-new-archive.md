@@ -5,19 +5,19 @@ slug: guide-onboarding-new-archive
 type: guide
 status: active
 bcsc_class: customer-internal
-last_edited: 2026-05-18
+last_edited: 2026-05-25
 editor: pointsav-engineering
 ---
 
 A Totebox Archive is the working directory for one cluster's AI session — a single `.git`
 repo (or a working-tree wrapper around a monorepo clone) under `clones/<archive-name>/`.
-Provisioning is a Command-Session task.
+Provisioning is a P1 administrator task performed from the workspace root.
 
 ## Prerequisites
 
 - The cluster's monorepo or guide source exists on GitHub.
 - Cluster branch `cluster/<archive-name>` exists or will be created.
-- You are in a Command Session at `/srv/foundry/`.
+- You are working from the workspace root at `/srv/foundry/` with P1 administrator access.
 
 ## Step 1 — Clone or initialise
 
@@ -73,7 +73,7 @@ Add a row to `/srv/foundry/PROJECT-CLONES.md` with:
 
 ## Step 5 — Commit
 
-From the Command Session workspace root:
+From the workspace root:
 
 ```bash
 git add PROJECT-CLONES.md

@@ -1,10 +1,22 @@
+---
+schema: foundry-doc-v1
+title: "Opening a Totebox Archive"
+slug: guide-open-archive
+type: guide
+status: active
+audience: operators
+bcsc_class: customer-internal
+last_edited: 2026-05-25
+editor: pointsav-engineering
+---
+
 # Guide — Opening a Totebox Archive
 
-This guide explains how to open a Totebox Session inside a Totebox Archive. A Totebox Session is the standard way to perform development work in Totebox Orchestration — open an archive, work within its scope, and close the session when the task is complete. Work stays inside the archive until the Command Session ratifies and promotes it.
+This guide explains how to open an AI working session inside a Totebox Archive. The standard workflow is to open an archive, work within its declared scope, and close the session when the task is complete. Work stays inside the archive until the P1 administrator ratifies and promotes it.
 
 This guide describes the planned operational workflow. The `bin/open-archive.sh` and `bin/list-archives.sh` entry-point scripts are intended; the file-based protocol described in subsequent steps is operationally live today.
 
-> **Audience.** Contributors with a P2 (Package Manager) or P3 (User) permission tier. P1 (System Administrator) operators run the Command Session instead — see `guide-command-session.md`.
+> **Audience.** Contributors with a P2 (Package Manager) or P3 (User) permission tier. P1 (System Administrator) operators work from the workspace root instead — see `guide-command-session.md`.
 
 ---
 
@@ -50,7 +62,7 @@ The session opens at `clones/<archive-name>/`. Read the inbox at session start:
 cat .agent/inbox.md
 ```
 
-The inbox contains messages from the Command Session and from other Totebox Sessions that have routed requests through the Command. Once a message has been actioned, archive it to `.agent/inbox-archive.md`.
+The inbox contains messages from the P1 administrator and from other archive sessions routed through the workspace. Once a message has been actioned, archive it to `.agent/inbox-archive.md`.
 
 ---
 
@@ -78,13 +90,13 @@ Need footer spacing token from project-design for the new services/_index.md lay
 Archive: project-design. Token file: pointsav-design-system/tokens/spacing.json.
 ```
 
-Prepend the message to `.agent/outbox.md` (newest on top). The Command Session picks it up during the next workspace sweep and either fetches the data or routes the request.
+Prepend the message to `.agent/outbox.md` (newest on top). The P1 administrator picks it up during the next workspace sweep and either fetches the data or routes the request.
 
 ---
 
 ## Step 5 — Stage wiki drafts
 
-TOPIC and GUIDE drafts produced in a Totebox Session are staged to `clones/<archive>/.agent/drafts-outbound/`. The draft pipeline (`cluster-wiki-draft-pipeline.md`) routes them through `project-editorial` for language refinement before commitment to the wiki repositories.
+TOPIC and GUIDE drafts produced inside an archive session are staged to `clones/<archive>/.agent/drafts-outbound/`. The draft pipeline routes them through the editorial cluster for language refinement before commitment to the wiki repositories.
 
 Draft frontmatter must include:
 
@@ -122,7 +134,7 @@ The script (planned) is intended to print every archive with its tetrad status a
 
 ## See also
 
-- `guide-command-session.md` — companion guide for P1 operators running the Command Session
+- `guide-command-session.md` — companion guide for P1 operators working from the workspace root
 - `README.md` — vault-privategit-source overview
 
 ---

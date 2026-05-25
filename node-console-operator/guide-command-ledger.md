@@ -6,32 +6,76 @@ type: guide
 status: active
 audience: operators
 bcsc_class: current-fact
-last_edited: 2026-05-08
+last_edited: 2026-05-25
 editor: pointsav-engineering
 ---
 
-# 🧭 GUIDE: UNIFIED COMMAND LEDGER OPERATIONS
-**Operational Tier:** 3 (Fleet Deployment)
-**Target Node:** node-console-operator
+# Guide — Unified Command Ledger Operations
 
----
+The Woodfine Command Ledger (`console.woodfinegroup.com`) is the operator interface
+for reviewing, verifying, and signing off on records managed by the Totebox Archive.
+It exposes identity records, communications, corporate documents, and financial
+ledgers through a hardware-key-driven interface. This guide covers how to navigate
+and operate the ledger.
 
-## I. EXECUTIVE SUMMARY
-The Woodfine Command Ledger is a Fiduciary Triage Deck, not a standard software dashboard. It leverages a Zero-Form architecture where the underlying Sovereign AI processes raw data, and the human operator provides final legal verification.
+## Prerequisites
 
-## II. MACHINE-BASED AUTHORIZATION (MBA)
-You do not log into this system with a username. Access is granted via cryptographic pairing between your physical hardware (e.g., your MacBook) and the isolated Totebox Archive. If the `MBA LINK ACTIVE` status is green, your hardware is verified.
+- A paired device (your MacBook or designated hardware) — access is granted via
+  hardware cryptographic pairing, not a username/password.
+- Browser access to `https://console.woodfinegroup.com`.
+- `MBA LINK ACTIVE` status showing green before beginning any session.
 
-## III. THE F-KEY TAXONOMY
-Navigation is executed via the physical F-Keys on your keyboard, instantly hot-swapping operational Cartridges into the central viewport:
+## Session access
 
-* **[F1] Help:** The immutable operating manual and compliance glossary.
-* **[F2] People:** The Identity Ledger. Review and verify new contacts extracted automatically from your communications.
-* **[F3] Email:** The Sovereign Comm Diode. A noise-free, text-only feed of your encrypted communications.
-* **[F4] Content:** Knowledge Synthesis. Verify and seal corporate drafts and generated memos.
-* **[F5] Minutebook:** Deep Records. Read-only access to immutable corporate PDFs and resolutions.
-* **[F6] Bookkeeper:** Financial Ledgers and Capital Deployment metrics.
-* **[F12] Input Machine:** The Secure Gateway. Drag and drop local desktop files here to strip execution permissions and inject them into the Sovereign network.
+Open `https://console.woodfinegroup.com` in your browser. The console verifies
+your hardware pairing automatically. If the `MBA LINK ACTIVE` indicator is green,
+your device is verified and the session is active.
+
+If the link is not active, the hardware pairing has lapsed or your device has changed.
+Contact the Woodfine network administrator to re-establish the pairing.
+
+## Navigation — F-key cartridges
+
+Each F-key loads a distinct operational cartridge into the central viewport:
+
+| Key | Cartridge | Purpose |
+|---|---|---|
+| F1 | Help | Immutable operating manual and compliance glossary |
+| F2 | People | Identity Ledger — review and verify contacts extracted from communications |
+| F3 | Email | Text-only feed of encrypted communications |
+| F4 | Content | Draft review and approval — verify and seal corporate drafts and generated memos |
+| F5 | Minutebook | Read-only access to corporate PDFs, minute books, and board resolutions |
+| F6 | Bookkeeper | Financial ledgers and capital deployment metrics |
+| F12 | Input Machine | Secure file gateway — drag local files here to strip execution permissions and inject into the network |
+
+## Common tasks
+
+### Reviewing new contacts (F2 — People)
+
+1. Press F2 to open the Identity Ledger.
+2. New contacts extracted from communications appear in the review queue.
+3. Verify each contact's identity against supporting records.
+4. Approve or reject the entry. Approved entries are written to the Totebox Archive.
+
+### Reading communications (F3 — Email)
+
+1. Press F3 to open the email feed.
+2. The feed is text-only and noise-filtered. Attachments are not rendered inline.
+3. Use the search field to locate specific threads or senders.
+
+### Approving content drafts (F4 — Content)
+
+1. Press F4 to open the content terminal.
+2. Review the draft in the viewport.
+3. Approve to seal the draft, or reject with a note.
+4. Sealed drafts are committed to the Totebox Archive as immutable records.
+
+### Injecting files (F12 — Input Machine)
+
+1. Press F12 to open the Input Machine.
+2. Select the destination Totebox, service, and chart of accounts.
+3. Drag the local file into the drop zone.
+4. The system strips execution permissions and routes the file into the Totebox Archive.
 
 ---
 
