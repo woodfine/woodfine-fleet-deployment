@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "PPN Mesh Execution (the F8 Terminal)"
 slug: guide-mesh-execution
 type: guide
+section: network-and-infrastructure
 status: active
 audience: operators
 bcsc_class: current-fact

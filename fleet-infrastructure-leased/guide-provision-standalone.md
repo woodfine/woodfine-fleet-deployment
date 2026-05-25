@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Standalone Node Provisioning"
 slug: guide-provision-standalone
 type: guide
+section: network-and-infrastructure
 status: active
 audience: operators
 bcsc_class: forward-looking

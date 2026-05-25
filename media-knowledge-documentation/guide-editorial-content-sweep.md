@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Monthly Editorial Content Sweep"
 slug: guide-editorial-content-sweep
 type: guide
+section: content-and-media
 status: active
 audience: editorial-operators
 bcsc_class: current-fact

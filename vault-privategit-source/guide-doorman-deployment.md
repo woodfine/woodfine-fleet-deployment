@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "service-slm Doorman — installation and operations"
 slug: guide-doorman-deployment
 type: guide
+section: source-control
 status: active
 audience: operators
 bcsc_class: current-fact

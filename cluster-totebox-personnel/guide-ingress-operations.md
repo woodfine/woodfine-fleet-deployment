@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Ingress Operations and Self-Healing Loop"
 slug: guide-ingress-operations
 type: guide
+section: personnel-and-identity
 status: active
 audience: operators
 bcsc_class: current-fact

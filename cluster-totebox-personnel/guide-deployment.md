@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Deployment — cluster-totebox-personnel"
 slug: guide-deployment
 type: guide
+section: personnel-and-identity
 status: scaffold
 audience: operators
 bcsc_class: customer-internal

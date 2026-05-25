@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Publishing a Regulatory Overlay"
 slug: guide-regulation-overlay-publishing
 type: guide
+section: bim-and-property
 status: active
 bcsc_class: customer-internal
 last_edited: 2026-05-25

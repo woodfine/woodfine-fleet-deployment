@@ -4,6 +4,7 @@ title: "Guide: Adding a Country to the GIS Pipeline"
 slug: guide-gis-adding-a-country
 category: gateway-orchestration-gis
 type: guide
+section: gis-and-geospatial
 quality: complete
 status: active
 audience: customer-operator

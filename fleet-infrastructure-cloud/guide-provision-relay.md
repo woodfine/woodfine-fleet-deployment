@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Cloud Relay Provisioning"
 slug: guide-provision-relay
 type: guide
+section: network-and-infrastructure
 status: active
 audience: operators
 bcsc_class: forward-looking

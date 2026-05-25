@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Deployment — cluster-totebox-property"
 slug: guide-deployment
 type: guide
+section: bim-and-property
 status: scaffold
 audience: operators
 bcsc_class: customer-internal

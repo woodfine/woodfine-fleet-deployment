@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Deployment — cluster-totebox-corporate"
 slug: guide-deployment
 type: guide
+section: provisioning
 status: scaffold
 audience: operators
 bcsc_class: customer-internal

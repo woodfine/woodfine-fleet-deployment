@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Telemetry Governance — media-marketing-landing"
 slug: guide-telemetry-governance
 type: guide
+section: content-and-media
 status: active
 audience: operators
 bcsc_class: current-fact

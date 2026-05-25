@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Totebox Orchestration and Autonomous Synthesis"
 slug: guide-totebox-orchestration
 type: guide
+section: personnel-and-identity
 status: active
 audience: operators
 bcsc_class: current-fact

@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Sovereign Search Operations"
 slug: guide-sovereign-search
 type: guide
+section: personnel-and-identity
 status: active
 audience: operators
 bcsc_class: current-fact

@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Deployment — Marketing Landing Site (Woodfine tenant)"
 slug: guide-deployment-marketing-site
 type: guide
+section: content-and-media
 status: active
 audience: operators
 bcsc_class: current-fact

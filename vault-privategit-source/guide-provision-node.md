@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Provision Node — vault-privategit-source"
 slug: guide-provision-node
 type: guide
+section: source-control
 status: scaffold
 audience: operators
 bcsc_class: customer-internal

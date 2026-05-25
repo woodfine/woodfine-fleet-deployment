@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Operating the Tier A Sysadmin TUI"
 slug: guide-tier-a-sysadmin-tui
 type: guide
+section: source-control
 status: active
 audience: operators
 bcsc_class: forward-looking

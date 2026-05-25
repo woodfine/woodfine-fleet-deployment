@@ -4,6 +4,7 @@ title: "Guide: GIS Pipeline Rebuild"
 slug: guide-gis-pipeline-rebuild
 category: gateway-orchestration-gis
 type: guide
+section: gis-and-geospatial
 quality: complete
 status: active
 audience: customer-operator

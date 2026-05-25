@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Recovering the Foundry Workspace VM from Resource Pressure"
 slug: guide-foundry-vm-resource-recovery
 type: guide
+section: workspace-development
 status: active
 bcsc_class: customer-internal
 last_edited: 2026-05-25

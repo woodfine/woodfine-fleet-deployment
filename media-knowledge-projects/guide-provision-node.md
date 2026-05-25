@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Provision Node — media-knowledge-projects"
 slug: guide-provision-node
 type: guide
+section: content-and-media
 status: scaffold
 audience: operators
 bcsc_class: customer-internal

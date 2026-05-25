@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Provisioning the Network Ledger (LXC)"
 slug: guide-lxc-network-admin
 type: guide
+section: network-and-infrastructure
 status: active
 audience: operators
 bcsc_class: current-fact

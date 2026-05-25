@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "macOS Endpoint Configuration"
 slug: guide-macos-endpoints
 type: guide
+section: network-and-infrastructure
 status: active
 audience: operators
 bcsc_class: current-fact

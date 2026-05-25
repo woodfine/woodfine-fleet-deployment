@@ -4,6 +4,7 @@ title: "Guide: Adding a New Chain to the GIS Pipeline"
 slug: guide-gis-adding-a-chain
 deployment: gateway-orchestration-gis-1
 type: guide
+section: gis-and-geospatial
 last_edited: 2026-05-25
 editor: pointsav-engineering
 bcsc_class: internal

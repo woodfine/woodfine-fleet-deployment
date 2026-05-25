@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Operating the service-slm Doorman on vault-privategit-source-1"
 slug: guide-doorman
 type: guide
+section: source-control
 status: active
 audience: workspace-master + operator
 bcsc_class: current-fact

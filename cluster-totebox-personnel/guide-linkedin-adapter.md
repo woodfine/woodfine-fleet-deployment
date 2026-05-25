@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "service-message-courier — LinkedIn Automation Adapter"
 slug: guide-linkedin-adapter
 type: guide
+section: personnel-and-identity
 status: active
 audience: operators
 bcsc_class: current-fact

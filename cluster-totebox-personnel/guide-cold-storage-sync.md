@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Cold Storage Backup — Personnel Archive"
 slug: guide-cold-storage-sync
 type: guide
+section: personnel-and-identity
 status: active
 audience: operators
 bcsc_class: current-fact

@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Claude Code Hooks Installed in the Workspace"
 slug: guide-claude-code-hooks-installed
 type: guide
+section: workspace-development
 status: active
 bcsc_class: customer-internal
 last_edited: 2026-05-25

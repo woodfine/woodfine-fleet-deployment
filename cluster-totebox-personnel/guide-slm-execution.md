@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "service-slm Execution Pipeline"
 slug: guide-slm-execution
 type: guide
+section: personnel-and-identity
 status: active
 audience: operators
 bcsc_class: current-fact

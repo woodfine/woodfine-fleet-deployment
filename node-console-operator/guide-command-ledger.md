@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Unified Command Ledger Operations"
 slug: guide-command-ledger
 type: guide
+section: console-and-operations
 status: active
 audience: operators
 bcsc_class: current-fact

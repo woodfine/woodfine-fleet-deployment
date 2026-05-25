@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Operating the Marketing Landing Service"
 slug: guide-operate-marketing-landing
 type: guide
+section: content-and-media
 status: active
 bcsc_class: customer-internal
 last_edited: 2026-05-25

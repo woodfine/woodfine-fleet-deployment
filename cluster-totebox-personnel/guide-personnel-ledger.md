@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Personnel Ledger Operations"
 slug: guide-personnel-ledger
 type: guide
+section: personnel-and-identity
 status: active
 audience: operators
 bcsc_class: current-fact

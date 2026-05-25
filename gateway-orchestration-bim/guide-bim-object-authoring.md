@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Authoring BIM Objects"
 slug: guide-bim-object-authoring
 type: guide
+section: bim-and-property
 status: active
 bcsc_class: customer-internal
 last_edited: 2026-05-25

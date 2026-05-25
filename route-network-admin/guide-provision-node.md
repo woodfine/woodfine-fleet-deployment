@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Provision Node — route-network-admin"
 slug: guide-provision-node
 type: guide
+section: network-and-infrastructure
 status: scaffold
 audience: operators
 bcsc_class: customer-internal

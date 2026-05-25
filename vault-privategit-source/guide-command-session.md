@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Running a Command Session"
 slug: guide-command-session
 type: guide
+section: source-control
 status: active
 audience: operators
 bcsc_class: customer-internal

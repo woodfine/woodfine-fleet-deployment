@@ -5,6 +5,7 @@ slug: guide-software-distribution-operations
 short_description: "Operational guide for vault-privategit-source-1: service management, catalog updates, binary publishing, payment flow, and wallet configuration for software.pointsav.com."
 category: vault-privategit-source
 type: guide
+section: source-control
 status: active
 bcsc_class: public-disclosure-safe
 last_edited: 2026-05-25

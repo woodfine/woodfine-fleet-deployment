@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Deployment — gateway-interface-command"
 slug: guide-deployment
 type: guide
+section: provisioning
 status: scaffold
 audience: operators
 bcsc_class: customer-internal

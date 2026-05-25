@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Operating the Yo-Yo Tier B Deployment"
 slug: guide-operating-yoyo
 type: guide
+section: source-control
 status: active
 audience: operators
 bcsc_class: current-fact

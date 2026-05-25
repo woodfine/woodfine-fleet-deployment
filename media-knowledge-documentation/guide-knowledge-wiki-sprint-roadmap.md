@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Knowledge Wiki — Wikipedia Parity Sprint Roadmap"
 slug: guide-knowledge-wiki-sprint-roadmap
 type: guide
+section: content-and-media
 status: active
 bcsc_class: no-disclosure-implication
 last_edited: 2026-05-25

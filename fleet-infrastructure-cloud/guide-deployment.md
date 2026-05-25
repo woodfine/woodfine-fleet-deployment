@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Deployment — fleet-infrastructure-cloud"
 slug: guide-deployment
 type: guide
+section: network-and-infrastructure
 status: scaffold
 audience: operators
 bcsc_class: customer-internal

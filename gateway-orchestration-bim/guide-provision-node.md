@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Provision Node — gateway-orchestration-bim"
 slug: guide-provision-node
 type: guide
+section: bim-and-property
 status: active
 audience: operators
 bcsc_class: current-fact

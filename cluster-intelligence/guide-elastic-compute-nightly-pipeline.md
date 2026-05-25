@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Elastic Compute #1 Nightly Pipeline"
 slug: guide-elastic-compute-nightly-pipeline
 type: guide
+section: ai-and-intelligence
 status: active
 bcsc_class: public-disclosure-safe
 last_edited: 2026-05-25

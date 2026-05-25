@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Mesh Network Orchestration"
 slug: guide-mesh-orchestration
 type: guide
+section: network-and-infrastructure
 status: active
 audience: operators
 bcsc_class: forward-looking

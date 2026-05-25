@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "SLM Deployment — cluster-totebox-personnel"
 slug: guide-01-deployment
 type: guide
+section: ai-and-intelligence
 status: active
 audience: operators
 bcsc_class: forward-looking

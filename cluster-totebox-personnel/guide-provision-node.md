@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Provision Node — cluster-totebox-personnel"
 slug: guide-provision-node
 type: guide
+section: personnel-and-identity
 status: scaffold
 audience: operators
 bcsc_class: customer-internal

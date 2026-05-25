@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Provision Node — gateway-orchestration-gis"
 slug: guide-provision-node
 type: guide
+section: gis-and-geospatial
 status: active
 audience: operators
 bcsc_class: current-fact

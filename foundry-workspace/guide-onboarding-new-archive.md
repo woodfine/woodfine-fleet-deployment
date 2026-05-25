@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Provisioning a New Totebox Archive"
 slug: guide-onboarding-new-archive
 type: guide
+section: workspace-development
 status: active
 bcsc_class: customer-internal
 last_edited: 2026-05-25

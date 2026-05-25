@@ -5,6 +5,7 @@ slug: guide-os-console-operator
 short_description: "Daily operator reference for os-console: startup, F-key map, Input Machine workflow, Content cartridge commands, MBA connectivity, configuration, and troubleshooting."
 category: node-console-operator
 type: guide
+section: console-and-operations
 status: active
 bcsc_class: public-disclosure-safe
 last_edited: 2026-05-25

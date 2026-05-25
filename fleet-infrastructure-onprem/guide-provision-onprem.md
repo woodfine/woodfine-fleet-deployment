@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Bare-Metal Provisioning and Mesh Fusion"
 slug: guide-provision-onprem
 type: guide
+section: network-and-infrastructure
 status: active
 audience: operators
 bcsc_class: current-fact

@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Deployment — gateway-orchestration-gis"
 slug: guide-deployment
 type: guide
+section: gis-and-geospatial
 status: active
 audience: operators
 bcsc_class: current-fact

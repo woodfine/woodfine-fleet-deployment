@@ -5,6 +5,7 @@ slug: guide-mba-pairing-ceremony
 short_description: "Step-by-step operator procedure for establishing, verifying, rotating, and revoking machine-based authorization pairings between os-console and os-* services."
 category: node-console-operator
 type: guide
+section: console-and-operations
 status: active
 bcsc_class: public-disclosure-safe
 last_edited: 2026-05-25

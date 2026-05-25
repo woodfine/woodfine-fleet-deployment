@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Working with climate zone tokens"
 slug: guide-climate-zone-tokens
 type: guide
+section: bim-and-property
 status: active
 bcsc_class: public-disclosure-safe
 last_edited: 2026-05-25

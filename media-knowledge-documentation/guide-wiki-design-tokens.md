@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Wiki Design Tokens — Deployment Integration"
 slug: guide-wiki-design-tokens
 type: guide
+section: content-and-media
 status: active
 bcsc_class: customer-internal
 last_edited: 2026-05-25

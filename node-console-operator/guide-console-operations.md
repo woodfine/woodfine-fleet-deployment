@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Console Operations and the Derivative HUD"
 slug: guide-console-operations
 type: guide
+section: console-and-operations
 status: active
 audience: operators
 bcsc_class: current-fact

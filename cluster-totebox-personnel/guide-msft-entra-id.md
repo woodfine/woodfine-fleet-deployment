@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Microsoft Entra ID — App Registration Setup"
 slug: guide-msft-entra-id
 type: guide
+section: personnel-and-identity
 status: active
 audience: operators
 bcsc_class: current-fact

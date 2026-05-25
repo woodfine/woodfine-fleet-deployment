@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Telemetry Operations and Compliance — media-marketing-landing"
 slug: guide-telemetry-operations
 type: guide
+section: content-and-media
 status: active
 audience: operators
 bcsc_class: current-fact

@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Provision Node — cluster-totebox-property"
 slug: guide-provision-node
 type: guide
+section: bim-and-property
 status: scaffold
 audience: operators
 bcsc_class: customer-internal

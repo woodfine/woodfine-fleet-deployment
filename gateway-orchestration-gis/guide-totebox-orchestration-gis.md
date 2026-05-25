@@ -4,6 +4,7 @@ title: "GUIDE — Totebox Orchestration for GIS"
 slug: guide-totebox-orchestration-gis
 category: gateway-orchestration-gis
 type: guide
+section: gis-and-geospatial
 quality: complete
 status: active
 audience: vendor-internal

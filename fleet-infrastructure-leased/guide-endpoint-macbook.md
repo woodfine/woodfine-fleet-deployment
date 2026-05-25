@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "MacBook Air Endpoint (Mexico)"
 slug: guide-endpoint-macbook
 type: guide
+section: network-and-infrastructure
 status: active
 audience: operators
 bcsc_class: current-fact

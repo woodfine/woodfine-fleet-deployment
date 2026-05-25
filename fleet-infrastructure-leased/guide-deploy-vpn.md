@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Deploy VPN — Sovereign Overlay Network"
 slug: guide-deploy-vpn
 type: guide
+section: network-and-infrastructure
 status: active
 audience: operators
 bcsc_class: current-fact

@@ -3,6 +3,7 @@ schema: foundry-doc-v1
 title: "Working with the Workspace Pre-Commit Gate"
 slug: guide-pre-commit-gate-operator-flow
 type: guide
+section: workspace-development
 status: active
 bcsc_class: customer-internal
 last_edited: 2026-05-25
