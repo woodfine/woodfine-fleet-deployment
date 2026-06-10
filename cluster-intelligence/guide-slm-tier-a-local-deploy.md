@@ -1,3 +1,14 @@
+---
+schema: foundry-doc-v1
+title: "Deploy service-slm Tier A — local inference on the workspace VM"
+slug: guide-slm-tier-a-local-deploy
+type: guide
+section: ai-and-intelligence
+status: active
+bcsc_class: no-disclosure-implication
+last_edited: 2026-06-10
+editor: pointsav-engineering
+---
 
 # Deploy service-slm Tier A — local inference on the workspace VM
 

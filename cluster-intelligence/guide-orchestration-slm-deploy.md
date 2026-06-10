@@ -1,3 +1,14 @@
+---
+schema: foundry-doc-v1
+title: "Deploy app-orchestration-slm — the multi-archive GPU fleet broker"
+slug: guide-orchestration-slm-deploy
+type: guide
+section: ai-and-intelligence
+status: active
+bcsc_class: no-disclosure-implication
+last_edited: 2026-06-10
+editor: pointsav-engineering
+---
 
 # Deploy app-orchestration-slm — the multi-archive GPU fleet broker
 

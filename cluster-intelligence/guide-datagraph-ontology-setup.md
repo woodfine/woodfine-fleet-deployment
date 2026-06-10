@@ -1,137 +1,163 @@
+---
+schema: foundry-doc-v1
+title: "Configure the DataGraph ontology for service-content"
+slug: guide-datagraph-ontology-setup
+type: guide
+section: ai-and-intelligence
+status: active
+bcsc_class: no-disclosure-implication
+last_edited: 2026-06-10
+editor: pointsav-engineering
+---
 
-# Configure the organizational knowledge graph ontology for your business domain
+# Configure the DataGraph ontology for service-content
 
-service-content loads its entity taxonomy at startup from CSV files in a configurable
-directory. This guide covers how to define entity types, chart of accounts, domains,
-and glossary terms specific to your organization, so the knowledge graph reflects
-your actual business vocabulary.
+service-content maintains the organizational knowledge graph. The ontology
+controls what entity types are recognized, how accounts are classified,
+what domains are active, and what glossary terms are resolved. This guide
+covers editing the ontology CSV files, live-reloading the ontology, and
+verifying entity counts after a change.
 
-## Where the ontology files live
-
-The directory is configured by the `SERVICE_CONTENT_ONTOLOGY_DIR` environment variable,
-defaulting to `./ontology` relative to the service-content binary. The Woodfine
-deployment uses `service-content/ontology/` in the monorepo clone.
+## Ontology directory structure
 
 ```
-ontology/
-├── archetypes.csv           entity role archetypes
-├── chart_of_accounts.csv   account type taxonomy
-├── entity_classes.csv      entity classification types
-├── themes.csv              organizational themes
-├── domains/
-│   ├── domain_corporate.csv
-│   ├── domain_documentation.csv
-│   └── domain_projects.csv
-├── glossary/
-│   ├── glossary_corporate.csv
-│   ├── glossary_documentation.csv
-│   └── glossary_projects.csv
-├── guides/
-│   └── guides_documentation.csv
-└── topics/
-    ├── topics_corporate.csv
-    ├── topics_documentation.csv
-    └── topics_projects.csv
+service-content/
+└── data/
+    └── ontology/
+        ├── archetypes.csv      # Entity archetypes and their classification rules
+        ├── chart-of-accounts.csv  # Financial account categories
+        ├── domains.csv         # Active domain vocabulary
+        └── glossary.csv        # Term definitions and canonical names
 ```
 
-## Editing archetypes
+All four files are hot-reloaded — no service restart required after an
+edit. The reload endpoint triggers an in-memory parse; invalid CSV aborts
+the reload and leaves the previous ontology in place.
 
-`archetypes.csv` defines the role profiles used during extraction. Each row becomes
-an entity of classification `archetype` in the graph.
+## Editing archetypes.csv
 
-Column headers: `id, label, description, domain`
+Each row defines an entity archetype that the extraction pipeline
+recognizes:
 
-Example:
-```csv
-id,label,description,domain
-exec-director,The Executive Director,Strategic oversight and accountability,corporate
-legal-counsel,The Legal Counsel,Regulatory compliance and contract management,legal
-property-manager,The Property Manager,Site operations and tenant relations,real-estate
+```
+archetype,description,parent,active
+person,Human individual,root,true
+organization,Legal entity,root,true
+project,Active work initiative,root,true
+asset,Managed resource,root,true
 ```
 
-After editing, reload without restart:
-```bash
-curl -X POST http://127.0.0.1:9081/v1/config/archetypes \
-  --data-binary @ontology/archetypes.csv
+Rules:
+- `archetype` is the canonical name; must be unique and lowercase.
+- `parent` must reference a defined archetype in the same file (`root`
+  is the implicit top-level).
+- Set `active: false` to stop recognizing that archetype in new
+  extractions (existing graph nodes are not deleted).
+
+## Editing chart-of-accounts.csv
+
+Maps financial account names to their classification:
+
+```
+account_name,classification,active
+Revenue,income,true
+Operating Expenses,expense,true
+Capital Assets,asset,true
 ```
 
-## Editing the chart of accounts
+Used by service-content's financial-entity extraction pass. Accounts not
+listed here are extracted under classification `unclassified`.
 
-`chart_of_accounts.csv` defines the account type taxonomy. Rows appear in graph queries
-as `coa-profile` entities, giving the inference model context about financial structure.
+## Editing domains.csv
 
-Column headers: `id, label, category, description`
+Controls which semantic domains the extraction pipeline indexes:
 
-Example for a real estate operation:
-```csv
-id,label,category,description
-coa-rent,Rental Income,revenue,Gross rent collected from tenants
-coa-maintenance,Maintenance Expense,expense,Repairs and upkeep of managed properties
-coa-mgmt-fee,Management Fee,expense,Fees paid to property management firm
+```
+domain,description,active
+legal,Corporate and contract records,true
+financial,Financial data and accounts,true
+infrastructure,Technical infrastructure,true
+personnel,Workforce and contacts,true
 ```
 
-## Editing domains
+Inactive domains are excluded from new indexing runs; their existing
+graph nodes remain queryable.
 
-Each domain CSV defines the high-level topic areas for a business segment. These
-appear as `domain` entities and drive topic and guide lookup during context injection.
+## Editing glossary.csv
 
-Column headers: `id, label, description, active`
+Term definitions drive canonical-name resolution — when an extraction
+encounter an alias, it resolves to the canonical term:
 
-Keep domains to 5–10 entries. More than that dilutes context injection quality.
-
-## Editing glossary terms
-
-Glossary CSVs provide bilingual term definitions used in extraction and context
-injection. Each domain has its own glossary file.
-
-Column headers: `term_en, term_es, definition, domain`
-
-Example for a legal practice:
-```csv
-term_en,term_es,definition,domain
-encumbrance,gravamen,A claim or lien attached to a property that may affect its transfer,legal
-beneficial owner,propietario beneficiario,The individual who ultimately owns or controls an asset,legal
+```
+term,canonical,aliases,definition
+service-slm,service-slm,"SLM service,local AI,local model",Local inference service
+service-content,service-content,"knowledge graph,content service",Organizational knowledge graph service
 ```
 
-## Reloading without restart
+`aliases` is a comma-separated list enclosed in double quotes when it
+contains commas.
 
-Most taxonomy files can be reloaded live:
+## Live reload
 
-```bash
-# Reload all taxonomy from disk (runs graph-cleanup.sh internally)
-curl -X POST http://127.0.0.1:9081/v1/config/guides/reload
-
-# Reload a specific section
-curl -X POST http://127.0.0.1:9081/v1/config/archetypes --data-binary @ontology/archetypes.csv
-curl -X POST http://127.0.0.1:9081/v1/config/coa --data-binary @ontology/chart_of_accounts.csv
-curl -X POST http://127.0.0.1:9081/v1/config/domains --data-binary @ontology/domains/domain_corporate.csv
-```
-
-## Verifying the updated ontology is active
-
-After reloading, query the graph for taxonomy entities:
+After editing any CSV file, trigger a reload without restarting the service:
 
 ```bash
-curl -s "http://127.0.0.1:9081/v1/graph/context?q=property+manager&module_id=woodfine&limit=5"
-# Expect: response includes the archetype entity if you defined it
+curl -X POST http://127.0.0.1:9081/admin/ontology/reload
+# Expect: {"status":"ok","loaded_at":"2026-06-10T..."
 ```
 
-Check entity counts to confirm taxonomy loaded:
+If the CSV contains an error, the response is:
+```json
+{"status":"error","message":"archetypes.csv line 7: unknown parent 'bad-parent'"}
+```
+Correct the file and retry. The previous ontology remains active until
+a successful reload.
+
+## Verify entity counts after reload
+
 ```bash
-curl -s http://127.0.0.1:9081/healthz
-# Expect: "entity_count" increasing after reload
+curl -s http://127.0.0.1:9081/v1/stats | python3 -m json.tool
 ```
 
-## Adding a new entity classification via extraction
+Expected shape:
+```json
+{
+  "entity_counts": {
+    "person": 1024,
+    "organization": 312,
+    "project": 87,
+    "asset": 204
+  },
+  "domains_active": ["legal","financial","infrastructure","personnel"],
+  "ontology_loaded_at": "2026-06-10T10:41:00Z"
+}
+```
 
-The base extraction schema recognizes: Person, Company, Project, Account, Location.
-To add a new classification, add it to the extraction schema in
-`service-content/src/` (requires a code change) OR teach the extractor to map
-incoming text to existing classifications creatively using role_vector.
+A count of 0 for an archetype that previously had entries indicates a
+parse error — check the reload response and service logs.
 
-For example, a `Regulation` can be represented as a `Policy` entity with
-`role_vector: "regulation|legal"`. This avoids a code change while still making
-the regulatory reference available for graph traversal.
+## Adding a new classification
 
-For significant domain expansion requiring new first-class entity types, open a
-development session to extend the extraction schema enum.
+To add a new entity archetype (e.g., `vendor` as a child of `organization`):
+
+1. Add a row to `archetypes.csv`:
+   ```
+   vendor,External supplier or service provider,organization,true
+   ```
+2. Reload: `curl -X POST http://127.0.0.1:9081/admin/ontology/reload`
+3. Verify the new archetype appears in `/v1/stats`.
+4. Run a targeted extraction pass to populate entities of the new type:
+   ```bash
+   curl -X POST http://127.0.0.1:9081/admin/extract/run \
+     -H "Content-Type: application/json" \
+     -d '{"archetype":"vendor"}'
+   ```
+
+## Troubleshooting
+
+| Symptom | Check |
+|---|---|
+| Reload returns 500 | Check `journalctl -u local-content.service --since=-2m` for parse errors |
+| Entity counts unchanged after reload | Extraction runs on a schedule; trigger manually with `/admin/extract/run` |
+| Alias not resolving to canonical | Verify alias is in `glossary.csv` and reload was successful |
+| Domain missing from `domains_active` | Check `active` column in `domains.csv` — must be `true` (case-sensitive) |

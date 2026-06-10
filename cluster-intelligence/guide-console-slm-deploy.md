@@ -1,148 +1,152 @@
+---
+schema: foundry-doc-v1
+title: "Deploy app-console-slm — the SLM dashboard cartridge"
+slug: guide-console-slm-deploy
+type: guide
+section: ai-and-intelligence
+status: active
+bcsc_class: no-disclosure-implication
+last_edited: 2026-06-10
+editor: pointsav-engineering
+---
 
-# Deploy and operate app-console-slm — the inference infrastructure TUI
+# Deploy app-console-slm — the SLM dashboard cartridge
 
-app-console-slm is the terminal dashboard for monitoring the inference infrastructure.
-It loads as cartridge F9 in the operator console (os-console chassis). This guide
-covers enabling the cartridge and using the dashboard controls.
+app-console-slm (F9 cartridge) displays live Doorman health, entity
+counts from the organizational knowledge graph, and inference routing
+state inside the os-console chassis. This guide covers building and
+installing the cartridge, configuring environment variables, and
+verifying the F9 dashboard is live.
 
 ## Pre-flight
 
 ```bash
-# Confirm the os-console chassis is running
-systemctl status local-console.service
+# Confirm os-console chassis is already running
+systemctl status os-console.service
 
-# Confirm service-slm Doorman is running and healthy
+# Confirm the Doorman is reachable
 curl -s http://127.0.0.1:9080/healthz
+# Expect: {"status":"ok"}
+
+# Confirm service-content is reachable (entity counts source)
+curl -s http://127.0.0.1:9081/healthz
+# Expect: {"status":"ok"}
 ```
 
-## Step 1 — Build the console cartridge
+## Step 1 — Build the cartridge
 
 ```bash
-cd /srv/foundry/clones/project-intelligence
-cargo build -p app-console-slm --release
+cd /srv/foundry/clones/project-intelligence/app-console-slm
+cargo build --release
 ```
 
-The built cartridge is loaded automatically by the console chassis when it is
-installed to the correct location:
+Binary lands at `target/release/app-console-slm`.
+
+## Step 2 — Install as a systemd service
 
 ```bash
-sudo cp app-console-slm/target/release/libapp_console_slm.so \
-  /usr/local/lib/console-cartridges/f9_slm.so
-sudo systemctl restart local-console.service
+sudo cp infrastructure/systemd/app-console-slm.service /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable --now app-console-slm.service
 ```
 
-## Step 2 — Configure cartridge endpoints
+## Step 3 — Configure environment variables
 
-The cartridge reads endpoints from environment variables. Add to the console
-service environment or set in the shell before launching the console:
+The cartridge reads from `/etc/app-console-slm/app-console-slm.env`. Create it:
 
 ```bash
-SLM_DOORMAN_ENDPOINT=http://127.0.0.1:9080
-SLM_ORCHESTRATION_ENDPOINT=http://127.0.0.1:9180  # optional; omit if no chassis
+sudo mkdir -p /etc/app-console-slm
+sudo tee /etc/app-console-slm/app-console-slm.env << EOF
+# Doorman endpoint (Tier A local, required)
+DOORMAN_ENDPOINT=http://127.0.0.1:9080
+
+# service-content endpoint (entity counts, optional)
+SERVICE_CONTENT_ENDPOINT=http://127.0.0.1:9081
+
+# Poll interval for dashboard refresh (seconds, default 10)
+SLM_POLL_INTERVAL_SEC=10
+EOF
+sudo systemctl restart app-console-slm.service
 ```
 
-## Step 3 — Open the SLM panel
+## Step 4 — Verify F9 is live
 
-Launch the operator console:
-```bash
-console
-```
-
-Press **F9** to switch to the SLM infrastructure panel.
-
-The panel loads with the last cached state and begins polling immediately.
-
-## Reading the dashboard
+Open the os-console chassis and press **F9**. The F9 dashboard layout:
 
 ```
-╭─ F9 — SLM + DataGraph ─────────────────────────────────────────╮
-│  Gateway ● running  Policy: balanced                           │
-│  Tier A: ✓  Tier C: ○                                         │
-├─ YoYo Fleet ───────────────────────────────────────────────────┤
-│  batch   (L4)    ● available  145ms  kill: OPEN               │
-│  express (A100)  ○ stopped    —      kill: OPEN               │
-├─ DataGraph ─────────────────────────────────────────────────────┤
-│  Entities: 7,445  Circuit: closed  Last: 4 min ago             │
-├─ Queue ─────────────────────────────────────────────────────────┤
-│  P0: 0   P1: 12   P2: 391   done: 799   poison: 11            │
-├─ Cost Today ────────────────────────────────────────────────────┤
-│  $2.47  batch: $0.71  express: $0.00  Tier C: $1.76           │
-╰─ [K]ill  [P]olicy  [G]raph  R=refresh  ?=help ──────────────────╯
+┌─────────────────────────────────────────────────────────────┐
+│ SLM Dashboard                                    F9         │
+├────────────────────────┬────────────────────────────────────┤
+│ Doorman Health         │ Entity Counts                      │
+│  Tier A:  ● HEALTHY   │  People:      1,024                │
+│  Tier B:  ○ unavail   │  Companies:     312                │
+│  Circuit: CLOSED      │  Projects:      87                 │
+├────────────────────────┴────────────────────────────────────┤
+│ Recent Routing                                              │
+│  [10:41] TOPIC generation → Tier A (local)   87 ms        │
+│  [10:40] Graph extraction → Tier A (local)  124 ms        │
+│  [10:38] Apprenticeship brief → Tier A       99 ms        │
+└─────────────────────────────────────────────────────────────┘
 ```
-
-**Gateway row:** ● = running, ✗ = unreachable. Policy shows the active routing mode.
-
-**Tier A:** ✓ = model healthy. Tier C: ○ = disabled (no API key).
-
-**Fleet rows:** State is one of: ● available, ○ stopped, ⟳ starting, ✗ failed/zombie.
-Latency shown in ms for available nodes. `kill: OPEN/CLOSED` shows kill switch state.
-
-**DataGraph:** Entity count from `/healthz`. Circuit shows if the graph query path
-is open (degraded) or closed (healthy). "Last" is time since the most recent
-successful extraction.
-
-**Queue:** Depth per priority level. "poison" = tasks requiring operator review.
-
-**Cost Today:** Cumulative spend since midnight UTC across all tiers.
 
 ## Keyboard controls
 
 | Key | Action |
 |---|---|
-| **R** | Immediate refresh — re-queries all endpoints |
-| **K** | Kill switch dialog — toggle per-label or global |
-| **P** | Policy dialog — change routing policy |
-| **G** | Graph detail — entity type breakdown |
-| **?** | Help overlay |
-| **Q** | Quit |
+| R | Force dashboard refresh (re-polls Doorman + service-content) |
+| K | Open kill switch dialog (pause/resume Doorman routing) |
+| P | Open routing policy dialog |
+| G | Jump to entity graph view |
+| ? | Show help overlay |
+| Q | Close F9 cartridge, return to chassis default |
 
-### Using the kill switch dialog (K)
+## Kill switch dialog
 
-Press K to open the kill switch dialog. Navigate with arrow keys:
-
-```
-Kill Switch Control
-──────────────────
-  batch    [OPEN  ] → toggle
-  express  [OPEN  ] → toggle
-  tier-c   [OPEN  ] → toggle
-  GLOBAL   [OPEN  ] → toggle all
-──────────────────
-  Enter: toggle  Esc: cancel
-```
-
-Closing a switch stops all new dispatching to that tier immediately. In-flight
-requests complete; queued work accumulates until the switch is reopened.
-
-### Using the policy dialog (P)
-
-Press P to open the routing policy selector:
+Press **K** to pause all Doorman inference routing:
 
 ```
-Routing Policy
-─────────────────────────────
-  ● balanced        (default)
-  ○ drain-batch     (all work to L4)
-  ○ drain-express   (all work to A100)
-  ○ local-only      (Tier A only)
-─────────────────────────────
-  Enter: apply  Esc: cancel
+┌─────────────────────────────┐
+│  Kill Switch                │
+│                             │
+│  ◉ Routing: ACTIVE          │
+│  ○ Routing: PAUSED          │
+│                             │
+│  [P] Pause    [R] Resume    │
+│  [Esc] Cancel               │
+└─────────────────────────────┘
 ```
 
-The policy change takes effect immediately in the Doorman without restart.
+Pausing sets the Doorman circuit to OPEN — in-flight requests complete;
+new requests queue until resumed. Resume with **R** in the dialog.
 
-## Connecting to the chassis instead of the Doorman
+## Routing policy dialog
 
-If `SLM_ORCHESTRATION_ENDPOINT` is set, the console also shows the fleet panel
-with all registered Doorman instances. This is useful when multiple archives share
-the same GPU nodes through app-orchestration-slm.
+Press **P** to configure tier preference:
+
+```
+┌────────────────────────────────┐
+│  Routing Policy                │
+│                                │
+│  Tier preference:              │
+│  ◉ Tier A first (local)        │
+│  ○ Tier B first (GPU)          │
+│  ○ Tier C fallback only        │
+│                                │
+│  [Enter] Apply   [Esc] Cancel  │
+└────────────────────────────────┘
+```
+
+## Chassis connection
+
+The cartridge connects to the os-console chassis socket at
+`/run/os-console/cartridge.sock`. If the chassis is restarted, the
+cartridge reconnects automatically on next poll cycle.
 
 ## Troubleshooting
 
 | Symptom | Check |
 |---|---|
-| Gateway shows ✗ | `curl http://127.0.0.1:9080/healthz` — is Doorman running? |
-| Fleet rows missing | `SLM_ORCHESTRATION_ENDPOINT` set? Chassis running? |
-| Cost Today: $0.00 | Normal when no GPU work has run today |
-| Queue poison > 0 | Run `ls /srv/foundry/data/apprenticeship/queue-poison/` to inspect failed briefs |
-| Panel not updating | Press R; check network to Doorman |
+| F9 shows "Doorman unreachable" | Verify `local-doorman.service` is running: `systemctl status local-doorman.service` |
+| Entity counts show 0 | Check `SERVICE_CONTENT_ENDPOINT` in env file; verify `local-content.service` is running |
+| Dashboard not refreshing | Check `SLM_POLL_INTERVAL_SEC` — set lower (e.g., 5) for faster updates |
+| Cartridge crash on F9 | Check logs: `journalctl -u app-console-slm.service --since=-5m` |

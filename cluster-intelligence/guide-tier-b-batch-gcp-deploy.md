@@ -1,3 +1,14 @@
+---
+schema: foundry-doc-v1
+title: "Deploy the batch GPU node (L4) on GCP for daily inference work"
+slug: guide-tier-b-batch-gcp-deploy
+type: guide
+section: ai-and-intelligence
+status: active
+bcsc_class: no-disclosure-implication
+last_edited: 2026-06-10
+editor: pointsav-engineering
+---
 
 # Deploy the batch GPU node (L4) on GCP for daily inference work
 
@@ -164,5 +175,5 @@ journalctl -u local-doorman.service -f | grep -E "(batch|extract|circuit)"
 gcloud compute instances stop yoyo-batch --zone=us-central1-a
 ```
 
-Cost: VM stopped = ~$2/month (boot disk only). VM running = $0.71/hr.
-At 2 hrs/day × 30 days = ~$43/month.
+Cost: VM stopped = approximately $2/month (boot disk only). VM running = $0.71/hr.
+At 2 hrs/day × 30 days = approximately $43/month.

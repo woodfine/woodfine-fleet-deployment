@@ -1,3 +1,14 @@
+---
+schema: foundry-doc-v1
+title: "Deploy the express GPU node (A100) on GCP for priority inference"
+slug: guide-tier-b-express-a100-deploy
+type: guide
+section: ai-and-intelligence
+status: active
+bcsc_class: no-disclosure-implication
+last_edited: 2026-06-10
+editor: pointsav-engineering
+---
 
 # Deploy the express GPU node (A100) on GCP for priority inference
 
@@ -141,9 +152,9 @@ the machine-type swap.
 
 ## Cost
 
-Stopped: ~$2/month (boot disk).
+Stopped: approximately $2/month (boot disk).
 Running A100: $3.67/hr.
 Running L4: $0.71/hr.
 
 The express node is designed to run only when needed. At 15 min idle shutdown,
-a 30-minute interactive session costs ~$1.84 on A100 or ~$0.36 on L4.
+a 30-minute interactive session costs approximately $1.84 on A100 or $0.36 on L4.
