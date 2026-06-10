@@ -1,5 +1,6 @@
 ---
 schema: foundry-cluster-manifest-v1
+cluster: project-woodfine
 cluster_name: project-woodfine
 cluster_branch: cluster/project-woodfine
 created: 2026-05-14
