@@ -1,20 +1,17 @@
 ---
 schema: foundry-doc-v1
+title: "Content Operations — media-knowledge-corporate"
 slug: guide-content-operations
 type: guide
-section: operations
+section: content-and-media
 status: active
-audience: operators
+audience: editorial-operators
 bcsc_class: customer-internal
-title: "Content Operations — media-knowledge-corporate"
-created: 2026-06-16
-updated: 2026-06-16
-language: en
-last_edited: 2026-06-18
-editor: project-editorial
+last_edited: 2026-06-16
+editor: pointsav-engineering
 ---
 
-## Content Operations — corporate.woodfinegroup.com
+# Content Operations — corporate.woodfinegroup.com
 
 This guide covers the ongoing content lifecycle for `corporate.woodfinegroup.com` — the corporate documentation wiki covering the Woodfine family of companies, the investment structure, and the economic model. It covers how articles are added, updated, reviewed, and retired; what quality standards apply; and how changes reach the live wiki.
 

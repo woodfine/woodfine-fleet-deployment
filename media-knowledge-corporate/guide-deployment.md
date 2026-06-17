@@ -1,20 +1,17 @@
 ---
 schema: foundry-doc-v1
+title: "Deployment — media-knowledge-corporate"
 slug: guide-deployment
 type: guide
-section: operations
-status: active
+section: content-and-media
+status: scaffold
 audience: operators
 bcsc_class: customer-internal
-title: "Deployment — media-knowledge-corporate"
-created: 2026-06-16
-updated: 2026-06-16
-language: en
-last_edited: 2026-06-18
-editor: project-editorial
+last_edited: 2026-06-16
+editor: pointsav-engineering
 ---
 
-## Deployment — media-knowledge-corporate
+# Deployment Guide — media-knowledge-corporate
 
 This guide covers initial deployment of the `media-knowledge-corporate` wiki instance, intended to serve internal corporate documentation for Woodfine Management Corp. For day-to-day content operations, see `guide-content-operations.md`. For node provisioning, see `guide-provision-node.md`.
 

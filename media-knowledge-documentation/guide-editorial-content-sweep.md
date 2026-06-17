@@ -1,20 +1,17 @@
 ---
 schema: foundry-doc-v1
+title: "Monthly Editorial Content Sweep — Documentation Wiki"
 slug: guide-editorial-content-sweep
 type: guide
-section: operations
+section: content-and-media
 status: active
-audience: operators
+audience: editorial-operators
 bcsc_class: customer-internal
-title: "Monthly Editorial Content Sweep — Documentation Wiki"
-created: 2026-06-16
-updated: 2026-06-16
-language: en
-last_edited: 2026-06-18
-editor: project-editorial
+last_edited: 2026-06-16
+editor: pointsav-engineering
 ---
 
-## Monthly Editorial Content Sweep
+# Guide — Monthly Editorial Content Sweep
 
 This guide covers the monthly quality review of `documentation.pointsav.com`, the platform engineering documentation wiki. The sweep identifies articles needing updates, drafts revisions to current quality standards, and routes approved changes through the editorial commit channel.
 
