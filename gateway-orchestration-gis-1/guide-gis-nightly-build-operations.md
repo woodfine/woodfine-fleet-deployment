@@ -6,56 +6,69 @@ section: operations
 status: active
 audience: operators
 bcsc_class: customer-internal
-last_edited: 2026-06-14
+title: "GIS Nightly Rebuild Operations"
+created: 2026-06-11
+updated: 2026-06-13
+language: en
+last_edited: 2026-06-18
 editor: project-gis
 ---
 
 # GIS Nightly Rebuild Operations
 
-This guide covers day-to-day operation of the GIS cluster nightly rebuild
-pipeline. The nightly rebuild updates cluster definitions and tile files for
-`gis.woodfinegroup.com`.
+This guide covers the scheduled nightly cluster rebuild for the Location Intelligence
+platform. The rebuild refreshes co-location cluster geometries and deploys updated
+map tiles and metadata to `gis.woodfinegroup.com`.
 
-## Pipeline overview
+## Overview
 
-The nightly rebuild runs two scripts in sequence:
+The nightly rebuild is a two-step pipeline:
 
-| Step | Script | Output |
-|------|--------|--------|
-| 1 | `build-clusters.py` | `work/clusters.geojson` — cluster centroids + metadata |
-| 2 | `build-tiles.py --layer 2` | `tiles/layer2-clusters.pmtiles` — vector tile package |
+1. **`build-clusters.py`** — re-runs the co-location algorithm against current chain JSONL
+   and produces `work/clusters.geojson`
+2. **`build-tiles.py --layer 2`** — converts clusters to PMTiles and writes
+   `clusters-meta.json` for the BentoBox inspector
 
-Two non-fatal archetype steps run after tile generation:
+After the cluster rebuild, two archetype pipelines run as non-fatal steps:
 
-| Script | Output | Failure impact |
-|--------|--------|----------------|
-| `build-vwh-clusters.py` | `data/archetype-vwh.geojson` | Map shows stale VWH data |
-| `build-pks-clusters.py` | `data/archetype-pks.geojson` | Map shows stale PKS data |
+- **`build-vwh-clusters.py`** (VWH — Urban Fringe, ~60 s) — refreshes
+  `archetype-vwh.geojson`
+- **`build-pks-clusters.py`** (PKS — Commuter, ~90 s) — refreshes
+  `archetype-pks.geojson`
 
-All scripts reside in
+All scripts run from
 `/srv/foundry/clones/project-gis/pointsav-monorepo/app-orchestration-gis/`.
 
 ## Schedule
 
-| Time | Action |
-|------|--------|
-| 22:00 PDT daily | `nightly-rebuild.sh` (automated via cron) |
-| 23:00 PDT Monday | `build-aec-global.sh` (Köppen, ecoregions, wetland, solar) |
-| 23:00 PDT Tuesday | `build-aec-seismic.sh` (seismic hazard zones) |
-| 23:00 PDT Wednesday | `build-aec-flood.sh` (flood + wildfire hazard) |
+The rebuild runs at **10:00 pm Vancouver PDT** (05:00 UTC, 9:00 pm PST).
 
-The system timezone is America/Vancouver. AEC scripts run on dedicated nights
-after the nightly rebuild completes.
+Check the active crontab:
+
+```bash
+crontab -l | grep nightly-rebuild
+```
+
+Expected output:
+```
+0 22 * * * cd /srv/foundry/clones/project-gis/pointsav-monorepo/app-orchestration-gis && bash nightly-rebuild.sh >> /srv/foundry/clones/project-gis/pointsav-monorepo/app-orchestration-gis/nightly-rebuild.log 2>&1
+```
+
+The AEC enrichment job runs one hour later on Mondays (11:00 pm PDT = 06:00 UTC):
+
+```
+0 23 * * 1 cd /srv/foundry/clones/project-gis/pointsav-monorepo/app-orchestration-gis && bash build-aec-global.sh >> .../aec-global.log 2>&1
+```
 
 ## Pre-flight checks
 
-Before running a manual rebuild, verify:
+Before running the rebuild manually, confirm:
 
 ```bash
-# 1. Disk space
-df -BG /srv/foundry | grep foundry   # need ≥ 5 GB free
+# 1. Disk: must have ≥5 GB free on /
+df -BG / | awk 'NR==2 {print $4, "free"}'
 
-# 2. taxonomy.py is not truncated (must be at least 400 lines)
+# 2. Taxonomy integrity: taxonomy.py must be ≥400 lines
 wc -l /srv/foundry/clones/project-gis/pointsav-monorepo/app-orchestration-gis/taxonomy.py
 
 # 3. No prior run in progress (flock prevents concurrent runs automatically)

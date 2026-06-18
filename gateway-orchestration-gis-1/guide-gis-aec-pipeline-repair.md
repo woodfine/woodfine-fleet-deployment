@@ -6,7 +6,10 @@ section: operations
 status: active
 audience: operators
 bcsc_class: customer-internal
-last_edited: 2026-06-14
+title: "AEC Hazard Pipeline Repair"
+created: 2026-06-11
+language: en
+last_edited: 2026-06-18
 editor: project-gis
 ---
 
@@ -78,7 +81,7 @@ ls -lh "$SCRIPTS"/build-aec*.log "$SCRIPTS"/aec-*.log 2>/dev/null
 1. Identify which log contains the failure:
 
    ```bash
-   grep -l "ERROR|WARN|exit" \
+   grep -l "ERROR\|WARN\|exit" \
      /srv/foundry/clones/project-gis/pointsav-monorepo/app-orchestration-gis/build-aec*.log
    ```
 
@@ -139,7 +142,7 @@ EU cluster seismic join produces 0 assignments, verify the endpoint in
 `build-aec-seismic.sh`:
 
 ```bash
-grep "ESHM20|eshm|seismicportal" build-aec-seismic.sh | head -5
+grep "ESHM20\|eshm\|seismicportal" build-aec-seismic.sh | head -5
 ```
 
 The current correct base URL is `https://www.seismicportal.eu/`. If the script
@@ -160,11 +163,15 @@ WRI AQUEDUCT 3.0 data (global riverine flood, ~90 MB GeoTIFF) is fetched via
 a direct URL. If the download fails (HTTP timeout, 5xx, or DNS failure):
 
 1. Check whether a stale `.aqueduct.skip` flag exists and remove it if the
-   download actually needs to re-run — delete it manually.
+   download actually needs to re-run:
+
+   ```bash
+   rm -f work/aec/.aqueduct.skip
+   ```
 
 2. Re-run `build-aec-flood.sh`. The script will retry the download.
 
-3. If the WRI endpoint is persistently unavailable, create a skip flag manually
+3. If the WRI endpoint is persistently unavailable, set the skip flag manually
    to bypass the download and proceed with FEMA + wildfire layers only:
 
    ```bash
@@ -195,7 +202,7 @@ country's clusters have no EU flood zone assignment for that run.
 |---------|----------|--------|
 | GWL_FCS30 tile HTTP 429 | Non-fatal | Logged as WARN; retry next run |
 | EU seismic 0 assignments | Data gap | Check ESHM20 URL (fix in `bd17a348`) |
-| AQUEDUCT download timeout | Skippable | Delete `.aqueduct.skip`; re-run; or use skip flag |
+| AQUEDUCT download timeout | Skippable | `rm .aqueduct.skip`; re-run; or use skip flag |
 | FEMA REST timeout (partial) | Non-fatal | Re-run; partial cells recovered |
 | Disk < 10 GB (Night 5) | Hard stop | Free disk before re-running |
 
@@ -207,7 +214,8 @@ provision, run the full five-night sequence in order:
 ```bash
 cd /srv/foundry/clones/project-gis/pointsav-monorepo/app-orchestration-gis
 
-# Remove stale markers (delete .night4-complete and .night5-complete from work/aec/)
+# Remove stale markers
+rm -f work/aec/.night4-complete work/aec/.night5-complete
 
 # Nights 1–3 (Köppen, ecoregions, wetland, solar)
 bash build-aec-global.sh
