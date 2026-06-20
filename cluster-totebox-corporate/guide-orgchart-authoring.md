@@ -7,7 +7,7 @@ section: authoring
 status: active
 audience: operators
 bcsc_class: customer-internal
-last_edited: 2026-06-14
+last_edited: 2026-06-20
 editor: project-orgcharts
 ---
 
@@ -15,6 +15,9 @@ editor: project-orgcharts
 
 > **Operational guide.** Describes how Jennifer Woodfine authors and revises
 > corporate org charts using the project-orgcharts Totebox cluster.
+>
+> Destination: `customer/woodfine-fleet-deployment/cluster-totebox-corporate/`
+> via project-editorial gateway.
 
 ---
 

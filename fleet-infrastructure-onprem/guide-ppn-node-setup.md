@@ -7,11 +7,11 @@ section: infrastructure
 status: active
 audience: operators
 bcsc_class: customer-internal
-last_edited: 2026-06-14
+last_edited: 2026-06-20
 editor: project-infrastructure
 ---
 
-# Joining a Node to an Existing PPN
+# GUIDE: Joining a Node to an Existing PPN
 
 Operational runbook for adding a Linux machine — bare metal, leased server, or cloud VM — to a running Pointsav Private Platform Network. Audience: an operator comfortable with a shell, SSH, and systemd, starting from a fresh Linux install.
 
