@@ -54,6 +54,7 @@ Per-deployment guides live inside their deployment subdirectory; these are expli
 | `fleet-infrastructure-onprem/` | On-premises hardware nodes |
 | `gateway-interface-command/` | Command-surface gateway |
 | `gateway-knowledge-documentation-1/` | Knowledge documentation gateway instance |
+| `gateway-mediakit-foodservice/` | Foodservice business gateway (foodservice.woodfinegroup.com) |
 | `gateway-orchestration-bim/` | BIM orchestration gateway |
 | `gateway-orchestration-gis/` | GIS orchestration gateway |
 | `gateway-orchestration-gis-1/` | GIS orchestration gateway instance 1 |

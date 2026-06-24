@@ -39,6 +39,7 @@ Last updated: 2026-05-24.
 |---|---|---|---|
 | gateway-interface-command | Scaffold-coded | gateway | 4 files |
 | gateway-knowledge-documentation-1 | Scaffold-coded | gateway | 1 file; guide-knowledge-wiki-sprint-roadmap.md; no scaffold skeleton yet |
+| gateway-mediakit-foodservice | Scaffold-coded | gateway | 2 files; scaffold skeleton (README + README.es); engine deployment pending; added 2026-06-24 |
 | gateway-orchestration-bim | Active | gateway | 8 files; scaffold skeleton + 4 operational GUIDEs added 2026-05-07 |
 | gateway-orchestration-gis | Scaffold-coded | gateway | 4 files; scaffold skeleton (README + README.es + guide-deployment + guide-provision-node) |
 | gateway-orchestration-gis-1 | Scaffold-coded | gateway | 1 file; guide-gis-adding-a-chain.md; no scaffold skeleton yet |
