@@ -1,3 +1,26 @@
+---
+artifact: guide
+schema: foundry-draft-v1
+title: "VWH Calibration Validation — Operations Guide"
+slug: guide-vwh-calibration-operations
+draft_id: project-editorial-20260615-vwh-cal-ops
+status: staged
+created: 2026-06-15
+updated: 2026-06-15
+owner: project-editorial
+destination: woodfine-fleet-deployment/gateway-orchestration-gis-1/
+route_to: command
+language_protocol: PROSE-GUIDE
+bcsc_class: internal-operational
+source_topic: archetypes/vertical-warehouse.md
+research_trail:
+  origin: project-editorial
+  basis: content stripped from topic-vertical-warehouse.md per M6 TOPIC/GUIDE split rule
+  data_sources: VWH production build, June 2026
+  citations_pending: false
+  forbidden_terms_cleared: true
+---
+
 # VWH Calibration Validation
 
 This guide documents the validation criterion for each Vertical Warehouse (VWH)
