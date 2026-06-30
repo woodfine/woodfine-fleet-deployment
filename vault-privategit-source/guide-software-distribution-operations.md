@@ -8,7 +8,7 @@ type: guide
 section: source-control
 status: active
 bcsc_class: public-disclosure-safe
-last_edited: 2026-05-25
+last_edited: 2026-06-29
 editor: pointsav-engineering
 ---
 
@@ -123,6 +123,7 @@ installers:
     platform: "<platform string>"
     size_mb: <integer>
     path: <id>/<version>             # relative path under /var/lib/local-software/releases/
+    beta: <true|false>               # optional; true omits payment fields from /v1/products
 
 licenses:
   - id: <machine-readable-id>
@@ -132,9 +133,38 @@ licenses:
     price_usdc: <integer USDC — NOT micro-units>
 ```
 
+#### Current installers catalog
+
+```yaml
+installers:
+  - id: os-privategit
+    name: "PointSav Private Git OS"
+    description: "Full-stack installer: marketplace + release server + payment watcher"
+    edition: "0.1.0"
+    platform: "x86_64-unknown-linux-gnu"
+    size_mb: 0        # placeholder until binary built
+    path: os-privategit/0.1.0
+    beta: true
+```
+
 The `price_usdc` field is in whole USDC (e.g., `180` = $180 USDC). The marketplace matches incoming payment amounts against this field to identify which product was purchased. Prices must be unique across all license entries; duplicate prices create ambiguous product identification.
 
 ---
+
+### BETA mode
+
+Setting `beta: true` on a catalog entry activates BETA mode for that product:
+
+- **`/v1/products` response** omits `price_usdc` and payment fields — the storefront renders a "Free during beta" badge instead of a payment flow.
+- **`local-software-source`** bypasses Ed25519 license token verification for BETA-flagged products — customers receive the binary without a license key.
+- **Install method** for BETA service binaries is a direct curl:
+
+```bash
+curl -fsSL https://software.pointsav.com/releases/os-privategit/install.sh | bash
+```
+
+Remove `beta: true` and restart the marketplace service when promoting a product to stable. Customers will be required to purchase a license key from that point forward.
+
 
 ## Binary publishing
 
@@ -372,4 +402,4 @@ sudo certbot --nginx -d software.pointsav.com
 
 *Copyright © 2026 PointSav Digital Systems. All rights reserved.*
 
-*Woodfine Capital Projects™, Woodfine Management Corp™, PointSav Digital Systems™, Totebox Orchestration™, and Totebox Archive™ are trademarks of Woodfine Capital Projects Inc., used in Canada, the United States, Latin America, and Europe. All other trademarks are the property of their respective owners.*
+*Woodfine Capital Projects™, Woodfine Management Corp™, PointSav Digital Systems™, Totebox Orchestration™, Totebox Archive™, and Capability Geometry™ are trademarks of Woodfine Capital Projects Inc., used in Canada, the United States, Latin America, and Europe. All other trademarks are the property of their respective owners.*
